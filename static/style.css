@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+h1,h2,p{
+    text-align: center;
+}
+h1 {
+    text-decoration: underline;
+    margin: 20px;
+}
+h2 {
+    margin: 10px;
+}
+p {
+    width: 80%;
+    margin: 10px auto;
+}
