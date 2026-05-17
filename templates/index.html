@@ -1,26 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library - Home page</title>
+{% extends "base.html" %}
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-   <nav class="site-nav">
-       <a href="{{ url_for('index') }}">Home</a>
-       <a href="{{ url_for('about') }}">About</a>
-       <a href="{{ url_for('books') }}">Available Books</a>
-       <a href="{{ url_for('borrow_return') }}">Borrow / Return</a>
-   </nav>
+{% block title %}Library - Home page{% endblock %}
 
-   <main class="page">
-   <h1>Welcome to the Library!</h1>
+{% block content %}
+<h1>Welcome to the Library!</h1>
 
-   <h2>We are glad to have you here, {{ name }}</h2>
+<h2>We are glad to have you here, {{ name }}</h2>
 
-   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem voluptates explicabo quisquam ratione. Consectetur nam accusantium laborum inventore aperiam debitis voluptas temporibus facilis ad, at, animi cumque rerum, iste cupiditate.</p> 
-   </main>
-</body>
-</html>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem voluptates explicabo quisquam ratione. Consectetur nam accusantium laborum inventore aperiam debitis voluptas temporibus facilis ad, at, animi cumque rerum, iste cupiditate.</p>
+{% endblock %}
