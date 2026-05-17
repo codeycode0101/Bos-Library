@@ -11,17 +11,32 @@ body {
 .site-nav {
     background: #232D55;
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 16px;
+    align-items: center;
+    gap: 24px;
+    justify-content: flex-start;
+    padding: 12px 20px;
     flex-wrap: wrap;
 }
-.site-nav a {
+.site-logo {
+    display: flex;
+    align-items: center;
+}
+.site-logo img {
+    display: block;
+    height: 48px;
+    width: auto;
+}
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.nav-links a {
     color: #ffffff;
     font-weight: bold;
     text-decoration: none;
 }
-.site-nav a:hover {
+.nav-links a:hover {
     color: #74C5EA;
 }
 .page {
