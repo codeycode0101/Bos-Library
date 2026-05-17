@@ -34,11 +34,27 @@ body {
 .nav-links a {
     color: #ffffff;
     font-weight: bold;
+    padding-bottom: 4px;
+    position: relative;
     text-decoration: none;
 }
-.nav-links a:hover {
-    color: #74C5EA;
+.nav-links a::after {
+    background: #74C5EA;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+    width: 100%;
 }
+.nav-links a:hover::after,
+.nav-links a:focus::after {
+    transform: scaleX(1);
+}
+/* Main class */
 .page {
     max-width: 900px;
     margin: 0 auto;
