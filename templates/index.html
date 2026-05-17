@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library - Home page</title>
+{% extends "base.html" %}
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-   <h1>Welcome to the Library!</h1>
+{% block title %}Library - Home page{% endblock %}
 
-   <h2>We are glad to have you here, {{ name }}</h2>
+{% block content %}
+<h1>Welcome to the Library!</h1>
 
-   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem voluptates explicabo quisquam ratione. Consectetur nam accusantium laborum inventore aperiam debitis voluptas temporibus facilis ad, at, animi cumque rerum, iste cupiditate.</p> 
-</body>
-</html>
+<h2>We are glad to have you here, {{ name }}</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem voluptates explicabo quisquam ratione. Consectetur nam accusantium laborum inventore aperiam debitis voluptas temporibus facilis ad, at, animi cumque rerum, iste cupiditate.</p>
+{% endblock %}

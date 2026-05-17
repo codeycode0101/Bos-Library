@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Library{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="site-nav">
+        <a class="site-logo" href="{{ url_for('index') }}" aria-label="Bosworth Library home">
+            <img src="{{ url_for('static', filename='images/bosworth-logo.png') }}" alt="Bosworth Independent School logo">
+        </a>
+
+        <div class="nav-links">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('books') }}">Available Books</a>
+            <a href="{{ url_for('borrow_return') }}">Borrow / Return</a>
+        </div>
+    </nav>
+
+    <main class="page">
+        {% block content %}{% endblock %}
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

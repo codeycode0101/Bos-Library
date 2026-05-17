@@ -4,6 +4,62 @@
     box-sizing: border-box;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
+body {
+    background: #ffffff;
+    color: #000000;
+}
+.site-nav {
+    background: #232D55;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    justify-content: flex-start;
+    padding: 12px 20px;
+    flex-wrap: wrap;
+}
+.site-logo {
+    display: flex;
+    align-items: center;
+}
+.site-logo img {
+    display: block;
+    height: 48px;
+    width: auto;
+}
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.nav-links a {
+    color: #ffffff;
+    font-weight: bold;
+    padding-bottom: 4px;
+    position: relative;
+    text-decoration: none;
+}
+.nav-links a::after {
+    background: #74C5EA;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+    width: 100%;
+}
+.nav-links a:hover::after,
+.nav-links a:focus::after {
+    transform: scaleX(1);
+}
+/* Main class */
+.page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
 h1,h2,p{
     text-align: center;
 }
@@ -17,4 +73,52 @@ h2 {
 p {
     width: 80%;
     margin: 10px auto;
+}
+.book-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px auto;
+}
+.book-table th,
+.book-table td {
+    border: 1px solid #232D55;
+    padding: 12px;
+    text-align: left;
+}
+.book-table th {
+    background: #232D55;
+    color: #ffffff;
+}
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+.library-form {
+    border: 1px solid #232D55;
+    padding: 20px;
+}
+.library-form label {
+    display: block;
+    font-weight: bold;
+    margin: 14px 0 6px;
+}
+.library-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #232D55;
+}
+.library-form button {
+    background: #232D55;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 16px;
+    padding: 10px 16px;
+}
+.library-form button:hover {
+    background: #74C5EA;
+    color: #000000;
 }

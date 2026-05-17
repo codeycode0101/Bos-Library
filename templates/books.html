@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Library - Available Books{% endblock %}
+
+{% block content %}
+<h1>Available Books</h1>
+<p>This page will show the books that are ready to borrow from the library.</p>
+
+<table class="book-table">
+    <thead>
+        <tr>
+            <th>ISBN</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>9780008533571</td>
+            <td>Watching You</td>
+            <td>Helen Fields</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>9781847941831</td>
+            <td>Atomic Habits</td>
+            <td>James Clear</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>9781405807050</td>
+            <td>Carol Ann Duffy Selected Poems</td>
+            <td>Michael J. Woods</td>
+            <td>Available</td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}
