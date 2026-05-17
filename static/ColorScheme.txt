@@ -1,0 +1,5 @@
+Bosworth Color Theme
+1. #232D55 - NAVY
+2. #74C5EA - LIGHTBLUE
+3. #FFFFFF - WHITE
+4. #000000 - BLACK

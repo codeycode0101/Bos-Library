@@ -7,7 +7,16 @@
     <title>Library - About</title>
 </head>
 <body>
-    <h1>About the Library</h1>
-    <p>Welcome to our library! We are dedicated to providing a wide range of books and resources for all ages.</p>
+    <nav class="site-nav">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('books') }}">Available Books</a>
+        <a href="{{ url_for('borrow_return') }}">Borrow / Return</a>
+    </nav>
+
+    <main class="page">
+        <h1>About the Library</h1>
+        <p>Welcome to our library! We are dedicated to providing a wide range of books and resources for all ages.</p>
+    </main>
 </body>
 </html>

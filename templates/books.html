@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library - Available Books</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="site-nav">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('books') }}">Available Books</a>
+        <a href="{{ url_for('borrow_return') }}">Borrow / Return</a>
+    </nav>
+
+    <main class="page">
+        <h1>Available Books</h1>
+        <p>This page will show the books that are ready to borrow from the library.</p>
+
+        <table class="book-table">
+            <thead>
+                <tr>
+                    <th>ISBN</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>9780008533571</td>
+                    <td>Watching You</td>
+                    <td>Helen Fields</td>
+                    <td>Available</td>
+                </tr>
+                <tr>
+                    <td>9781847941831</td>
+                    <td>Atomic Habits</td>
+                    <td>James Clear</td>
+                    <td>Available</td>
+                </tr>
+                <tr>
+                    <td>9781405807050</td>
+                    <td>Carol Ann Duffy Selected Poems</td>
+                    <td>Michael J. Woods</td>
+                    <td>Available</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

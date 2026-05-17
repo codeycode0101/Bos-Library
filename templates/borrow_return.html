@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library - Borrow / Return</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="site-nav">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('books') }}">Available Books</a>
+        <a href="{{ url_for('borrow_return') }}">Borrow / Return</a>
+    </nav>
+
+    <main class="page">
+        <h1>Borrow / Return Books</h1>
+        <p>These forms are placeholders for the borrowing and returning workflow.</p>
+
+        <section class="form-grid">
+            <form class="library-form" action="#" method="get">
+                <h2>Borrow a Book</h2>
+                <label for="borrower-name">Borrower name</label>
+                <input id="borrower-name" name="borrower-name" type="text" placeholder="Student or staff name">
+
+                <label for="borrow-isbn">Book ISBN</label>
+                <input id="borrow-isbn" name="borrow-isbn" type="text" placeholder="Enter ISBN">
+
+                <button type="submit">Borrow Book</button>
+            </form>
+
+            <form class="library-form" action="#" method="get">
+                <h2>Return a Book</h2>
+                <label for="returner-name">Borrower name</label>
+                <input id="returner-name" name="returner-name" type="text" placeholder="Student or staff name">
+
+                <label for="return-isbn">Book ISBN</label>
+                <input id="return-isbn" name="return-isbn" type="text" placeholder="Enter ISBN">
+
+                <button type="submit">Return Book</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
