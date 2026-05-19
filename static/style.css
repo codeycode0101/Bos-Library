@@ -55,7 +55,7 @@ body {
 .nav-links a:focus::after {
     transform: scaleX(1);
 }
-/* <main> class */
+/* /* ================ Main class ================ */
 .page {
     max-width: 900px;
     margin: 0 auto;
@@ -199,6 +199,7 @@ p {
     gap: 20px;
     margin-top: 30px;
 }
+/* ================ Library Forms ================ */
 .library-form {
     border: 1px solid #232D55;
     padding: 20px;
