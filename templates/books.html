@@ -6,34 +6,28 @@
 <h1>Available Books</h1>
 <p>This page will show the books that are ready to borrow from the library.</p>
 
-<table class="book-table">
-    <thead>
-        <tr>
-            <th>ISBN</th>
-            <th>Title</th>
-            <th>Author</th>
-            <th>Status</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>9780008533571</td>
-            <td>Watching You</td>
-            <td>Helen Fields</td>
-            <td>Available</td>
-        </tr>
-        <tr>
-            <td>9781847941831</td>
-            <td>Atomic Habits</td>
-            <td>James Clear</td>
-            <td>Available</td>
-        </tr>
-        <tr>
-            <td>9781405807050</td>
-            <td>Carol Ann Duffy Selected Poems</td>
-            <td>Michael J. Woods</td>
-            <td>Available</td>
-        </tr>
-    </tbody>
-</table>
+<div class="books-header">
+    <label for="book-search">Search books</label>
+    <input id="book-search" class="search-input" type="search" placeholder="Search by title, author, or ISBN" aria-label="Search books">
+</div>
+
+<div id="book-grid" class="book-grid">
+    {% for book in books %}
+    <article class="book-card" data-search="{{ book.isbn }} {{ book.title }} {{ book.author }} {{ book.published }}">
+        <div class="book-cover-wrapper">
+            <img class="book-cover" src="{{ url_for('static', filename='images/covers/' ~ book.cover) }}" alt="Cover for {{ book.title }}">
+        </div>
+        <div class="book-details">
+            <h2>{{ book.title }}</h2>
+            <p><strong>Author:</strong> {{ book.author }}</p>
+            <p><strong>ISBN:</strong> {{ book.isbn }}</p>
+            <p><strong>Published:</strong> {{ book.published }}</p>
+            <p class="book-description">{{ book.description }}</p>
+            <p class="book-status"><strong>Status:</strong> {{ book.status }}</p>
+        </div>
+    </article>
+    {% endfor %}
+</div>
+
+<div id="no-results" class="no-results" hidden>No books match your search.</div>
 {% endblock %}

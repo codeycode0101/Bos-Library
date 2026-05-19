@@ -33,6 +33,7 @@ body {
 }
 .nav-links a {
     color: #ffffff;
+    display: inline-block;
     font-weight: bold;
     padding-bottom: 4px;
     position: relative;
@@ -47,14 +48,14 @@ body {
     position: absolute;
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 0.25s ease;
+    transition: transform 0.4s ease;
     width: 100%;
 }
 .nav-links a:hover::after,
 .nav-links a:focus::after {
     transform: scaleX(1);
 }
-/* Main class */
+/* <main> class */
 .page {
     max-width: 900px;
     margin: 0 auto;
@@ -88,6 +89,109 @@ p {
 .book-table th {
     background: #232D55;
     color: #ffffff;
+}
+.books-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin: 20px auto 30px;
+    max-width: 760px;
+    text-align: center;
+}
+.books-header label {
+    font-weight: bold;
+    letter-spacing: 0.03em;
+}
+.search-input {
+    width: 100%;
+    max-width: 520px;
+    padding: 12px 14px;
+    border: 2px solid #232D55;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin: 0 auto 30px;
+    max-width: 980px;
+}
+.book-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(35, 45, 85, 0.17);
+    border-radius: 30px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 22px 48px rgba(35, 45, 85, 0.10);
+}
+.book-cover-wrapper {
+    position: relative;
+    height: 170px;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(116, 197, 234, 0.28), rgba(35, 45, 85, 0.12));
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.book-cover {
+    width: 140%;
+    max-width: none;
+    position: absolute;
+    left: 50%;
+    top: -32px;
+    transform: translateX(-50%);
+    border-radius: 0 0 26px 26px;
+    box-shadow: 0 24px 56px rgba(35, 45, 85, 0.16);
+}
+.book-details {
+    padding: 26px 26px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 12px;
+    text-align: left;
+}
+.book-details h2 {
+    margin: 0;
+    font-size: 1.45rem;
+    color: #1f3155;
+    line-height: 1.2;
+    text-align: left;
+}
+.book-details p {
+    margin: 0;
+    line-height: 1.5;
+    color: #3d4a68;
+    text-align: left;
+}
+.book-description {
+    color: #4a556f;
+}
+.book-status {
+    margin-top: 10px;
+    font-weight: 700;
+    color: #1b3c61;
+}
+@media (max-width: 840px) {
+    .book-cover-wrapper {
+        height: 150px;
+    }
+    .book-cover {
+        width: 170%;
+        top: -28px;
+    }
+    .book-details {
+        padding: 20px 18px 24px;
+    }
+}
+.no-results {
+    margin: 16px auto;
+    text-align: center;
+    color: #991b1b;
+    font-size: 1rem;
 }
 .form-grid {
     display: grid;

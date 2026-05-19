@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+    <!-- Site Navigation -->
     <nav class="site-nav">
         <a class="site-logo" href="{{ url_for('index') }}" aria-label="Bosworth Library home">
             <img src="{{ url_for('static', filename='images/bosworth-logo.png') }}" alt="Bosworth Independent School logo">
@@ -19,7 +20,8 @@
             <a href="{{ url_for('borrow_return') }}">Borrow / Return</a>
         </div>
     </nav>
-
+    
+    <!-- Main content -->
     <main class="page">
         {% block content %}{% endblock %}
     </main>
