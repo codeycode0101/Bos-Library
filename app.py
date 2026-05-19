@@ -1,4 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+from datetime import timedelta
+import mysql.connector
 
 app = Flask(__name__)
 
@@ -27,7 +29,6 @@ def borrow_return():
 # Renders the index.html template, passing the name variable to it (defaulting to "Guest" if no name is provided).
 def index(name="Guest"):
     return render_template('index.html', name=name)
-
 
 if __name__ == '__main__':
     app.run(debug=True)
