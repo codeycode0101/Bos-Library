@@ -7,24 +7,26 @@
 <p>These forms are placeholders for the borrowing and returning workflow.</p>
 
 <section class="form-grid">
+    <!-- Borrow Form -->
     <form class="library-form" action="#" method="get">
         <h2>Borrow a Book</h2>
-        <label for="borrower-name">Borrower name</label>
-        <input id="borrower-name" name="borrower-name" type="text" placeholder="Student or staff name">
+        <label for="borrower-id">Borrower ID</label>
+        <input id="borrower-id" name="borrower-id" type="text" placeholder="Enter borrower ID">
 
-        <label for="borrow-isbn">Book ISBN</label>
-        <input id="borrow-isbn" name="borrow-isbn" type="text" placeholder="Enter ISBN">
+        <label for="borrow-title">Book Title</label>
+        <input id="borrow-title" name="borrow-title" type="text" placeholder="Enter book title">
 
         <button type="submit">Borrow Book</button>
     </form>
 
+    <!-- Return Form -->
     <form class="library-form" action="#" method="get">
         <h2>Return a Book</h2>
-        <label for="returner-name">Borrower name</label>
-        <input id="returner-name" name="returner-name" type="text" placeholder="Student or staff name">
+        <label for="returner-id">Borrower ID</label>
+        <input id="returner-id" name="returner-id" type="text" placeholder="Enter borrower ID">
 
-        <label for="return-isbn">Book ISBN</label>
-        <input id="return-isbn" name="return-isbn" type="text" placeholder="Enter ISBN">
+        <label for="return-title">Book Title</label>
+        <input id="return-title" name="return-title" type="text" placeholder="Enter book title">
 
         <button type="submit">Return Book</button>
     </form>
