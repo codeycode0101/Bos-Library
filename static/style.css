@@ -33,6 +33,7 @@ body {
 }
 .nav-links a {
     color: #ffffff;
+    display: inline-block;
     font-weight: bold;
     padding-bottom: 4px;
     position: relative;
@@ -47,14 +48,14 @@ body {
     position: absolute;
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 0.25s ease;
+    transition: transform 0.4s ease;
     width: 100%;
 }
 .nav-links a:hover::after,
 .nav-links a:focus::after {
     transform: scaleX(1);
 }
-/* Main class */
+/* <main> class */
 .page {
     max-width: 900px;
     margin: 0 auto;
