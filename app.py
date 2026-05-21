@@ -4,36 +4,33 @@ import mysql.connector
 import json
 import os
 
-from flask import Flask, render_template
-
 app = Flask(__name__)
 
 # Find user_id based on their name
 
 # Find book's ISBN based on the name of the book
-def find_book(title):
-    cursor.execute("""
-    SELECT books.ISBN FROM books 
-    WHERE books.Title LIKE %s""",(f'%{title}%',))
+def find_isbn(title):
+    cursor.execute("SELECT books.ISBN FROM books WHERE books.Title LIKE %s",(f'%{title}%',))
 
-    book_ISBN = cursor.fetchall()
-    
+    # Fetches result row from executed query
+    book_ISBN = cursor.fetchone()
+
     if not book_ISBN:
         return "Sorry, we don't have this book."
     
-    return book_ISBN
+    return book_ISBN[0]
 
 # Check how many books does the user borrow
 def count(user_id):
-    cursor.execute("""
-    SELECT count(idBorrow) FROM borrows
-    WHERE idUser = %s"""
-    ,(user_id,))
+    cursor.execute("SELECT COUNT(idBorrow) FROM borrows WHERE idUser = %s",(user_id,))
 
-    count = cursor.fetchall()[0][0]
+    count = cursor.fetchone()
+    count2 = count[0]
     print(count)
+    print(count2)
 
-    if count > 3:
+    # TODO: Later implement a portal to change such parameters on the web app. Not in the code directly.
+    if count2 > 3:
         return False
     return True
 
@@ -49,7 +46,7 @@ db = mysql.connector.connect(
 # Get a cursor
 cursor = db.cursor()
 
-
+# Function to load book data from a JSON file
 def load_books():
     data_path = os.path.join(app.root_path, 'data', 'books.json')
     with open(data_path, 'r', encoding='utf-8') as file:
@@ -72,24 +69,24 @@ def books():
 # Route for the borrow and return page
 @app.route('/borrow-return', strict_slashes=False, methods=['GET', 'POST'])
 def borrow_return():
-    # TODO: For borrowing and returning books, use an NFC reader to read student card data
+    # TODO: For borrowing and returning books, use an NFC reader to read student card data.
     # and a barcode scanner to scan ISBN barcodes so the system can store the book information.
+    # Retrieve the user_id and book_ISBN from the form data, then find an available copy of the book and assign it to the user.
     if request.method == 'POST':
-        user_id= request.form.get('borrower-id')
-        if user_id == None:
+        user_id = request.form.get('borrower-id')
+        if user_id:
+            book_title = request.form.get('borrow-title')
+            book_ISBN = find_isbn(book_title)
+            # Debug
+            print(book_ISBN)
+        else:    
             return "Invalid id"
-        book_title = request.form.get('borrow-title')
-        book_ISBN = find_book(book_title)
-        print(book_ISBN[0][0])
 
         # Find available copy
-        cursor.execute("""
-        SELECT copy_id FROM book_copies 
-        WHERE copy_ISBN = %s AND copy_status = 'Available' 
-        LIMIT 1""", (book_ISBN[0][0],))
+        cursor.execute("SELECT copy_id FROM book_copies WHERE copy_ISBN = %s AND copy_status = 'Available'", (book_ISBN,))
 
-        # Assign the id of the copy 
-        copy_id = cursor.fetchall()
+        # Assign the id of the copy
+        copy_id = cursor.fetchone()
         print(copy_id)
 
         # If there is no copy available:
@@ -97,32 +94,32 @@ def borrow_return():
             return "No available option."
         
         # Check how many books does the user borrow:
-        if count(user_id) == False:
+        if not count(user_id):
             return 'You have borrowed more than 3 books. Please return before borrowing.'
 
         #TODO: Ask for borrowed dates in HTML
-        # Set the borrow_date
-        # borrow_date = request.form['borrow_date']
+        #Set the borrow_date
+        borrow_date = request.form['borrow_date']
 
-        # # Calculate the due_date
-        # due_date = borrow_date + timedelta(14)
+        # Calculate the due_date
+        due_date = borrow_date + timedelta(14)
 
-        # # Add the borrow action into borrows_table
-        # parameters_borrow= [borrow_date, due_date, user_id, copy_id, book_ISBN]
-        # cursor.execute("""
-        # INSERT INTO borrows(borrow_date, due_date, idUser, book_copy_id, book_copy_ISBN) 
-        # VALUES (%s, %s, %s, %s, %s)""",
-        # (parameters_borrow))
+        # Add the borrow action into borrows_table
+        parameters_borrow= [borrow_date, due_date, user_id, copy_id, book_ISBN]
+        cursor.execute("""
+        INSERT INTO borrows(borrow_date, due_date, idUser, book_copy_id, book_copy_ISBN) 
+        VALUES (%s, %s, %s, %s, %s)""",
+        (parameters_borrow))
 
-        # # Change the copy_status
-        # parameters_copy_status = [copy_id, book_ISBN]
-        # cursor.execute("""
-        # UPDATE book_copies 
-        # SET copy_status = "Borrowed"
-        # WHERE (copy_id = %s) AND (copy_ISBN = %s)""",
-        # (parameters_copy_status))
+        # Change the copy_status
+        parameters_copy_status = [copy_id, book_ISBN]
+        cursor.execute("""
+        UPDATE book_copies 
+        SET copy_status = "Borrowed"
+        WHERE (copy_id = %s) AND (copy_ISBN = %s)""",
+        (parameters_copy_status))
 
-        # db.commit()
+        db.commit()
 
 
     return render_template('borrow_return.html')

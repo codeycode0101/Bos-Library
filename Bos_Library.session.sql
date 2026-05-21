@@ -1,1 +1,2 @@
-SELECT * FROM books;
+SELECT *
+FROM book_copies;
