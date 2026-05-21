@@ -1,2 +1,2 @@
 SELECT *
-FROM book_copies;
+FROM borrows;
