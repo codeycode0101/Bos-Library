@@ -81,11 +81,12 @@ INSERT INTO book_copies
 VALUES (1, 'Available', '9780008533571'),
   (1, 'Available', '9781398519732'),
   (1, 'Available', '9781405807050'),
-  (1, 'Available', '9781847941831'),
-  (2, 'Borrowed', '9780008533571'),
-  (2, 'Borrowed', '9781398519732'),
-  (2, 'Borrowed', '9781405807050'),
-  (2, 'Borrowed', '9781847941831');
+  (1, 'Available', '9781847941831');
+-- Temporarily disabled for testing purposes
+-- (2, 'Borrowed', '9780008533571')
+-- (2, 'Borrowed', '9781398519732'),
+-- (2, 'Borrowed', '9781405807050'),
+-- (2, 'Borrowed', '9781847941831');
 -- users
 CREATE TABLE users (
   idUser int NOT NULL,
@@ -109,7 +110,7 @@ VALUES (
   (5, 'Esther', 'Taylor', '1984-05-05', 'Teacher');
 -- borrows
 CREATE TABLE borrows (
-  idBorrow int NOT NULL,
+  idBorrow int NOT NULL AUTO_INCREMENT,
   borrow_date date DEFAULT NULL,
   return_date date DEFAULT NULL,
   due_date date DEFAULT NULL,

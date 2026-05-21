@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from datetime import timedelta
+from datetime import timedelta, datetime
 import mysql.connector
 import json
 import os
@@ -26,8 +26,8 @@ def count(user_id):
 
     count = cursor.fetchone()
     count2 = count[0]
-    print(count)
-    print(count2)
+    print("Borrow count:", count)
+    print("Borrow count (simplified):", count2)
 
     # TODO: Later implement a portal to change such parameters on the web app. Not in the code directly.
     if count2 > 3:
@@ -78,46 +78,49 @@ def borrow_return():
             book_title = request.form.get('borrow-title')
             book_ISBN = find_isbn(book_title)
             # Debug
-            print(book_ISBN)
+            print("book ISBN:", book_ISBN)
         else:    
             return "Invalid id"
 
         # Find available copy
         cursor.execute("SELECT copy_id FROM book_copies WHERE copy_ISBN = %s AND copy_status = 'Available'", (book_ISBN,))
 
-        # Assign the id of the copy
-        copy_id = cursor.fetchone()
-        print(copy_id)
+        # Retrieve the id of the copy
+        copy_id = cursor.fetchone()[0]
+        print("copy ID:", copy_id)
 
         # If there is no copy available:
         if not copy_id:
+            #TODO: Create alert boxes instead of returning text.
             return "No available option."
         
         # Check how many books does the user borrow:
         if not count(user_id):
             return 'You have borrowed more than 3 books. Please return before borrowing.'
+        
+        #Retrieve Borrow date from form as string.
+        borrow_date_str = request.form.get('borrow-date')
+        print("Borrow date:", borrow_date_str)
 
-        #TODO: Ask for borrowed dates in HTML
-        #Set the borrow_date
-        borrow_date = request.form['borrow_date']
-
-        # Calculate the due_date
-        due_date = borrow_date + timedelta(14)
+        # Convert the borrow date string to a date object
+        borrow_date = datetime.strptime(borrow_date_str, '%Y-%m-%d').date()
+        
+        # Calculate the due_date (current date + 14 days)
+        due_date = borrow_date + timedelta(days=14)
+        print("Due date:", due_date)
 
         # Add the borrow action into borrows_table
-        parameters_borrow= [borrow_date, due_date, user_id, copy_id, book_ISBN]
-        cursor.execute("""
-        INSERT INTO borrows(borrow_date, due_date, idUser, book_copy_id, book_copy_ISBN) 
-        VALUES (%s, %s, %s, %s, %s)""",
-        (parameters_borrow))
+        parameters_borrow = (borrow_date, due_date, user_id, copy_id, book_ISBN)
+        cursor.execute("INSERT INTO borrows(borrow_date, due_date, idUser, book_copy_id, book_copy_ISBN) VALUES (%s, %s, %s, %s, %s)",
+        parameters_borrow)
 
         # Change the copy_status
-        parameters_copy_status = [copy_id, book_ISBN]
+        parameters_copy_status = (copy_id, book_ISBN)
         cursor.execute("""
         UPDATE book_copies 
         SET copy_status = "Borrowed"
         WHERE (copy_id = %s) AND (copy_ISBN = %s)""",
-        (parameters_copy_status))
+        parameters_copy_status)
 
         db.commit()
 
