@@ -20,7 +20,9 @@
             <a href="{{ url_for('borrow_return') }}">Borrow / Return</a>
         </div>
     </nav>
-    
+
+    {% block flash %}{% endblock %}
+
     <!-- Main content -->
     <main class="page">
         {% block content %}{% endblock %}

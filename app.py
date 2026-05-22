@@ -1,10 +1,11 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, flash, redirect, url_for
 from datetime import timedelta, datetime
 import mysql.connector
 import json
 import os
 
 app = Flask(__name__)
+app.secret_key = 'your_secret_key'  # Required for flash messages
 
 # Find user_id based on their name
 
@@ -83,12 +84,14 @@ def borrow_return():
         print("Borrow date:", borrow_date_str)
 
         if not (user_id and book_title and borrow_date_str):
-            return "Please fill in all fields."
+            flash("Please fill in all fields.", "error")
+            return redirect(url_for('borrow_return'))
        
         book_title = request.form['borrow-title']
         book_ISBN = find_isbn(book_title)
         if not book_ISBN:
-            return "Sorry we don't have this book."
+            flash("Sorry we don't have this book.", "error")
+            return redirect(url_for('borrow_return'))
         
         print("book ISBN:", book_ISBN)
 
@@ -100,14 +103,16 @@ def borrow_return():
 
         # If there is no copy available:
         if not copy_id:
-            return "No available option."
+            flash("No available copy.", "error")
+            return redirect(url_for('borrow_return'))
 
         copy_id = copy_id[0]
         print("Copy ID:", copy_id)
         
         # Check how many books does the user borrow:
         if not allow_borrow(user_id):
-            return 'You have borrowed more than 3 books. Please return before borrowing.'
+            flash("You have borrowed more than 3 books. Please return before borrowing.", "error")
+            return redirect(url_for('borrow_return'))
 
         # Convert the borrow date string to a date object
         borrow_date = datetime.strptime(borrow_date_str, '%Y-%m-%d').date()
@@ -131,7 +136,8 @@ def borrow_return():
 
         db.commit()
 
-
+        flash("Book borrowed successfully.", "success")
+        return redirect(url_for('borrow_return'))
     return render_template('borrow_return.html')
 
 
