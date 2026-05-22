@@ -227,3 +227,105 @@ p {
     background: #74C5EA;
     color: #000000;
 }
+/* ================ Flash toast overlay ================ */
+/* Toast: Temp messages that mimic notifications in web applications */
+
+/* unordered list contains one or more messages */
+.flash-toast-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    max-width: min(360px, calc(100vw - 32px));
+    padding: 0;
+    pointer-events: none;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 100%;
+    z-index: 1000;
+}
+/* Toast container (holds text and close btn) */
+.flash-toast-stack .toast {
+    align-items: flex-start;
+    animation: toast-in 0.3s ease forwards;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(35, 45, 85, 0.18);
+    display: flex;
+    font-weight: bold;
+    gap: 10px;
+    justify-content: space-between;
+    opacity: 1;
+    padding: 14px 12px 14px 16px;
+    pointer-events: auto;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+/* Toast sliding out */
+.flash-toast-stack .toast--dismissing {
+    animation: toast-out 0.25s ease forwards;
+}
+/* Alert message */
+.flash-toast-stack .toast-text {
+    flex: 1;
+    line-height: 1.4;
+    text-align: left;
+}
+/* x button */
+.flash-toast-stack .toast-close {
+    background: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-size: 1.25rem;
+    line-height: 1;
+    margin-top: -2px;
+    opacity: 0.7;
+    padding: 2px 6px;
+}
+/* Bold when mouse over close btn */
+.flash-toast-stack .toast-close:hover,
+.flash-toast-stack .toast-close:focus {
+    /* opacity: 1;
+    outline: 2px solid currentColor;
+    outline-offset: 2px; */
+    font-weight: bold;
+}
+/* ============================================= Alert types ============================================= */
+.flash-toast-stack .alert-error {
+    background: #fde8e8;
+    border: 1px solid #c53030;
+    color: #9b2c2c;
+}
+.flash-toast-stack .alert-success {
+    background: #e6ffed;
+    border: 1px solid #2f855a;
+    color: #22543d;
+}
+.flash-toast-stack .alert-message {
+    background: #ebf8ff;
+    border: 1px solid #3182ce;
+    color: #2c5282;
+}
+/* ============================================= Toast Animations ============================================= */
+@keyframes toast-in {
+    from {
+        opacity: 0;
+        transform: translateX(110%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes toast-out {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(110%);
+    }
+}

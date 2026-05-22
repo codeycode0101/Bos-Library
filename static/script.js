@@ -1,4 +1,23 @@
 document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.toast-close').forEach((button) => {
+        button.addEventListener('click', () => {
+            const toast = button.closest('.toast');
+            if (!toast) {
+                return;
+            }
+            const removeToast = () => {
+                const stack = toast.closest('.flash-toast-stack');
+                toast.remove();
+                if (stack && !stack.querySelector('.toast')) {
+                    stack.remove();
+                }
+            };
+            toast.classList.add('toast--dismissing');
+            toast.addEventListener('animationend', removeToast, { once: true });
+            window.setTimeout(removeToast, 300);
+        });
+    });
+
     const searchInput = document.getElementById('book-search');
     const bookGrid = document.getElementById('book-grid');
     const noResults = document.getElementById('no-results');
