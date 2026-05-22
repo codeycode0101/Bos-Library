@@ -228,6 +228,9 @@ p {
     color: #000000;
 }
 /* ================ Flash toast overlay ================ */
+/* Toast: Temp messages that mimic notifications in web applications */
+
+/* unordered list contains one or more messages */
 .flash-toast-stack {
     display: flex;
     flex-direction: column;
@@ -243,6 +246,7 @@ p {
     width: 100%;
     z-index: 1000;
 }
+/* Toast container (holds text and close btn) */
 .flash-toast-stack .toast {
     align-items: flex-start;
     animation: toast-in 0.3s ease forwards;
@@ -257,15 +261,17 @@ p {
     pointer-events: auto;
     transition: opacity 0.25s ease, transform 0.25s ease;
 }
+/* Toast sliding out */
 .flash-toast-stack .toast--dismissing {
-    opacity: 0;
-    transform: translateX(110%);
+    animation: toast-out 0.25s ease forwards;
 }
+/* Alert message */
 .flash-toast-stack .toast-text {
     flex: 1;
     line-height: 1.4;
     text-align: left;
 }
+/* x button */
 .flash-toast-stack .toast-close {
     background: transparent;
     border: none;
@@ -278,6 +284,7 @@ p {
     opacity: 0.7;
     padding: 2px 6px;
 }
+/* Bold when mouse over close btn */
 .flash-toast-stack .toast-close:hover,
 .flash-toast-stack .toast-close:focus {
     /* opacity: 1;
@@ -285,6 +292,7 @@ p {
     outline-offset: 2px; */
     font-weight: bold;
 }
+/* ============================================= Alert types ============================================= */
 .flash-toast-stack .alert-error {
     background: #fde8e8;
     border: 1px solid #c53030;
@@ -300,6 +308,7 @@ p {
     border: 1px solid #3182ce;
     color: #2c5282;
 }
+/* ============================================= Toast Animations ============================================= */
 @keyframes toast-in {
     from {
         opacity: 0;
@@ -308,5 +317,15 @@ p {
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+@keyframes toast-out {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(110%);
     }
 }

@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             };
             toast.classList.add('toast--dismissing');
-            toast.addEventListener('transitionend', removeToast, { once: true });
+            toast.addEventListener('animationend', removeToast, { once: true });
             window.setTimeout(removeToast, 300);
         });
     });
