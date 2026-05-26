@@ -58,18 +58,18 @@ def return_book():
         else:
             cursor.execute("SELECT idBorrow FROM borrows WHERE idUser = %s AND book_copy_ISBN = %s AND returned IS NULL",(user_id, book_ISBN))
         
-        borrow_record = cursor.fetchone()[0]
-        if not borrow_record:
+        row = cursor.fetchone()
+        if not row:
             flash("No record of borrowing this book found for this user.", "error")
             return redirect(url_for('borrow_return'))
+        borrow_record = row[0]
         
         # Debugging print
         print("Borrow record found:", borrow_record)
 
         # Pull the due date from the borrow record  
         cursor.execute("SELECT due_date FROM borrows WHERE idBorrow = %s",(borrow_record,))      
-        due_date_str = cursor.fetchone()[0]
-        due_date = datetime.strptime(due_date_str, '%Y-%m-%d')
+        due_date = cursor.fetchone()[0]
 
         # Check whether the return date > due date
         return_date = datetime.strptime(return_date_str, '%Y-%m-%d')
@@ -83,14 +83,11 @@ def return_book():
         
         # Change the status of the book copy to 'available'
         if copy_id:
-            cursor.execute("UPDATE book_copies SET status = 'available' WHERE ISBN = %s AND idCopy = %s",(book_ISBN, copy_id))
+            cursor.execute("UPDATE book_copies SET status = 'available' WHERE ISBN = %s AND idCopy = %s AND status = 'borrowed'",(book_ISBN, copy_id))
         else:  
-            cursor.execute("UPDATE book_copies SET status = 'available' WHERE ISBN = %s",(book_ISBN))
+            cursor.execute("UPDATE book_copies SET status = 'available' WHERE ISBN = %s AND status = 'borrowed' LIMIT 1",(book_ISBN,))
         
         # Commit the changes to the database
         db.commit()
-
-        # Tell the user that the book has been returned successfully
-        flash("Book returned successfully.", "success")
         return redirect(url_for('borrow_return'))
         
