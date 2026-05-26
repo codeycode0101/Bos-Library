@@ -19,7 +19,7 @@ def find_isbn(title):
 
 # Check how many books does the user borrow
 def allow_borrow(user_id):
-    cursor.execute("SELECT COUNT(idBorrow) FROM borrows WHERE idUser = %s",(user_id,))
+    cursor.execute("SELECT COUNT(idBorrow) FROM borrows WHERE idUser = %s AND returned IS NULL",(user_id,))
 
     count = cursor.fetchone()
     

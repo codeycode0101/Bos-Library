@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from datetime import timedelta, datetime
 from borrow_function import borrow
+from return_function import return_book
 import mysql.connector
 import json
 import os
@@ -48,7 +49,11 @@ def books():
 def borrow_return():
     # TODO: For borrowing and returning books, use an NFC reader to read student card data.
     # and a barcode scanner to scan ISBN barcodes so the system can store the book information.
+
+    # TODO FOR QUANG: Create an if statement to differentiate between borrow and return form submissions.
+
     borrow()
+    return_book()
     return render_template('borrow_return.html')
 
 
