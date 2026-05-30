@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request
-from datetime import timedelta, datetime
 from borrow_function import borrow
 from return_function import return_book
+from active_borrows import get_active_borrows
+from debug import debug, debug_error, debug_warning, debug_info, debug_success
 import mysql.connector
 import json
 import os
@@ -52,15 +53,23 @@ def borrow_return():
 
     if request.method == 'POST':
         action = request.form.get('action')
-        print("DEBUG: borrow_return route received POST")
-        print("DEBUG: form action:", action)
+        debug("borrow_return route received POST", color='yellow')
+        debug(f"form action: {action}", color='cyan')
 
         if action == 'borrow':
-            borrow()
+            resp = borrow()
+            if resp:
+                return resp
         elif action == 'return':
-            return_book()
+            resp = return_book()
+            if resp:
+                return resp
 
-    return render_template('borrow_return.html')
+    # Query active borrows to populate dashboard tab
+    active_borrows = get_active_borrows(cursor)
+    debug_success(f"Active borrows fetched: {active_borrows}")
+
+    return render_template('borrow_return.html', active_borrows=active_borrows)
 
 
 # Route for the index page, with an optional name parameter.

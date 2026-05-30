@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, flash, redirect, url_for
+from debug import debug, debug_error, debug_warning, debug_info
 from datetime import datetime, timedelta
 import mysql.connector
 
@@ -45,10 +46,10 @@ def return_book():
         return redirect(url_for('borrow_return'))
 
     # Debugging prints
-    print("User ID:", user_id)
-    print("Book title:", book_title)
-    print("Return date:", return_date_str)
-    print("Copy ID:", copy_id)
+    debug_info(f"User ID: {user_id}")
+    debug_info(f"Book title: {book_title}")
+    debug_info(f"Return date: {return_date_str}")
+    debug_info(f"Copy ID: {copy_id}")
 
     if not (user_id and book_title and return_date_str):
         flash("Please fill in all fields.", "error")
@@ -67,7 +68,7 @@ def return_book():
     borrow_record = row[0]
 
     # Debugging print
-    print("Borrow record found:", borrow_record)
+    debug_info(f"Borrow record found: {borrow_record}")
 
     # Pull the due date from the borrow record  
     cursor.execute("SELECT due_date FROM borrows WHERE idBorrow = %s",(borrow_record,))      

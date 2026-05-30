@@ -68,4 +68,33 @@ document.addEventListener('DOMContentLoaded', function () {
             initialTab.click();
         }
     }
+    // Active borrows table row selection highlighting when clicked, and deselect when clicking outside the table
+    const activeBorrowTable = document.querySelector('#active-borrows-panel table.data-table');
+    let selectedRow = null;
+
+    if (activeBorrowTable) {
+        const rows = Array.from(activeBorrowTable.querySelectorAll('.selectable-row'));
+
+        rows.forEach(row => {
+            row.addEventListener('click', (event) => {
+                event.stopPropagation();
+                const isSelected = row.classList.contains('selected');
+
+                rows.forEach(r => r.classList.remove('selected'));
+                if (!isSelected) {
+                    row.classList.add('selected');
+                    selectedRow = row;
+                } else {
+                    selectedRow = null;
+                }
+            });
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!activeBorrowTable.contains(event.target) && selectedRow) {
+                selectedRow.classList.remove('selected');
+                selectedRow = null;
+            }
+        });
+    }
 });

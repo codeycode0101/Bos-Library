@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, flash, redirect, url_for
+from debug import debug, debug_error, debug_warning, debug_info
 from datetime import datetime, timedelta
 import mysql.connector
 
@@ -22,7 +23,7 @@ def allow_borrow(user_id):
     cursor.execute("SELECT COUNT(idBorrow) FROM borrows WHERE idUser = %s AND returned IS NULL",(user_id,))
 
     count = cursor.fetchone()
-    print("Amount of books borrowed:", count[0])
+    debug_info(f"Amount of books borrowed: {count[0]}")
     # TODO: Later implement a portal to change such parameters on the web app. Not in the code directly.
 
     # TODO: r now, I set the limit to 3 books. If the user has borrowed more than 3 books, they cannot borrow anymore until they return some.
@@ -51,9 +52,9 @@ def borrow():
     borrow_date_str = request.form.get('borrow-date')
 
     # Debugging prints
-    print("User ID:", user_id)
-    print("Book title:", book_title)
-    print("Borrow date:", borrow_date_str)
+    debug_info(f"User ID: {user_id}")
+    debug_info(f"Book title: {book_title}")
+    debug_info(f"Borrow date: {borrow_date_str}")
 
     if not (user_id and book_title and borrow_date_str):
         flash("Please fill in all fields.", "error")
@@ -66,7 +67,7 @@ def borrow():
         return redirect(url_for('borrow_return'))
 
     # Debugging print
-    print("book ISBN:", book_ISBN)
+    debug_info(f"book ISBN: {book_ISBN}")
 
     # Find available copy
     cursor.execute("SELECT copy_id FROM book_copies WHERE copy_ISBN = %s AND copy_status = 'Available'", (book_ISBN,))
@@ -81,7 +82,7 @@ def borrow():
 
     # Debugging print
     copy_id = copy_id[0]
-    print("Copy ID:", copy_id)
+    debug_info(f"Copy ID: {copy_id}")
 
     # Check how many books does the user borrow:
     if not allow_borrow(user_id):
@@ -93,7 +94,7 @@ def borrow():
 
     # Calculate the due_date (current date + 14 days)
     due_date = borrow_date + timedelta(days=14)
-    print("Due date:", due_date)
+    debug_info(f"Due date: {due_date}")
 
     # Add the borrow action into borrows_table
     parameters_borrow = (borrow_date, due_date, user_id, copy_id, book_ISBN)

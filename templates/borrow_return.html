@@ -29,11 +29,13 @@
             <p class="sidebar-label">Dashboard</p>
             <button type="button" class="dashboard-tab active" data-target="borrow-panel">Borrow Books</button>
             <button type="button" class="dashboard-tab" data-target="return-panel">Return Books</button>
+            <button type="button" class="dashboard-tab" data-target="active-borrows-panel">Active Borrows</button>
         </div>
-
-        <div class="sidebar-panel sidebar-info">
-            <p class="sidebar-info-title">How it works</p>
-            <p>Select either Borrow or Return from the sidebar, then complete the form to process a transaction. You can swap views without leaving the page.</p>
+        <!-- Removed the 'How it works' panel per design request -->
+        
+        <div class="sidebar-panel sidebar-actions">
+            <p class="sidebar-info-title">Quick Actions</p>
+            <p style="font-size:0.95rem;color:#556185;">Use the buttons to switch workflows. Forms appear on the right.</p>
         </div>
     </aside>
 
@@ -75,6 +77,42 @@
 
                 <button type="submit">Return Book</button>
             </form>
+        </section>
+
+        <section id="active-borrows-panel" class="dashboard-section">
+            <h2>Active Borrows</h2>
+            <div class="table-responsive">
+                <table class="book-table data-table">
+                    <thead>
+                        <tr>
+                            <th>Borrower ID</th>
+                            <th>Borrower</th>
+                            <th>ISBN</th>
+                            <th>Copy ID</th>
+                            <th>Title</th>
+                            <th>Borrow Date</th>
+                            <th>Due Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if active_borrows %}
+                            {% for row in active_borrows %}
+                                <tr class="selectable-row" data-selected="false">
+                                    <td>{{ row.idUser }}</td>
+                                    <td>{{ row.first_name }} {{ row.last_name }}</td>
+                                    <td>{{ row.book_copy_ISBN }}</td>
+                                    <td>{{ row.book_copy_id }}</td>
+                                    <td>{{ row.Title or '—' }}</td>
+                                    <td class="muted">{{ row.borrow_date }}</td>
+                                    <td><span class="due-pill{% if row.overdue %} overdue{% endif %}">{{ row.due_date }}</span></td>
+                                </tr>
+                            {% endfor %}
+                        {% else %}
+                            <tr><td colspan="7" style="text-align:center;">No active borrows.</td></tr>
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
         </section>
     </div>
 </div>
