@@ -22,7 +22,7 @@ db = mysql.connector.connect(
 )
 
 # Get a cursor
-cursor = db.cursor()
+cursor = db.cursor(buffered=True)
 
 # Function to load book data from a JSON file
 def load_books():
@@ -50,10 +50,16 @@ def borrow_return():
     # TODO: For borrowing and returning books, use an NFC reader to read student card data.
     # and a barcode scanner to scan ISBN barcodes so the system can store the book information.
 
-    # TODO FOR QUANG: Create an if statement to differentiate between borrow and return form submissions.
+    if request.method == 'POST':
+        action = request.form.get('action')
+        print("DEBUG: borrow_return route received POST")
+        print("DEBUG: form action:", action)
 
-    borrow()
-    return_book()
+        if action == 'borrow':
+            borrow()
+        elif action == 'return':
+            return_book()
+
     return render_template('borrow_return.html')
 
 

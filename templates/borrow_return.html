@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Library - Borrow / Return{% endblock %}
+{% block title %}Library - Borrow / Return Dashboard{% endblock %}
 
 {% block flash %}
 {% with messages = get_flashed_messages(with_categories=true) %}
@@ -18,38 +18,65 @@
 {% endblock %}
 
 {% block content %}
-<h1>Borrow / Return Books</h1>
-<p>These forms are placeholders for the borrowing and returning workflow.</p>
+<div class="dashboard-intro">
+    <h1>Borrow & Return Dashboard</h1>
+    <p>Switch between borrow and return workflows from a single admin-style dashboard.</p>
+</div>
 
-<section class="form-grid">
-    <!-- Borrow Form -->
-    <form class="library-form" action="{{ url_for('borrow_return') }}" method="post">
-        <h2>Borrow a Book</h2>
-        <label for="borrower-id">Borrower ID</label>
-        <input id="borrower-id" name="borrower-id" type="text" placeholder="Enter borrower ID">
+<div class="dashboard-layout">
+    <aside class="dashboard-sidebar">
+        <div class="sidebar-panel">
+            <p class="sidebar-label">Dashboard</p>
+            <button type="button" class="dashboard-tab active" data-target="borrow-panel">Borrow Books</button>
+            <button type="button" class="dashboard-tab" data-target="return-panel">Return Books</button>
+        </div>
 
-        <label for="borrow-title">Book Title</label>
-        <input id="borrow-title" name="borrow-title" type="text" placeholder="Enter book title">
+        <div class="sidebar-panel sidebar-info">
+            <p class="sidebar-info-title">How it works</p>
+            <p>Select either Borrow or Return from the sidebar, then complete the form to process a transaction. You can swap views without leaving the page.</p>
+        </div>
+    </aside>
 
-        <label for="borrow-date">Borrow Date</label>
-        <input id="borrow-date" name="borrow-date" type="date">
+    <div class="dashboard-panel">
+        <section id="borrow-panel" class="dashboard-section active">
+            <h2>Borrow a Book</h2>
+            <form class="library-form" action="{{ url_for('borrow_return') }}" method="post">
+                <input type="hidden" name="action" value="borrow">
 
-        <button type="submit">Borrow Book</button>
-    </form>
+                <label for="borrower-id">Borrower ID</label>
+                <input id="borrower-id" name="borrower-id" type="text" placeholder="Enter borrower ID">
 
-    <!-- Return Form -->
-    <form class="library-form" action="#" method="post">
-        <h2>Return a Book</h2>
-        <label for="returner-id">Borrower ID</label>
-        <input id="returner-id" name="returner-id" type="text" placeholder="Enter borrower ID">
+                <label for="borrow-title">Book Title</label>
+                <input id="borrow-title" name="borrow-title" type="text" placeholder="Enter book title">
 
-        <label for="return-title">Book Title</label>
-        <input id="return-title" name="return-title" type="text" placeholder="Enter book title">
+                <label for="borrow-date">Borrow Date</label>
+                <input id="borrow-date" name="borrow-date" type="date">
 
-        <label for="return-date">Return Date</label>
-        <input id="return-date" name="return-date" type="date">
+                <button type="submit">Borrow Book</button>
+            </form>
+        </section>
 
-        <button type="submit">Return Book</button>
-    </form>
-</section>
+        <section id="return-panel" class="dashboard-section">
+            <h2>Return a Book</h2>
+            <form class="library-form" action="{{ url_for('borrow_return') }}" method="post">
+                <input type="hidden" name="action" value="return">
+
+                <label for="returner-id">Borrower ID</label>
+                <input id="returner-id" name="returner-id" type="text" placeholder="Enter borrower ID">
+
+                <label for="return-title">Book Title</label>
+                <input id="return-title" name="return-title" type="text" placeholder="Enter book title">
+
+                <label for="copy-id">Copy ID (optional)</label>
+                <input id="copy-id" name="copy-id" type="text" placeholder="Enter copy ID if known">
+
+                <label for="return-date">Return Date</label>
+                <input id="return-date" name="return-date" type="date">
+
+                <button type="submit">Return Book</button>
+            </form>
+        </section>
+    </div>
+</div>
 {% endblock %}
+
