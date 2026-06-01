@@ -1,5 +1,5 @@
 from datetime import datetime
-from debug import debug_error
+from src.debug import debug_error
 
 
 def get_active_borrows(cursor):

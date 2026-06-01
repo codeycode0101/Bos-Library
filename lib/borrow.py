@@ -1,49 +1,25 @@
-from flask import Flask, render_template, request, flash, redirect, url_for
-from debug import debug, debug_error, debug_warning, debug_info
+from flask import request, flash, redirect, url_for, render_template
+from lib.utils import db, cursor, find_isbn
+from lib.book_history import get_active_borrows
+from lib.debug import debug_info
 from datetime import datetime, timedelta
-import mysql.connector
 
-app = Flask(__name__)
-app.secret_key = 'your_secret_key'  # Required for flash messages
 
-# Find book's ISBN based on the name of the book
-def find_isbn(title):
-    cursor.execute("SELECT books.ISBN FROM books WHERE books.Title LIKE %s",(f'%{title}%',))
-
-    # Fetches result row from executed query
-    book_ISBN = cursor.fetchone()
-
-    if not book_ISBN:
-        return False
-    
-    return book_ISBN[0]
-
-# Check how many books does the user borrow
 def allow_borrow(user_id):
-    cursor.execute("SELECT COUNT(idBorrow) FROM borrows WHERE idUser = %s AND returned IS NULL",(user_id,))
-
+    """Check how many books the user has borrowed."""
+    cursor.execute("SELECT COUNT(idBorrow) FROM borrows WHERE idUser = %s AND returned IS NULL", (user_id,))
     count = cursor.fetchone()
     debug_info(f"Amount of books borrowed: {count[0]}")
+    
     # TODO: Later implement a portal to change such parameters on the web app. Not in the code directly.
-
-    # TODO: r now, I set the limit to 3 books. If the user has borrowed more than 3 books, they cannot borrow anymore until they return some.
+    # TODO: Right now, I set the limit to 3 books. If the user has borrowed more than 3 books, they cannot borrow anymore until they return some.
     if count[0] > 2:
         return False
     return True
 
-# Connect to server
-db = mysql.connector.connect(
-    host = "127.0.0.1",
-    port = 3306,
-    user = "root",
-    password = "Bosworth@123",
-    database = "bos_library"
-)
 
-# Get a buffered cursor to avoid unread-result errors when using multiple sequential queries
-cursor = db.cursor(buffered=True)
-
-def borrow():
+def borrow_book():
+    """Handle book borrowing operation."""
     if request.method != 'POST':
         return None
     
@@ -61,7 +37,7 @@ def borrow():
         return redirect(url_for('borrow_return'))
 
     # Find the book's ISBN based on the title
-    book_ISBN = find_isbn(book_title)
+    book_ISBN = find_isbn(book_title, cursor)
     if not book_ISBN:
         flash("Sorry we don't have this book.", "error")
         return redirect(url_for('borrow_return'))
@@ -112,4 +88,4 @@ def borrow():
     db.commit()
 
     flash("Book borrowed successfully.", "success")
-    return redirect(url_for('borrow_return'))
+    return render_template('borrow_return.html', active_borrows=get_active_borrows(cursor))

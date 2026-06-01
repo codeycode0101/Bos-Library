@@ -1,29 +1,14 @@
 from flask import Flask, render_template, request
-from borrow_function import borrow
-from return_function import return_book
-from active_borrows import get_active_borrows
-from debug import debug, debug_error, debug_warning, debug_info, debug_success
-import mysql.connector
+from src.borrow_book import borrow_book
+from src.return_book import return_book
+from src.book_history import get_active_borrows
+from src.debug import debug, debug_error, debug_warning, debug_info, debug_success
+from src.utils import db, cursor
 import json
 import os
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key' # Required for flash messages
-
-# I still leave the database connection here because I need to use the cursor in other functions (AI Generated code haha)
-# I can move it to a separate file later if needed.
-
-# Connect to server
-db = mysql.connector.connect(
-    host = "127.0.0.1",
-    port = 3306,
-    user = "root",
-    password = "Bosworth@123",
-    database = "bos_library"
-)
-
-# Get a cursor
-cursor = db.cursor(buffered=True)
 
 # Function to load book data from a JSON file
 def load_books():
@@ -57,15 +42,20 @@ def borrow_return():
         debug(f"form action: {action}", color='cyan')
 
         if action == 'borrow':
-            resp = borrow()
+            resp = borrow_book()
             if resp:
                 return resp
+            else:
+                debug_warning("Borrowing failed. Check the form data and try again.")
         elif action == 'return':
             resp = return_book()
             if resp:
                 return resp
+            else:
+                debug_warning("Returning failed. Check the form data and try again.")
 
     # Query active borrows to populate dashboard tab
+    # TODO: Update the table every POST request so the dashboard is always up to date.
     active_borrows = get_active_borrows(cursor)
     debug_success(f"Active borrows fetched: {active_borrows}")
 
