@@ -88,4 +88,4 @@ def borrow_book():
     db.commit()
 
     flash("Book borrowed successfully.", "success")
-    return render_template('borrow_return.html', active_borrows=get_active_borrows(cursor))
+    return redirect(url_for('borrow_return'))

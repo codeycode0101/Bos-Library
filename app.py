@@ -55,7 +55,6 @@ def borrow_return():
                 debug_warning("Returning failed. Check the form data and try again.")
 
     # Query active borrows to populate dashboard tab
-    # TODO: Update the table every POST request so the dashboard is always up to date.
     active_borrows = get_active_borrows(cursor)
     debug_success(f"Active borrows fetched: {active_borrows}")
 
