@@ -4,7 +4,7 @@ USE `bos_library`;
 --
 -- Host: localhost    Database: bos_library
 -- ------------------------------------------------------
--- Server version	8.0.46
+-- Server version	8.0.46 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
