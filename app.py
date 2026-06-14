@@ -1,3 +1,5 @@
+import os
+from dotenv import load_dotenv
 from flask import Flask, render_template, request
 from src.borrow_book import borrow_book
 from src.return_book import return_book
@@ -5,10 +7,14 @@ from src.book_history import get_active_borrows
 from src.debug import debug, debug_error, debug_warning, debug_info, debug_success
 from src.utils import db, cursor
 import json
-import os
 
+load_dotenv()
 app = Flask(__name__)
-app.secret_key = 'your_secret_key' # Required for flash messages
+secret_key = os.getenv('SECRET_KEY')
+if not secret_key:
+    debug_error('Missing SECRET_KEY environment variable')
+    raise RuntimeError('Missing SECRET_KEY environment variable')
+app.secret_key = secret_key
 
 # Function to load book data from a JSON file
 def load_books():

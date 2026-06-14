@@ -1,6 +1,6 @@
 LIBRARY DATA REQUIREMENTS
 
-The library will be divided into groups (genres). Each group has a unique ID (genre_ID), a name (for example: non_fiction, fiction, sci-fi,….), book_count.
+- The library will be divided into groups (genres). Each group has a unique ID (genre_ID), a name (for example: non_fiction, fiction, sci-fi,….), book_count.
 
 There are many books in each genre. A book has an ISBN, title, author, a genre_ID (foreign_key), is_borrowed_or_not.
 
@@ -8,10 +8,10 @@ Students and teachers can borrow books from the library. Each student/teacher ha
 
 A student/teacher can borrow at most 3 books at once. The students must return/extend after 2 weeks. Otherwise, it is considered as due. Therefore, we want to keep track when the student/teacher borrows the book.
 
-Genre: genre_ID, name, numbers_of_books in this field (optional)
+% Genre: genre_ID, name, numbers_of_books in this field (optional)
 
-Book: ISBN, title, author, is_borrowed_or_not, genre_ID (foreign key)
+% Book: ISBN, title, author, is_borrowed_or_not, genre_ID (foreign key)
 
-Student: student_ID, name, DOB, key_stage, sex, is_borrowing_or_not, is_overdue_before.
+% Student: student_ID, name, DOB, key_stage, sex, is_borrowing_or_not, is_overdue_before.
 
-Teacher: teacher_ID, name, DOB, key_stage, sex, is_borrowing_or_not, is_overdue_before.
+% Teacher: teacher_ID, name, DOB, key_stage, sex, is_borrowing_or_not, is_overdue_before.
