@@ -141,4 +141,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //         updateText();
 //     }
-// });
+});
