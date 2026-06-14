@@ -18,9 +18,10 @@ def load_books():
 
 
 # Route for the about page
-@app.route('/about', strict_slashes=False)
-def about():
-    return render_template('about.html')
+# TODO: Disabled for now, but can be enabled if needed in the future.
+# @app.route('/about', strict_slashes=False)
+# def about():
+#     return render_template('about.html')
 
 
 # Route for the available books page
