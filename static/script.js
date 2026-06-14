@@ -97,4 +97,48 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-});
+
+//     const headerPhrases = [
+//         'Simple library management for students, readers, and staff',
+//         'Designed for students, readers, and library staff',
+//         'Easy borrowing, returning, and loan tracking'
+//     ];
+//     const typingElement = document.querySelector('.typing-text');
+//     if (typingElement) {
+//         let phraseIndex = 0;
+//         let charIndex = 0;
+//         let deleting = false;
+//         const typeSpeed = 90;
+//         const deleteSpeed = 50;
+//         const pauseAfterTyping = 1800;
+
+//         const updateText = () => {
+//             const currentPhrase = headerPhrases[phraseIndex];
+
+//             if (!deleting) {
+//                 typingElement.textContent = currentPhrase.slice(0, charIndex + 1);
+//                 charIndex += 1;
+
+//                 if (charIndex === currentPhrase.length) {
+//                     deleting = true;
+//                     window.setTimeout(updateText, pauseAfterTyping);
+//                     return;
+//                 }
+//             } else {
+//                 typingElement.textContent = currentPhrase.slice(0, charIndex - 1);
+//                 charIndex -= 1;
+
+//                 if (charIndex === 0) {
+//                     deleting = false;
+//                     phraseIndex = (phraseIndex + 1) % headerPhrases.length;
+//                     window.setTimeout(updateText, 500);
+//                     return;
+//                 }
+//             }
+
+//             window.setTimeout(updateText, deleting ? deleteSpeed : typeSpeed);
+//         };
+
+//         updateText();
+//     }
+// });
