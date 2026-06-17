@@ -37,6 +37,12 @@ def books():
     return render_template('books.html', books=books)
 
 
+# Route for the login page
+@app.route('/login', strict_slashes=False, methods=['GET', 'POST'])
+def login():
+    return render_template('login.html')
+
+
 # Route for the borrow and return page
 @app.route('/borrow-return', strict_slashes=False, methods=['GET', 'POST'])
 def borrow_return():

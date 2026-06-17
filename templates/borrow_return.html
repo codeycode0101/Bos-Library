@@ -9,7 +9,7 @@
             {% for category, message in messages %}
                 <li class="toast alert-{{ category }}" role="alert">
                     <span class="toast-text">{{ message }}</span>
-                    <button type="button" class="toast-close" aria-label="Dismiss message">&times;</button>
+                    <button type="button" class="toast-close" aria-label="Dismiss message"><i class="bx bx-x" aria-hidden="true"></i></button>
                 </li>
             {% endfor %}
         </ul>
