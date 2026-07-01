@@ -56,7 +56,14 @@ body {
     transform: scaleX(1);
 }
 .nav-actions {
+    align-items: center;
+    display: flex;
+    gap: 12px;
     margin-left: auto;
+}
+.nav-user {
+    color: #ffffff;
+    font-weight: bold;
 }
 .nav-signin {
     background: #74C5EA;
@@ -73,6 +80,61 @@ body {
     background: #ffffff;
     color: #1b294e;
     transform: translateY(-1px);
+}
+/* ================ Error Page ================ */
+.page:has(.error-page) {
+    max-width: 900px;
+}
+.error-page {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: calc(100vh - 96px);
+    padding: 32px 0;
+}
+.error-panel {
+    background: #ffffff;
+    border: 1px solid rgba(35, 45, 85, 0.12);
+    border-radius: 18px;
+    box-shadow: 0 18px 40px rgba(35, 45, 85, 0.10);
+    max-width: 560px;
+    padding: 42px 34px;
+    text-align: center;
+    width: 100%;
+}
+.error-panel .bx {
+    color: #9b2c2c;
+    font-size: 3rem;
+}
+.error-panel h1 {
+    margin: 14px 0 12px;
+    text-decoration: none;
+}
+.error-panel p {
+    color: #3d4a68;
+    line-height: 1.55;
+}
+.error-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 26px;
+}
+.button-link {
+    border-radius: 8px;
+    display: inline-block;
+    font-weight: bold;
+    padding: 12px 20px;
+    text-decoration: none;
+}
+.button-link.primary {
+    background: #232D55;
+    color: #ffffff;
+}
+.button-link.secondary {
+    border: 2px solid #232D55;
+    color: #232D55;
 }
 /* /* ================ Main class ================ */
 .page {

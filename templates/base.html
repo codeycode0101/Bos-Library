@@ -20,16 +20,36 @@
                 <a href="{{ url_for('index') }}">Home</a>
                 {# <a href="{{ url_for('about') }}">About</a> #}
                 <a href="{{ url_for('books') }}">Available Books</a>
-                <a href="{{ url_for('borrow_return') }}">Borrow / Return</a>
+                {% if session.get('admin_logged_in') %}
+                    <a href="{{ url_for('borrow_return') }}">Borrow / Return</a>
+                {% endif %}
             </div>
 
             <div class="nav-actions">
-                <a class="nav-signin" href="{{ url_for('login') }}">Sign in</a>
+                {% if session.get('admin_logged_in') %}
+                    <span class="nav-user">Admin</span>
+                    <a class="nav-signin" href="{{ url_for('logout') }}">Log out</a>
+                {% else %}
+                    <a class="nav-signin" href="{{ url_for('login') }}">Sign in</a>
+                {% endif %}
             </div>
         </nav>
     {% endblock %}
 
-    {% block flash %}{% endblock %}
+    {% block flash %}
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul class="flash-toast-stack" aria-live="polite">
+                    {% for category, message in messages %}
+                        <li class="toast alert-{{ category }}" role="alert">
+                            <span class="toast-text">{{ message }}</span>
+                            <button type="button" class="toast-close" aria-label="Dismiss message"><i class="bx bx-x" aria-hidden="true"></i></button>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    {% endblock %}
 
     <!-- Main content -->
     <main class="page">
