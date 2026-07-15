@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 from flask import Flask, render_template, request
 from src.borrow_book import borrow_book
 from src.return_book import return_book
+from src.login_system import login_admin, logout_admin, require_admin_login
 from src.book_history import get_active_borrows
 from src.debug import debug, debug_error, debug_warning, debug_info, debug_success
 from src.utils import db, cursor
@@ -37,11 +38,26 @@ def books():
     return render_template('books.html', books=books)
 
 
+# Route for the login page
+@app.route('/login', strict_slashes=False, methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        return login_admin()
+
+    return render_template('login.html')
+
+
+@app.route('/logout', strict_slashes=False)
+def logout():
+    return logout_admin()
+
+
 # Route for the borrow and return page
 @app.route('/borrow-return', strict_slashes=False, methods=['GET', 'POST'])
 def borrow_return():
-    # TODO: For borrowing and returning books, use an NFC reader to read student card data.
-    # and a barcode scanner to scan ISBN barcodes so the system can store the book information.
+    auth_response = require_admin_login()
+    if auth_response is not None:
+        return auth_response
 
     if request.method == 'POST':
         action = request.form.get('action')

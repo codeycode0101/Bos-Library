@@ -3,9 +3,89 @@
 {% block title %}Library - Home page{% endblock %}
 
 {% block content %}
-<h1>Welcome to the Library!</h1>
+<section class="home-hero">
+    <div class="hero-copy">
+        <p class="eyebrow">Bosworth Independent School</p>
+        {% if session.get('admin_logged_in') %}
+            <h1>Administrator dashboard</h1>
+            <p>Manage the library efficiently, oversee borrowing activity, and keep records up to date from one place.</p>
 
-<h2>We are glad to have you here, {{ name }}</h2>
+            <div class="hero-actions">
+                <a class="button-link primary" href="{{ url_for('borrow_return') }}">Manage loans</a>
+                <a class="button-link secondary" href="{{ url_for('books') }}">View catalog</a>
+            </div>
+        {% else %}
+            <h1>Welcome back, {{ name }}.</h1>
+            <p>Discover new books, manage loans, and keep the library experience simple and welcoming for everyone.</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem voluptates explicabo quisquam ratione. Consectetur nam accusantium laborum inventore aperiam debitis voluptas temporibus facilis ad, at, animi cumque rerum, iste cupiditate.</p>
+            <div class="hero-actions">
+                <a class="button-link primary" href="{{ url_for('books') }}">Browse books</a>
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="hero-card" aria-label="Library highlights">
+        {% if session.get('admin_logged_in') %}
+            <h2>Administrator tools</h2>
+            <ul>
+                <li><i class='bx bx-transfer-alt'></i> Monitor active borrow requests</li>
+                <li><i class='bx bx-book-open'></i> Review book availability quickly</li>
+                <li><i class='bx bx-bar-chart-alt-2'></i> Keep circulation organised</li>
+            </ul>
+        {% else %}
+            <h2>Why visitors love the library</h2>
+            <ul>
+                <li><i class='bx bx-book-open'></i> Fast access to the latest titles</li>
+                <li><i class='bx bx-transfer-alt'></i> Smooth borrow and return workflow</li>
+                <li><i class='bx bx-trending-up'></i> Clear tracking for active loans</li>
+            </ul>
+        {% endif %}
+    </div>
+</section>
+
+<section class="home-highlights">
+    {% if session.get('admin_logged_in') %}
+        <article class="highlight-card">
+            <i class='bx bx-transfer-alt'></i>
+            <h3>Borrow and return</h3>
+            <p>Handle library transactions quickly and keep the circulation process moving smoothly.</p>
+            <a href="{{ url_for('borrow_return') }}">Open dashboard</a>
+        </article>
+
+        <article class="highlight-card">
+            <i class='bx bx-book-open'></i>
+            <h3>Browse the catalog</h3>
+            <p>Review available titles and help patrons find what they need with confidence.</p>
+            <a href="{{ url_for('books') }}">View catalog</a>
+        </article>
+
+        <article class="highlight-card">
+            <i class='bx bx-line-chart'></i>
+            <h3>Track activity</h3>
+            <p>Stay aware of active loans and keep the library running efficiently.</p>
+            <a href="{{ url_for('borrow_return') }}">See activity</a>
+        </article>
+    {% else %}
+        <article class="highlight-card">
+            <i class='bx bx-library'></i>
+            <h3>Explore the collection</h3>
+            <p>Browse our available books and find your next read in just a few clicks.</p>
+            <a href="{{ url_for('books') }}">View catalog</a>
+        </article>
+
+        <article class="highlight-card">
+            <i class='bx bx-bookmark'></i>
+            <h3>Find your next read</h3>
+            <p>Explore a welcoming collection of books and discover something new every visit.</p>
+            <a href="{{ url_for('books') }}">Explore books</a>
+        </article>
+
+        <article class="highlight-card">
+            <i class='bx bx-time-five'></i>
+            <h3>Easy borrowing experience</h3>
+            <p>Enjoy a simple process for checking out and returning books without hassle.</p>
+            <a href="{{ url_for('books') }}">Learn more</a>
+        </article>
+    {% endif %}
+</section>
 {% endblock %}

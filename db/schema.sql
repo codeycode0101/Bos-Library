@@ -54,441 +54,441 @@ LOCK TABLES `book_copies` WRITE;
 ;
 INSERT INTO `book_copies`
 VALUES (1, 'Available', '9780006513445'),
-(1, 'Available', '9780007119271'),
-(1, 'Available', '9780007119288'),
-(1, 'Available', '9780007119295'),
-(1, 'Available', '9780007119301'),
-(1, 'Available', '9780007119318'),
-(1, 'Available', '9780007119325'),
-(1, 'Available', '9780007120833'),
-(1, 'Available', '9780007120840'),
-(1, 'Available', '9780007120857'),
-(1, 'Available', '9780007120864'),
-(1, 'Available', '9780007120871'),
-(1, 'Available', '9780007120888'),
-(1, 'Available', '9780007120895'),
-(1, 'Available', '9780007120901'),
-(1, 'Available', '9780007120918'),
-(1, 'Available', '9780007120925'),
-(1, 'Available', '9780007120932'),
-(1, 'Available', '9780007120949'),
-(1, 'Available', '9780007120956'),
-(1, 'Available', '9780007120963'),
-(1, 'Available', '9780007120970'),
-(1, 'Available', '9780007120987'),
-(1, 'Available', '9780007120994'),
-(1, 'Available', '9780007121007'),
-(1, 'Available', '9780007121014'),
-(1, 'Available', '9780007121021'),
-(1, 'Available', '9780007121038'),
-(1, 'Available', '9780007121045'),
-(1, 'Available', '9780007121052'),
-(1, 'Available', '9780007121069'),
-(1, 'Available', '9780007121076'),
-(1, 'Available', '9780007121083'),
-(1, 'Available', '9780007136834'),
-(1, 'Available', '9780007139569'),
-(1, 'Available', '9780007149537'),
-(1, 'Available', '9780007157327'),
-(1, 'Available', '9780007255047'),
-(1, 'Available', '9780007268252'),
-(1, 'Available', '9780007268269'),
-(1, 'Available', '9780007300112'),
-(1, 'Available', '9780007300129'),
-(1, 'Available', '9780007300136'),
-(1, 'Available', '9780007300143'),
-(1, 'Available', '9780007300150'),
-(1, 'Available', '9780007300167'),
-(1, 'Available', '9780007300174'),
-(1, 'Available', '9780007300181'),
-(1, 'Available', '9780007300198'),
-(1, 'Available', '9780007300204'),
-(1, 'Available', '9780007300211'),
-(1, 'Available', '9780007300228'),
-(1, 'Available', '9780007300235'),
-(1, 'Available', '9780007300242'),
-(1, 'Available', '9780007300259'),
-(1, 'Available', '9780007300266'),
-(1, 'Available', '9780007300273'),
-(1, 'Available', '9780007300280'),
-(1, 'Available', '9780007300297'),
-(1, 'Available', '9780007300303'),
-(1, 'Available', '9780007300310'),
-(1, 'Available', '9780007339839'),
-(1, 'Available', '9780007426942'),
-(1, 'Available', '9780007426959'),
-(1, 'Available', '9780007527526'),
-(1, 'Available', '9780007527533'),
-(1, 'Available', '9780007527540'),
-(1, 'Available', '9780007527557'),
-(1, 'Available', '9780007557905'),
-(1, 'Available', '9780007714346'),
-(1, 'Available', '9780008112738'),
-(1, 'Available', '9780008112745'),
-(1, 'Available', '9780008253219'),
-(1, 'Available', '9780008262044'),
-(1, 'Available', '9780099387916'),
-(1, 'Available', '9780099478379'),
-(1, 'Available', '9780099506928'),
-(1, 'Available', '9780099771708'),
-(1, 'Available', '9780140258417'),
-(1, 'Available', '9780140431070'),
-(1, 'Available', '9780140434972'),
-(1, 'Available', '9780140434996'),
-(1, 'Available', '9780140435085'),
-(1, 'Available', '9780140435122'),
-(1, 'Available', '9780140436112'),
-(1, 'Available', '9780140436853'),
-(1, 'Available', '9780140437423'),
-(1, 'Available', '9780140437508'),
-(1, 'Available', '9780140439441'),
-(1, 'Available', '9780140449082'),
-(1, 'Available', '9780140620344'),
-(1, 'Available', '9780140620603'),
-(1, 'Available', '9780140621631'),
-(1, 'Available', '9780140622065'),
-(1, 'Available', '9780141018621'),
-(1, 'Available', '9780141023571'),
-(1, 'Available', '9780141026213'),
-(1, 'Available', '9780141034323'),
-(1, 'Available', '9780141034354'),
-(1, 'Available', '9780141034361'),
-(1, 'Available', '9780141034378'),
-(1, 'Available', '9780141034385'),
-(1, 'Available', '9780141037584'),
-(1, 'Available', '9780141184548'),
-(1, 'Available', '9780141192474'),
-(1, 'Available', '9780141322919'),
-(1, 'Available', '9780141324524'),
-(1, 'Available', '9780141439471'),
-(1, 'Available', '9780141439518'),
-(1, 'Available', '9780141439556'),
-(1, 'Available', '9780141439563'),
-(1, 'Available', '9780141439570'),
-(1, 'Available', '9780141439587'),
-(1, 'Available', '9780141439600'),
-(1, 'Available', '9780141439617'),
-(1, 'Available', '9780141439662'),
-(1, 'Available', '9780141439679'),
-(1, 'Available', '9780141439723'),
-(1, 'Available', '9780141439730'),
-(1, 'Available', '9780141439747'),
-(1, 'Available', '9780141439846'),
-(1, 'Available', '9780141441146'),
-(1, 'Available', '9780141441979'),
-(1, 'Available', '9780141999654'),
-(1, 'Available', '9780194011068'),
-(1, 'Available', '9780194791823'),
-(1, 'Available', '9780194798792'),
-(1, 'Available', '9780195456127'),
-(1, 'Available', '9780198354604'),
-(1, 'Available', '9780198370116'),
-(1, 'Available', '9780198376408'),
-(1, 'Available', '9780198399117'),
-(1, 'Available', '9780198399124'),
-(1, 'Available', '9780198399131'),
-(1, 'Available', '9780198412939'),
-(1, 'Available', '9780198412960'),
-(1, 'Available', '9780198413639'),
-(1, 'Available', '9780198421429'),
-(1, 'Available', '9780198436324'),
-(1, 'Available', '9780198608837'),
-(1, 'Available', '9780198610298'),
-(1, 'Available', '9780198611868'),
-(1, 'Available', '9780198613343'),
-(1, 'Available', '9780199102341'),
-(1, 'Available', '9780199129768'),
-(1, 'Available', '9780199147656'),
-(1, 'Available', '9780199147663'),
-(1, 'Available', '9780199148226'),
-(1, 'Available', '9780199180943'),
-(1, 'Available', '9780199558469'),
-(1, 'Available', '9780230545199'),
-(1, 'Available', '9780241538982'),
-(1, 'Available', '9780241956533'),
-(1, 'Available', '9780245606113'),
-(1, 'Available', '9780255366878'),
-(1, 'Available', '9780271014746'),
-(1, 'Available', '9780273031383'),
-(1, 'Available', '9780307277787'),
-(1, 'Available', '9780316909655'),
-(1, 'Available', '9780330431880'),
-(1, 'Available', '9780330485616'),
-(1, 'Available', '9780330511315'),
-(1, 'Available', '9780340720509'),
-(1, 'Available', '9780340905548'),
-(1, 'Available', '9780340915035'),
-(1, 'Available', '9780340999110'),
-(1, 'Available', '9780406904096'),
-(1, 'Available', '9780406925336'),
-(1, 'Available', '9780408106580'),
-(1, 'Available', '9780413772633'),
-(1, 'Available', '9780421741300'),
-(1, 'Available', '9780435181444'),
-(1, 'Available', '9780435181451'),
-(1, 'Available', '9780435183059'),
-(1, 'Available', '9780435185084'),
-(1, 'Available', '9780435185169'),
-(1, 'Available', '9780435185275'),
-(1, 'Available', '9780435185282'),
-(1, 'Available', '9780435188634'),
-(1, 'Available', '9780435188948'),
-(1, 'Available', '9780435232825'),
-(1, 'Available', '9780435235895'),
-(1, 'Available', '9780435966881'),
-(1, 'Available', '9780435966898'),
-(1, 'Available', '9780435966904'),
-(1, 'Available', '9780436401336'),
-(1, 'Available', '9780439943727'),
-(1, 'Available', '9780451528551'),
-(1, 'Available', '9780451531674'),
-(1, 'Available', '9780460045940'),
-(1, 'Available', '9780486290997'),
-(1, 'Available', '9780521046297'),
-(1, 'Available', '9780521747424'),
-(1, 'Available', '9780550100948'),
-(1, 'Available', '9780563203841'),
-(1, 'Available', '9780567292292'),
-(1, 'Available', '9780571056866'),
-(1, 'Available', '9780571094578'),
-(1, 'Available', '9780571216109'),
-(1, 'Available', '9780571327317'),
-(1, 'Available', '9780582403444'),
-(1, 'Available', '9780582469396'),
-(1, 'Available', '9780582473133'),
-(1, 'Available', '9780582829992'),
-(1, 'Available', '9780583339674'),
-(1, 'Available', '9780586058398'),
-(1, 'Available', '9780590353427'),
-(1, 'Available', '9780603580949'),
-(1, 'Available', '9780631219293'),
-(1, 'Available', '9780689837562'),
-(1, 'Available', '9780701185008'),
-(1, 'Available', '9780719542527'),
-(1, 'Available', '9780719578687'),
-(1, 'Available', '9780743477550'),
-(1, 'Available', '9780745655512'),
-(1, 'Available', '9780745664125'),
-(1, 'Available', '9780748782802'),
-(1, 'Available', '9780748785056'),
-(1, 'Available', '9780748798216'),
-(1, 'Available', '9780749082161'),
-(1, 'Available', '9780749397227'),
-(1, 'Available', '9780750900614'),
-(1, 'Available', '9780752812182'),
-(1, 'Available', '9780857053954'),
-(1, 'Available', '9780857087980'),
-(1, 'Available', '9780860037507'),
-(1, 'Available', '9780863574641'),
-(1, 'Available', '9780954007911'),
-(1, 'Available', '9780954007928'),
-(1, 'Available', '9780954866549'),
-(1, 'Available', '9780993231162'),
-(1, 'Available', '9781108465977'),
-(1, 'Available', '9781108667425'),
-(1, 'Available', '9781108859028'),
-(1, 'Available', '9781108859035'),
-(1, 'Available', '9781108863193'),
-(1, 'Available', '9781138687387'),
-(1, 'Available', '9781292133874'),
-(1, 'Available', '9781292150116'),
-(1, 'Available', '9781292183398'),
-(1, 'Available', '9781292183404'),
-(1, 'Available', '9781292232539'),
-(1, 'Available', '9781292274669'),
-(1, 'Available', '9781292274683'),
-(1, 'Available', '9781405072847'),
-(1, 'Available', '9781405087278'),
-(1, 'Available', '9781405335379'),
-(1, 'Available', '9781405852234'),
-(1, 'Available', '9781405852593'),
-(1, 'Available', '9781405892346'),
-(1, 'Available', '9781405896719'),
-(1, 'Available', '9781406364897'),
-(1, 'Available', '9781406364910'),
-(1, 'Available', '9781406364927'),
-(1, 'Available', '9781407106229'),
-(1, 'Available', '9781407182612'),
-(1, 'Available', '9781408206652'),
-(1, 'Available', '9781408517109'),
-(1, 'Available', '9781409135418'),
-(1, 'Available', '9781409326199'),
-(1, 'Available', '9781416511618'),
-(1, 'Available', '9781426320705'),
-(1, 'Available', '9781444161885'),
-(1, 'Available', '9781447980209'),
-(1, 'Available', '9781447983545'),
-(1, 'Available', '9781447984351'),
-(1, 'Available', '9781447990550'),
-(1, 'Available', '9781471834882'),
-(1, 'Available', '9781471842139'),
-(1, 'Available', '9781471842191'),
-(1, 'Available', '9781471842238'),
-(1, 'Available', '9781471843365'),
-(1, 'Available', '9781471844300'),
-(1, 'Available', '9781471844324'),
-(1, 'Available', '9781471844331'),
-(1, 'Available', '9781471844362'),
-(1, 'Available', '9781471866968'),
-(1, 'Available', '9781471876103'),
-(1, 'Available', '9781471876226'),
-(1, 'Available', '9781471889363'),
-(1, 'Available', '9781471889660'),
-(1, 'Available', '9781472258335'),
-(1, 'Available', '9781509852857'),
-(1, 'Available', '9781510405196'),
-(1, 'Available', '9781510423527'),
-(1, 'Available', '9781510424234'),
-(1, 'Available', '9781510458949'),
-(1, 'Available', '9781510470286'),
-(1, 'Available', '9781510477513'),
-(1, 'Available', '9781576731864'),
-(1, 'Available', '9781592976812'),
-(1, 'Available', '9781593392932'),
-(1, 'Available', '9781780225111'),
-(1, 'Available', '9781780747750'),
-(1, 'Available', '9781782941224'),
-(1, 'Available', '9781782941408'),
-(1, 'Available', '9781782942795'),
-(1, 'Available', '9781782942924'),
-(1, 'Available', '9781782943099'),
-(1, 'Available', '9781782943129'),
-(1, 'Available', '9781782943242'),
-(1, 'Available', '9781782943471'),
-(1, 'Available', '9781782943549'),
-(1, 'Available', '9781782943662'),
-(1, 'Available', '9781782943679'),
-(1, 'Available', '9781782943686'),
-(1, 'Available', '9781782944041'),
-(1, 'Available', '9781782944157'),
-(1, 'Available', '9781782944911'),
-(1, 'Available', '9781782944935'),
-(1, 'Available', '9781782944942'),
-(1, 'Available', '9781782944959'),
-(1, 'Available', '9781782944966'),
-(1, 'Available', '9781782944980'),
-(1, 'Available', '9781782945000'),
-(1, 'Available', '9781782945321'),
-(1, 'Available', '9781782945598'),
-(1, 'Available', '9781782945604'),
-(1, 'Available', '9781782945611'),
-(1, 'Available', '9781782945628'),
-(1, 'Available', '9781782946410'),
-(1, 'Available', '9781782946748'),
-(1, 'Available', '9781782946755'),
-(1, 'Available', '9781782946878'),
-(1, 'Available', '9781782946885'),
-(1, 'Available', '9781786328601'),
-(1, 'Available', '9781786328632'),
-(1, 'Available', '9781788101011'),
-(1, 'Available', '9781789080216'),
-(1, 'Available', '9781789080308'),
-(1, 'Available', '9781789080384'),
-(1, 'Available', '9781789080391'),
-(1, 'Available', '9781789080827'),
-(1, 'Available', '9781789082814'),
-(1, 'Available', '9781789086270'),
-(1, 'Available', '9781840224009'),
-(1, 'Available', '9781840851465'),
-(1, 'Available', '9781841467658'),
-(1, 'Available', '9781841693255'),
-(1, 'Available', '9781841693781'),
-(1, 'Available', '9781842552155'),
-(1, 'Available', '9781842553206'),
-(1, 'Available', '9781843560296'),
-(1, 'Available', '9781843625223'),
-(1, 'Available', '9781844081813'),
-(1, 'Available', '9781844192403'),
-(1, 'Available', '9781844194414'),
-(1, 'Available', '9781844892020'),
-(1, 'Available', '9781846900839'),
-(1, 'Available', '9781847156761'),
-(1, 'Available', '9781847394644'),
-(1, 'Available', '9781847621184'),
-(1, 'Available', '9781847621405'),
-(1, 'Available', '9781847622754'),
-(1, 'Available', '9781848120457'),
-(1, 'Available', '9781850082606'),
-(1, 'Available', '9781853260377'),
-(1, 'Available', '9781853268359'),
-(1, 'Available', '9781854315830'),
-(1, 'Available', '9781857493962'),
-(1, 'Available', '9781862302983'),
-(1, 'Available', '9781903240236'),
-(1, 'Available', '9781907363689'),
-(1, 'Available', '9781907363696'),
-(1, 'Available', '9781907363702'),
-(1, 'Available', '9781907363719'),
-(1, 'Available', '9781909531260'),
-(1, 'Available', '9781910432006'),
-(1, 'Available', '9781911208068'),
-(1, 'Available', '9785957600756'),
-(1, 'Available', '9785992505634'),
-(1, 'Available', '9787119033990'),
-(1, 'Available', '9787560026763'),
-(1, 'Available', '9787801034144'),
-(1, 'Available', '9788960477001'),
-(1, 'Available', '9789088141430'),
-(1, 'Available', '9789888037452'),
-(1, 'Available', '9789888597796'),
-(1, 'Available', '9789988151430'),
-(1, 'Available', '9798630248015'),
-(2, 'Available', '9780007119318'),
-(2, 'Available', '9780007268252'),
-(2, 'Available', '9780140434972'),
-(2, 'Available', '9780140439441'),
-(2, 'Available', '9780141034323'),
-(2, 'Available', '9780141034354'),
-(2, 'Available', '9780141034361'),
-(2, 'Available', '9780141034378'),
-(2, 'Available', '9780141034385'),
-(2, 'Available', '9780141037584'),
-(2, 'Available', '9780141192474'),
-(2, 'Available', '9780141324524'),
-(2, 'Available', '9780141439563'),
-(2, 'Available', '9780141439723'),
-(2, 'Available', '9780141439747'),
-(2, 'Available', '9780194798792'),
-(2, 'Available', '9780198436324'),
-(2, 'Available', '9780199180943'),
-(2, 'Available', '9780199558469'),
-(2, 'Available', '9780255366878'),
-(2, 'Available', '9780408106580'),
-(2, 'Available', '9780435181444'),
-(2, 'Available', '9780435183059'),
-(2, 'Available', '9780435188634'),
-(2, 'Available', '9780451528551'),
-(2, 'Available', '9780451531674'),
-(2, 'Available', '9780486290997'),
-(2, 'Available', '9780719542527'),
-(2, 'Available', '9780745655512'),
-(2, 'Available', '9780993231162'),
-(2, 'Available', '9781108667425'),
-(2, 'Available', '9781292183398'),
-(2, 'Available', '9781292232539'),
-(2, 'Available', '9781292274683'),
-(2, 'Available', '9781405852593'),
-(2, 'Available', '9781405896719'),
-(2, 'Available', '9781447983545'),
-(2, 'Available', '9781447990550'),
-(2, 'Available', '9781471842139'),
-(2, 'Available', '9781471866968'),
-(2, 'Available', '9781510470286'),
-(2, 'Available', '9781510477513'),
-(2, 'Available', '9781782943242'),
-(2, 'Available', '9781782943686'),
-(2, 'Available', '9781789080391'),
-(2, 'Available', '9781846900839'),
-(2, 'Available', '9798630248015'),
-(3, 'Available', '9780141034323'),
-(3, 'Available', '9780435188634'),
-(3, 'Available', '9780451528551'),
-(3, 'Available', '9781292274683'),
-(3, 'Available', '9781447990550'),
-(4, 'Available', '9780435188634'),
-(4, 'Available', '9780451528551'),
-(4, 'Available', '9781292274683'),
-(5, 'Available', '9780435188634');
+  (1, 'Available', '9780007119271'),
+  (1, 'Available', '9780007119288'),
+  (1, 'Available', '9780007119295'),
+  (1, 'Available', '9780007119301'),
+  (1, 'Available', '9780007119318'),
+  (1, 'Available', '9780007119325'),
+  (1, 'Available', '9780007120833'),
+  (1, 'Available', '9780007120840'),
+  (1, 'Available', '9780007120857'),
+  (1, 'Available', '9780007120864'),
+  (1, 'Available', '9780007120871'),
+  (1, 'Available', '9780007120888'),
+  (1, 'Available', '9780007120895'),
+  (1, 'Available', '9780007120901'),
+  (1, 'Available', '9780007120918'),
+  (1, 'Available', '9780007120925'),
+  (1, 'Available', '9780007120932'),
+  (1, 'Available', '9780007120949'),
+  (1, 'Available', '9780007120956'),
+  (1, 'Available', '9780007120963'),
+  (1, 'Available', '9780007120970'),
+  (1, 'Available', '9780007120987'),
+  (1, 'Available', '9780007120994'),
+  (1, 'Available', '9780007121007'),
+  (1, 'Available', '9780007121014'),
+  (1, 'Available', '9780007121021'),
+  (1, 'Available', '9780007121038'),
+  (1, 'Available', '9780007121045'),
+  (1, 'Available', '9780007121052'),
+  (1, 'Available', '9780007121069'),
+  (1, 'Available', '9780007121076'),
+  (1, 'Available', '9780007121083'),
+  (1, 'Available', '9780007136834'),
+  (1, 'Available', '9780007139569'),
+  (1, 'Available', '9780007149537'),
+  (1, 'Available', '9780007157327'),
+  (1, 'Available', '9780007255047'),
+  (1, 'Available', '9780007268252'),
+  (1, 'Available', '9780007268269'),
+  (1, 'Available', '9780007300112'),
+  (1, 'Available', '9780007300129'),
+  (1, 'Available', '9780007300136'),
+  (1, 'Available', '9780007300143'),
+  (1, 'Available', '9780007300150'),
+  (1, 'Available', '9780007300167'),
+  (1, 'Available', '9780007300174'),
+  (1, 'Available', '9780007300181'),
+  (1, 'Available', '9780007300198'),
+  (1, 'Available', '9780007300204'),
+  (1, 'Available', '9780007300211'),
+  (1, 'Available', '9780007300228'),
+  (1, 'Available', '9780007300235'),
+  (1, 'Available', '9780007300242'),
+  (1, 'Available', '9780007300259'),
+  (1, 'Available', '9780007300266'),
+  (1, 'Available', '9780007300273'),
+  (1, 'Available', '9780007300280'),
+  (1, 'Available', '9780007300297'),
+  (1, 'Available', '9780007300303'),
+  (1, 'Available', '9780007300310'),
+  (1, 'Available', '9780007339839'),
+  (1, 'Available', '9780007426942'),
+  (1, 'Available', '9780007426959'),
+  (1, 'Available', '9780007527526'),
+  (1, 'Available', '9780007527533'),
+  (1, 'Available', '9780007527540'),
+  (1, 'Available', '9780007527557'),
+  (1, 'Available', '9780007557905'),
+  (1, 'Available', '9780007714346'),
+  (1, 'Available', '9780008112738'),
+  (1, 'Available', '9780008112745'),
+  (1, 'Available', '9780008253219'),
+  (1, 'Available', '9780008262044'),
+  (1, 'Available', '9780099387916'),
+  (1, 'Available', '9780099478379'),
+  (1, 'Available', '9780099506928'),
+  (1, 'Available', '9780099771708'),
+  (1, 'Available', '9780140258417'),
+  (1, 'Available', '9780140431070'),
+  (1, 'Available', '9780140434972'),
+  (1, 'Available', '9780140434996'),
+  (1, 'Available', '9780140435085'),
+  (1, 'Available', '9780140435122'),
+  (1, 'Available', '9780140436112'),
+  (1, 'Available', '9780140436853'),
+  (1, 'Available', '9780140437423'),
+  (1, 'Available', '9780140437508'),
+  (1, 'Available', '9780140439441'),
+  (1, 'Available', '9780140449082'),
+  (1, 'Available', '9780140620344'),
+  (1, 'Available', '9780140620603'),
+  (1, 'Available', '9780140621631'),
+  (1, 'Available', '9780140622065'),
+  (1, 'Available', '9780141018621'),
+  (1, 'Available', '9780141023571'),
+  (1, 'Available', '9780141026213'),
+  (1, 'Available', '9780141034323'),
+  (1, 'Available', '9780141034354'),
+  (1, 'Available', '9780141034361'),
+  (1, 'Available', '9780141034378'),
+  (1, 'Available', '9780141034385'),
+  (1, 'Available', '9780141037584'),
+  (1, 'Available', '9780141184548'),
+  (1, 'Available', '9780141192474'),
+  (1, 'Available', '9780141322919'),
+  (1, 'Available', '9780141324524'),
+  (1, 'Available', '9780141439471'),
+  (1, 'Available', '9780141439518'),
+  (1, 'Available', '9780141439556'),
+  (1, 'Available', '9780141439563'),
+  (1, 'Available', '9780141439570'),
+  (1, 'Available', '9780141439587'),
+  (1, 'Available', '9780141439600'),
+  (1, 'Available', '9780141439617'),
+  (1, 'Available', '9780141439662'),
+  (1, 'Available', '9780141439679'),
+  (1, 'Available', '9780141439723'),
+  (1, 'Available', '9780141439730'),
+  (1, 'Available', '9780141439747'),
+  (1, 'Available', '9780141439846'),
+  (1, 'Available', '9780141441146'),
+  (1, 'Available', '9780141441979'),
+  (1, 'Available', '9780141999654'),
+  (1, 'Available', '9780194011068'),
+  (1, 'Available', '9780194791823'),
+  (1, 'Available', '9780194798792'),
+  (1, 'Available', '9780195456127'),
+  (1, 'Available', '9780198354604'),
+  (1, 'Available', '9780198370116'),
+  (1, 'Available', '9780198376408'),
+  (1, 'Available', '9780198399117'),
+  (1, 'Available', '9780198399124'),
+  (1, 'Available', '9780198399131'),
+  (1, 'Available', '9780198412939'),
+  (1, 'Available', '9780198412960'),
+  (1, 'Available', '9780198413639'),
+  (1, 'Available', '9780198421429'),
+  (1, 'Available', '9780198436324'),
+  (1, 'Available', '9780198608837'),
+  (1, 'Available', '9780198610298'),
+  (1, 'Available', '9780198611868'),
+  (1, 'Available', '9780198613343'),
+  (1, 'Available', '9780199102341'),
+  (1, 'Available', '9780199129768'),
+  (1, 'Available', '9780199147656'),
+  (1, 'Available', '9780199147663'),
+  (1, 'Available', '9780199148226'),
+  (1, 'Available', '9780199180943'),
+  (1, 'Available', '9780199558469'),
+  (1, 'Available', '9780230545199'),
+  (1, 'Available', '9780241538982'),
+  (1, 'Available', '9780241956533'),
+  (1, 'Available', '9780245606113'),
+  (1, 'Available', '9780255366878'),
+  (1, 'Available', '9780271014746'),
+  (1, 'Available', '9780273031383'),
+  (1, 'Available', '9780307277787'),
+  (1, 'Available', '9780316909655'),
+  (1, 'Available', '9780330431880'),
+  (1, 'Available', '9780330485616'),
+  (1, 'Available', '9780330511315'),
+  (1, 'Available', '9780340720509'),
+  (1, 'Available', '9780340905548'),
+  (1, 'Available', '9780340915035'),
+  (1, 'Available', '9780340999110'),
+  (1, 'Available', '9780406904096'),
+  (1, 'Available', '9780406925336'),
+  (1, 'Available', '9780408106580'),
+  (1, 'Available', '9780413772633'),
+  (1, 'Available', '9780421741300'),
+  (1, 'Available', '9780435181444'),
+  (1, 'Available', '9780435181451'),
+  (1, 'Available', '9780435183059'),
+  (1, 'Available', '9780435185084'),
+  (1, 'Available', '9780435185169'),
+  (1, 'Available', '9780435185275'),
+  (1, 'Available', '9780435185282'),
+  (1, 'Available', '9780435188634'),
+  (1, 'Available', '9780435188948'),
+  (1, 'Available', '9780435232825'),
+  (1, 'Available', '9780435235895'),
+  (1, 'Available', '9780435966881'),
+  (1, 'Available', '9780435966898'),
+  (1, 'Available', '9780435966904'),
+  (1, 'Available', '9780436401336'),
+  (1, 'Available', '9780439943727'),
+  (1, 'Available', '9780451528551'),
+  (1, 'Available', '9780451531674'),
+  (1, 'Available', '9780460045940'),
+  (1, 'Available', '9780486290997'),
+  (1, 'Available', '9780521046297'),
+  (1, 'Available', '9780521747424'),
+  (1, 'Available', '9780550100948'),
+  (1, 'Available', '9780563203841'),
+  (1, 'Available', '9780567292292'),
+  (1, 'Available', '9780571056866'),
+  (1, 'Available', '9780571094578'),
+  (1, 'Available', '9780571216109'),
+  (1, 'Available', '9780571327317'),
+  (1, 'Available', '9780582403444'),
+  (1, 'Available', '9780582469396'),
+  (1, 'Available', '9780582473133'),
+  (1, 'Available', '9780582829992'),
+  (1, 'Available', '9780583339674'),
+  (1, 'Available', '9780586058398'),
+  (1, 'Available', '9780590353427'),
+  (1, 'Available', '9780603580949'),
+  (1, 'Available', '9780631219293'),
+  (1, 'Available', '9780689837562'),
+  (1, 'Available', '9780701185008'),
+  (1, 'Available', '9780719542527'),
+  (1, 'Available', '9780719578687'),
+  (1, 'Available', '9780743477550'),
+  (1, 'Available', '9780745655512'),
+  (1, 'Available', '9780745664125'),
+  (1, 'Available', '9780748782802'),
+  (1, 'Available', '9780748785056'),
+  (1, 'Available', '9780748798216'),
+  (1, 'Available', '9780749082161'),
+  (1, 'Available', '9780749397227'),
+  (1, 'Available', '9780750900614'),
+  (1, 'Available', '9780752812182'),
+  (1, 'Available', '9780857053954'),
+  (1, 'Available', '9780857087980'),
+  (1, 'Available', '9780860037507'),
+  (1, 'Available', '9780863574641'),
+  (1, 'Available', '9780954007911'),
+  (1, 'Available', '9780954007928'),
+  (1, 'Available', '9780954866549'),
+  (1, 'Available', '9780993231162'),
+  (1, 'Available', '9781108465977'),
+  (1, 'Available', '9781108667425'),
+  (1, 'Available', '9781108859028'),
+  (1, 'Available', '9781108859035'),
+  (1, 'Available', '9781108863193'),
+  (1, 'Available', '9781138687387'),
+  (1, 'Available', '9781292133874'),
+  (1, 'Available', '9781292150116'),
+  (1, 'Available', '9781292183398'),
+  (1, 'Available', '9781292183404'),
+  (1, 'Available', '9781292232539'),
+  (1, 'Available', '9781292274669'),
+  (1, 'Available', '9781292274683'),
+  (1, 'Available', '9781405072847'),
+  (1, 'Available', '9781405087278'),
+  (1, 'Available', '9781405335379'),
+  (1, 'Available', '9781405852234'),
+  (1, 'Available', '9781405852593'),
+  (1, 'Available', '9781405892346'),
+  (1, 'Available', '9781405896719'),
+  (1, 'Available', '9781406364897'),
+  (1, 'Available', '9781406364910'),
+  (1, 'Available', '9781406364927'),
+  (1, 'Available', '9781407106229'),
+  (1, 'Available', '9781407182612'),
+  (1, 'Available', '9781408206652'),
+  (1, 'Available', '9781408517109'),
+  (1, 'Available', '9781409135418'),
+  (1, 'Available', '9781409326199'),
+  (1, 'Available', '9781416511618'),
+  (1, 'Available', '9781426320705'),
+  (1, 'Available', '9781444161885'),
+  (1, 'Available', '9781447980209'),
+  (1, 'Available', '9781447983545'),
+  (1, 'Available', '9781447984351'),
+  (1, 'Available', '9781447990550'),
+  (1, 'Available', '9781471834882'),
+  (1, 'Available', '9781471842139'),
+  (1, 'Available', '9781471842191'),
+  (1, 'Available', '9781471842238'),
+  (1, 'Available', '9781471843365'),
+  (1, 'Available', '9781471844300'),
+  (1, 'Available', '9781471844324'),
+  (1, 'Available', '9781471844331'),
+  (1, 'Available', '9781471844362'),
+  (1, 'Available', '9781471866968'),
+  (1, 'Available', '9781471876103'),
+  (1, 'Available', '9781471876226'),
+  (1, 'Available', '9781471889363'),
+  (1, 'Available', '9781471889660'),
+  (1, 'Available', '9781472258335'),
+  (1, 'Available', '9781509852857'),
+  (1, 'Available', '9781510405196'),
+  (1, 'Available', '9781510423527'),
+  (1, 'Available', '9781510424234'),
+  (1, 'Available', '9781510458949'),
+  (1, 'Available', '9781510470286'),
+  (1, 'Available', '9781510477513'),
+  (1, 'Available', '9781576731864'),
+  (1, 'Available', '9781592976812'),
+  (1, 'Available', '9781593392932'),
+  (1, 'Available', '9781780225111'),
+  (1, 'Available', '9781780747750'),
+  (1, 'Available', '9781782941224'),
+  (1, 'Available', '9781782941408'),
+  (1, 'Available', '9781782942795'),
+  (1, 'Available', '9781782942924'),
+  (1, 'Available', '9781782943099'),
+  (1, 'Available', '9781782943129'),
+  (1, 'Available', '9781782943242'),
+  (1, 'Available', '9781782943471'),
+  (1, 'Available', '9781782943549'),
+  (1, 'Available', '9781782943662'),
+  (1, 'Available', '9781782943679'),
+  (1, 'Available', '9781782943686'),
+  (1, 'Available', '9781782944041'),
+  (1, 'Available', '9781782944157'),
+  (1, 'Available', '9781782944911'),
+  (1, 'Available', '9781782944935'),
+  (1, 'Available', '9781782944942'),
+  (1, 'Available', '9781782944959'),
+  (1, 'Available', '9781782944966'),
+  (1, 'Available', '9781782944980'),
+  (1, 'Available', '9781782945000'),
+  (1, 'Available', '9781782945321'),
+  (1, 'Available', '9781782945598'),
+  (1, 'Available', '9781782945604'),
+  (1, 'Available', '9781782945611'),
+  (1, 'Available', '9781782945628'),
+  (1, 'Available', '9781782946410'),
+  (1, 'Available', '9781782946748'),
+  (1, 'Available', '9781782946755'),
+  (1, 'Available', '9781782946878'),
+  (1, 'Available', '9781782946885'),
+  (1, 'Available', '9781786328601'),
+  (1, 'Available', '9781786328632'),
+  (1, 'Available', '9781788101011'),
+  (1, 'Available', '9781789080216'),
+  (1, 'Available', '9781789080308'),
+  (1, 'Available', '9781789080384'),
+  (1, 'Available', '9781789080391'),
+  (1, 'Available', '9781789080827'),
+  (1, 'Available', '9781789082814'),
+  (1, 'Available', '9781789086270'),
+  (1, 'Available', '9781840224009'),
+  (1, 'Available', '9781840851465'),
+  (1, 'Available', '9781841467658'),
+  (1, 'Available', '9781841693255'),
+  (1, 'Available', '9781841693781'),
+  (1, 'Available', '9781842552155'),
+  (1, 'Available', '9781842553206'),
+  (1, 'Available', '9781843560296'),
+  (1, 'Available', '9781843625223'),
+  (1, 'Available', '9781844081813'),
+  (1, 'Available', '9781844192403'),
+  (1, 'Available', '9781844194414'),
+  (1, 'Available', '9781844892020'),
+  (1, 'Available', '9781846900839'),
+  (1, 'Available', '9781847156761'),
+  (1, 'Available', '9781847394644'),
+  (1, 'Available', '9781847621184'),
+  (1, 'Available', '9781847621405'),
+  (1, 'Available', '9781847622754'),
+  (1, 'Available', '9781848120457'),
+  (1, 'Available', '9781850082606'),
+  (1, 'Available', '9781853260377'),
+  (1, 'Available', '9781853268359'),
+  (1, 'Available', '9781854315830'),
+  (1, 'Available', '9781857493962'),
+  (1, 'Available', '9781862302983'),
+  (1, 'Available', '9781903240236'),
+  (1, 'Available', '9781907363689'),
+  (1, 'Available', '9781907363696'),
+  (1, 'Available', '9781907363702'),
+  (1, 'Available', '9781907363719'),
+  (1, 'Available', '9781909531260'),
+  (1, 'Available', '9781910432006'),
+  (1, 'Available', '9781911208068'),
+  (1, 'Available', '9785957600756'),
+  (1, 'Available', '9785992505634'),
+  (1, 'Available', '9787119033990'),
+  (1, 'Available', '9787560026763'),
+  (1, 'Available', '9787801034144'),
+  (1, 'Available', '9788960477001'),
+  (1, 'Available', '9789088141430'),
+  (1, 'Available', '9789888037452'),
+  (1, 'Available', '9789888597796'),
+  (1, 'Available', '9789988151430'),
+  (1, 'Available', '9798630248015'),
+  (2, 'Available', '9780007119318'),
+  (2, 'Available', '9780007268252'),
+  (2, 'Available', '9780140434972'),
+  (2, 'Available', '9780140439441'),
+  (2, 'Available', '9780141034323'),
+  (2, 'Available', '9780141034354'),
+  (2, 'Available', '9780141034361'),
+  (2, 'Available', '9780141034378'),
+  (2, 'Available', '9780141034385'),
+  (2, 'Available', '9780141037584'),
+  (2, 'Available', '9780141192474'),
+  (2, 'Available', '9780141324524'),
+  (2, 'Available', '9780141439563'),
+  (2, 'Available', '9780141439723'),
+  (2, 'Available', '9780141439747'),
+  (2, 'Available', '9780194798792'),
+  (2, 'Available', '9780198436324'),
+  (2, 'Available', '9780199180943'),
+  (2, 'Available', '9780199558469'),
+  (2, 'Available', '9780255366878'),
+  (2, 'Available', '9780408106580'),
+  (2, 'Available', '9780435181444'),
+  (2, 'Available', '9780435183059'),
+  (2, 'Available', '9780435188634'),
+  (2, 'Available', '9780451528551'),
+  (2, 'Available', '9780451531674'),
+  (2, 'Available', '9780486290997'),
+  (2, 'Available', '9780719542527'),
+  (2, 'Available', '9780745655512'),
+  (2, 'Available', '9780993231162'),
+  (2, 'Available', '9781108667425'),
+  (2, 'Available', '9781292183398'),
+  (2, 'Available', '9781292232539'),
+  (2, 'Available', '9781292274683'),
+  (2, 'Available', '9781405852593'),
+  (2, 'Available', '9781405896719'),
+  (2, 'Available', '9781447983545'),
+  (2, 'Available', '9781447990550'),
+  (2, 'Available', '9781471842139'),
+  (2, 'Available', '9781471866968'),
+  (2, 'Available', '9781510470286'),
+  (2, 'Available', '9781510477513'),
+  (2, 'Available', '9781782943242'),
+  (2, 'Available', '9781782943686'),
+  (2, 'Available', '9781789080391'),
+  (2, 'Available', '9781846900839'),
+  (2, 'Available', '9798630248015'),
+  (3, 'Available', '9780141034323'),
+  (3, 'Available', '9780435188634'),
+  (3, 'Available', '9780451528551'),
+  (3, 'Available', '9781292274683'),
+  (3, 'Available', '9781447990550'),
+  (4, 'Available', '9780435188634'),
+  (4, 'Available', '9780451528551'),
+  (4, 'Available', '9781292274683'),
+  (5, 'Available', '9780435188634');
 /*!40000 ALTER TABLE `book_copies` ENABLE KEYS */
 ;
 UNLOCK TABLES;
@@ -527,2466 +527,2574 @@ VALUES (
     13,
     4
   ),
-(
+  (
     '9780007119271',
     'Peril at End House',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007119288',
     'Evil Under the Sun',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007119295',
     'Lord Edgware Dies',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007119301',
     'Dumb Witness',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007119318',
     'Murder on the Orient Express',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007119325',
     'Death on the Nile',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007120833',
     'Cards on the Table',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007120840',
     'The ABC Murders',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007120857',
     'The Mysterious Affair at Styles',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007120864',
     'Appointment with Death',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007120871',
     'Taken at the Flood',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007120888',
     'Sad Cypress',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007120895',
     'Mrs McGinty\'s Dead',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007120901',
     'Cat Among the Pigeons',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007120918',
     'The Hollow',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007120925',
     'After the Funeral',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007120932',
     'A Caribbean Mystery',
     'Agatha Christie',
     13,
     4
   ),
-('9780007120949', 'Nemesis', 'Agatha Christie', 13, 4),
-(
+  (
+    '9780007120949',
+    'Nemesis',
+    'Agatha Christie',
+    13,
+    4
+  ),
+  (
     '9780007120956',
     '4.50 from Paddington',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007120963',
     'A Pocket Full of Rye',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007120970',
     'Sleeping Murder',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007120987',
     'The Body in the Library',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007120994',
     'The Moving Finger',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007121007',
     'The Mirror Crack\'d from Side to Side',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007121014',
     'At Bertram\'s Hotel',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007121021',
     'They Do It with Mirrors',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007121038',
     'Murder at the Vicarage',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007121045',
     'A Murder Is Announced',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007121052',
     'Towards Zero',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007121069',
     'Ordeal by Innocence',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007121076',
     'Sparkling Cyanide',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007121083',
     'Why Didn\'t They Ask Evans?',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007136834',
     'And Then There Were None',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007139569',
     'Dead Alone',
     'Gay Longworth',
     18,
     2
   ),
-(
+  (
     '9780007149537',
     'The Age of Wonder',
     'Richard Holmes',
     0,
     1
   ),
-(
+  (
     '9780007157327',
     'David Beckham',
     'David Beckham; Tom Watt',
     0,
     1
   ),
-(
+  (
     '9780007255047',
     'Psychology A2 for AQA \'A\'',
     'Mike Cardwell; Liz Clark; Claire Meldrum',
     0,
     1
   ),
-(
+  (
     '9780007268252',
     'Chemistry',
     'John Bentham; Graham Curtis; Andrew Maczek; Colin Chambers; David Nicholls; Geoff Hallas',
     0,
     1
   ),
-(
+  (
     '9780007268269',
     'AQA As Chemistry',
     'John Bentham; Graham Curtis; Andrew Maczek; Colin Chambers; David Nicholls; Geoff Hallas',
     0,
     1
   ),
-(
+  (
     '9780007300112',
     'AQA A Level Chemistry Student Book 2',
     'Alyn G. McFarland; Teresa Quigg; Nora Henry',
     0,
     1
   ),
-(
+  (
     '9780007300129',
     'AQA Physics a AS',
     'Jim Breithaupt',
     0,
     1
   ),
-(
+  (
     '9780007300136',
     'The Meaning of the Glorious Qur\'an',
     'Sahib Mustaqim Bleher',
     0,
     1
   ),
-(
+  (
     '9780007300143',
     'Unlocking the Imagination',
     'Simon Duffy',
     0,
     1
   ),
-(
+  (
     '9780007300150',
     'The General Theory of Employment, Interest and Money',
     'John Maynard Keynes',
     0,
     1
   ),
-(
+  (
     '9780007300167',
     'Rousseau: A Very Short Introduction',
     'Robert Wokler',
     0,
     1
   ),
-(
+  (
     '9780007300174',
     'Sayings and Anecdotes',
     'Diogenes',
     0,
     1
   ),
-(
+  (
     '9780007300181',
     'On the Genealogy of Morals',
     'Friedrich Nietzsche',
     13,
     1
   ),
-('9780007300198', 'The Analects', 'Confucius', 0, 1),
-(
+  (
+    '9780007300198',
+    'The Analects',
+    'Confucius',
+    0,
+    1
+  ),
+  (
     '9780007300204',
     'Plato: Meno and Phaedo',
     'David Sedley',
     0,
     1
   ),
-(
+  (
     '9780007300211',
     'Farhang-i jadƒ´d-i pizishkƒ´-i D≈´rland',
     'William Alexander Newman Dorland; Farƒ´d Mudarris M≈´savƒ´; Mu·∏•sin Arjumand',
     0,
     2
   ),
-(
+  (
     '9780007300228',
     'We Ain√ït What We Ought To Be',
     'Stephen Tuck',
     0,
     1
   ),
-('9780007300235', 'Chemistry', 'Ian H. Davis', 0, 1),
-(
+  (
+    '9780007300235',
+    'Chemistry',
+    'Ian H. Davis',
+    0,
+    1
+  ),
+  (
     '9780007300242',
     'High Windows',
     'Philip Larkin',
     0,
     1
   ),
-(
+  (
     '9780007300259',
     'Pure Dead Magic',
     'Debi Gliori',
     13,
     2
   ),
-(
+  (
     '9780007300266',
     'Iggie\'s House',
     'Judy Blume',
     13,
     2
   ),
-(
+  (
     '9780007300273',
     'Pure Dead Wicked',
     'Debi Gliori',
     13,
     2
   ),
-('9780007300280', 'Inconceivable', 'Ben Elton', 18, 2),
-(
+  (
+    '9780007300280',
+    'Inconceivable',
+    'Ben Elton',
+    18,
+    2
+  ),
+  (
     '9780007300297',
     'The French Lieutenant\'s Woman',
     'John Fowles',
     18,
     2
   ),
-(
+  (
     '9780007300303',
     'Brewer\'s Rogues, Villains and Eccentrics',
     'William Donaldson',
     0,
     1
   ),
-(
+  (
     '9780007300310',
     'Nicholas Nickleby',
     'Charles Dickens',
     13,
     2
   ),
-(
+  (
     '9780007339839',
     'Michael Jackson',
     'James Aldis',
     0,
     1
   ),
-(
+  (
     '9780007426942',
     'Collins Paperback Dictionary',
     '[Anonymus AC08888486]',
     0,
     1
   ),
-(
+  (
     '9780007426959',
     'Collins English Thesaurus',
     'Justin Crozier; Lorna Gilmour; Helen Hucker',
     0,
     1
   ),
-(
+  (
     '9780007527526',
     'The Murder of Roger Ackroyd',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007527533',
     'Five Little Pigs',
     'Agatha Christie',
     13,
     4
   ),
-(
+  (
     '9780007527540',
     'Crooked House',
     'Agatha Christie',
     13,
     4
   ),
-('9780007527557', 'Curtain', 'Agatha Christie', 13, 4),
-(
+  (
+    '9780007527557',
+    'Curtain',
+    'Agatha Christie',
+    13,
+    4
+  ),
+  (
     '9780007557905',
     'The Girl Who Saved the King of Sweden',
     'Jonas Jonasson',
     13,
     2
   ),
-(
+  (
     '9780007714346',
     'Complete History of the World',
     'The Times',
     0,
     1
   ),
-(
+  (
     '9780008112738',
     'Mathematics for GCSE',
     'Kevin Evans',
     0,
     1
   ),
-(
+  (
     '9780008112745',
     'Further Mathematics for GCSE',
     'Kevin Evans',
     0,
     1
   ),
-(
+  (
     '9780008253219',
     'Collins English Dictionary',
     'Collins Dictionaries',
     0,
     1
   ),
-(
+  (
     '9780008262044',
     'Essential Chemistry for Cambridge IGCSE',
     'Primrose Kitten',
     0,
     1
   ),
-(
+  (
     '9780099387916',
     'Birdsong',
     'Sebastian Faulks',
     18,
     2
   ),
-(
+  (
     '9780099478379',
     'The Last Sherlock Holmes Story',
     'Michael Dibdin',
     13,
     2
   ),
-(
+  (
     '9780099506928',
     'A Spot of Bother',
     'Mark Haddon',
     0,
     2
   ),
-(
+  (
     '9780099771708',
     'The Emperor\'s New Mind',
     'Roger Penrose',
     0,
     1
   ),
-('9780140258417', 'The Beach', 'Alex Garland', 18, 2),
-(
+  (
+    '9780140258417',
+    'The Beach',
+    'Alex Garland',
+    18,
+    2
+  ),
+  (
     '9780140431070',
     'The Fortunes and Misfortunes of the Famous Moll Flanders',
     'Daniel Defoe',
     18,
     2
   ),
-(
+  (
     '9780140434972',
     'Little Dorrit',
     'Charles Dickens',
     0,
     2
   ),
-(
+  (
     '9780140434996',
     'Dombey and Son',
     'Charles Dickens',
     0,
     2
   ),
-(
+  (
     '9780140435085',
     'Martin Chuzzlewit',
     'Charles Dickens',
     13,
     2
   ),
-(
+  (
     '9780140435122',
     'Nicholas Nickleby',
     'Charles Dickens',
     13,
     2
   ),
-(
+  (
     '9780140436112',
     'Pickwick Papers',
     'Charles Dickens',
     0,
     2
   ),
-(
+  (
     '9780140436853',
     'Barnaby Rudge',
     'Charles Dickens',
     0,
     2
   ),
-(
+  (
     '9780140437423',
     'The Old Curiosity Shop',
     'Charles Dickens',
     0,
     2
   ),
-(
+  (
     '9780140437508',
     'Three Men in a Boat',
     'Jerome K. Jerome',
     13,
     2
   ),
-(
+  (
     '9780140439441',
     'David Copperfield',
     'Charles Dickens',
     0,
     2
   ),
-('9780140449082', 'Histories', 'Herodotus', 0, 1),
-(
+  ('9780140449082', 'Histories', 'Herodotus', 0, 1),
+  (
     '9780140620344',
     'Twenty Thousand Leagues Under the Sea',
     'Jules Verne',
     13,
     2
   ),
-(
+  (
     '9780140620603',
     'Jude the Obscure',
     'Thomas Hardy',
     18,
     2
   ),
-(
+  (
     '9780140621631',
     'Around the World in Eighty Days',
     'Jules Verne',
     13,
     2
   ),
-(
+  (
     '9780140622065',
     'From the Earth to the Moon',
     'Jules Verne',
     13,
     2
   ),
-(
+  (
     '9780141018621',
     'Autograph Man',
     'Zadie Smith',
     13,
     2
   ),
-(
+  (
     '9780141023571',
     'Of Mice and Men',
     'John Steinbeck',
     13,
     2
   ),
-(
+  (
     '9780141026213',
     'The Penguin Concise Encyclopedia',
     'David Crystal',
     0,
     1
   ),
-(
+  (
     '9780141034323',
     'A Study in Scarlet',
     'Arthur Conan Doyle',
     13,
     2
   ),
-(
+  (
     '9780141034354',
     'The Return of Sherlock Holmes',
     'Arthur Conan Doyle',
     13,
     2
   ),
-(
+  (
     '9780141034361',
     'The Memoirs of Sherlock Holmes',
     'Arthur Conan Doyle',
     13,
     1
   ),
-(
+  (
     '9780141034378',
     'The Adventures of Sherlock Holmes',
     'Arthur Conan Doyle',
     13,
     2
   ),
-(
+  (
     '9780141034385',
     'His Last Bow',
     'Arthur Conan Doyle',
     13,
     2
   ),
-(
+  (
     '9780141037584',
     'The Sign of Four',
     'Arthur Conan Doyle',
     13,
     2
   ),
-(
+  (
     '9780141184548',
     'Look back in anger',
     'John Osborne',
     0,
     1
   ),
-(
+  (
     '9780141192474',
     'The Valley of Fear',
     'Arthur Conan Doyle',
     13,
     2
   ),
-(
+  (
     '9780141322919',
     'Just Listen',
     'Sarah Dessen',
     13,
     3
   ),
-(
+  (
     '9780141439471',
     'Frankenstein',
     'Mary Shelley',
     13,
     2
   ),
-(
+  (
     '9780141439518',
     'Pride and Prejudice',
     'Jane Austen',
     0,
     3
   ),
-(
+  (
     '9780141439556',
     'Wuthering Heights',
     'Emily Brontë',
     13,
     2
   ),
-(
+  (
     '9780141439563',
     'Great Expectations',
     'Charles Dickens',
     0,
     2
   ),
-(
+  (
     '9780141439570',
     'The Picture of Dorian Gray',
     'Oscar Wilde',
     18,
     2
   ),
-('9780141439587', 'Emma', 'Jane Austen', 0, 3),
-(
+  ('9780141439587', 'Emma', 'Jane Austen', 0, 3),
+  (
     '9780141439600',
     'A Tale of Two Cities',
     'Charles Dickens',
     0,
     2
   ),
-(
+  (
     '9780141439617',
     'The Woman in White',
     'Wilkie Collins',
     13,
     2
   ),
-(
+  (
     '9780141439662',
     'Sense and Sensibility',
     'Jane Austen',
     0,
     3
   ),
-(
+  (
     '9780141439679',
     'Hard Times',
     'Charles Dickens',
     0,
     2
   ),
-(
+  (
     '9780141439723',
     'Bleak House',
     'Charles Dickens',
     0,
     2
   ),
-(
+  (
     '9780141439730',
     'Dr Jekyll and Mr Hyde',
     'Robert Louis Stevenson',
     13,
     2
   ),
-(
+  (
     '9780141439747',
     'Oliver Twist',
     'Charles Dickens',
     0,
     2
   ),
-('9780141439846', 'Dracula', 'Bram Stoker', 13, 2),
-(
+  ('9780141439846', 'Dracula', 'Bram Stoker', 13, 2),
+  (
     '9780141441146',
     'Jane Eyre',
     'Charlotte Brontë',
     13,
     2
   ),
-(
+  (
     '9780141441979',
     'Journey to the Centre of the Earth',
     'Jules Verne',
     13,
     2
   ),
-(
+  (
     '9780141999654',
     'Tibetan Book of the Dead',
     'Padmasambhava; Terton Karma Lingpa; Guyurme Dorje; Graham Coleman; Thupten Jinpa; Tenzin Gyatso',
     0,
     1
   ),
-(
+  (
     '9780194011068',
     'Insight: Elementary: Student Book',
     'Fiona Beddall; Jayne Wildman',
     0,
     2
   ),
-(
+  (
     '9780194791823',
     'Oxford Bookworms Library New Edition: Stage 4',
     'Dick Francis',
     13,
     2
   ),
-(
+  (
     '9780194798792',
     'Oxford Advanced Learner\'s Dictionary of Current English',
     'Albert Sydney Hornby',
     0,
     1
   ),
-(
+  (
     '9780195456127',
     '牛津高階英漢雙解詞典',
     'Albert S. Hornby',
     0,
     2
   ),
-(
+  (
     '9780198354604',
     'The Tudors - England, 1485-1603',
     'Michael Tillbrook',
     0,
     1
   ),
-(
+  (
     '9780198370116',
     'Oxford AQA History for GCSE: Conflict and Tension 1918-1939',
     'Ellen Longley',
     0,
     1
   ),
-(
+  (
     '9780198376408',
     'The Complete Companions: A Level Year 1 and AS Psychology: The Revision and Exam Companion for AQA',
     'Oxford University Press',
     0,
     1
   ),
-(
+  (
     '9780198399117',
     'Complete Physics for Cambridge IGCSE',
     'Stephen Pople',
     0,
     1
   ),
-(
+  (
     '9780198399124',
     'Complete Biology for Cambridge IGCSE',
     'Ron Pickering',
     0,
     1
   ),
-(
+  (
     '9780198399131',
     'Complete Chemistry for Cambridge IGCSE',
     'RoseMarie Gallagher; Paul Ingram',
     0,
     1
   ),
-(
+  (
     '9780198412939',
     'AQA A Level Further Maths: Year 2 Student Book',
     'David Baker',
     0,
     1
   ),
-(
+  (
     '9780198412960',
     'AQA A Level Maths: Year 2 Student Book',
     'David Baker; Brian Jefferson; Eddie Mullan; John Rayneau; Mark Rowland; Robert Wagner; Paul Williams; Garry Wiseman; Katie Wood',
     0,
     1
   ),
-(
+  (
     '9780198413639',
     'AQA GCSE Psychology Second Edition',
     'Mike Stanley; Karen Boswell; Sarah Harris; Nicky Hayes; Fran Knight; Tracy Mendis',
     0,
     1
   ),
-(
+  (
     '9780198421429',
     'Democracy and Nazism',
     'Robert Whitfield; Kirsty Taylor',
     0,
     1
   ),
-(
+  (
     '9780198436324',
     'Complete Companions for AQA A Level Psychology 5th Edition',
     'Mike Flanagan Cardwell; Cara Flanagan',
     0,
     1
   ),
-(
+  (
     '9780198608837',
     'The Concise Oxford Dictionary of Literary Terms',
     'Chris Baldick',
     0,
     1
   ),
-(
+  (
     '9780198610298',
     'Pocket Oxford English Dictionary',
     'Catherine Soanes; Sara Hawker; Julia Elliott; Francis George Fowler; Henry Watson Fowler',
     0,
     1
   ),
-(
+  (
     '9780198611868',
     'Oxford English Dictionary',
     'Oxford University Press',
     0,
     1
   ),
-(
+  (
     '9780198613343',
     'Pocket Oxford Dictionary',
     'Oxford University Press',
     0,
     1
   ),
-(
+  (
     '9780199102341',
     'The New Oxford School Dictionary',
     'Joyce M. Hawkins',
     0,
     1
   ),
-(
+  (
     '9780199129768',
     'New Oxford Student Texts: Goldsmith: She Stoops to Conquer',
     'Diane Maybank',
     13,
     2
   ),
-(
+  (
     '9780199147656',
     'Essential Physics for Cambridge IGCSE',
     'Jim Breithaupt',
     0,
     1
   ),
-(
+  (
     '9780199147663',
     'Essential Biology for Cambridge IGCSE',
     'Ron Pickering',
     0,
     1
   ),
-(
+  (
     '9780199148226',
     'New Coordinated Science: Physics Students\' Book',
     'Stephen Pople',
     0,
     1
   ),
-(
+  (
     '9780199180943',
     'AS and A Level Psychology Through Diagrams',
     'Grahame Hill',
     0,
     1
   ),
-(
+  (
     '9780199558469',
     'Oxford Paperback Dictionary and Thesaurus',
     'Maurice Waite; Sara Hawker',
     0,
     1
   ),
-(
+  (
     '9780230545199',
     'The International Student Handbook',
     'Hayo Reinders; Nick Moore; Marilyn Lewis',
     0,
     1
   ),
-('9780241538982', 'Unknown', 'Unknown', 0, 2),
-(
+  ('9780241538982', 'Unknown', 'Unknown', 0, 2),
+  (
     '9780241956533',
     'The Help',
     'Kathryn Stockett',
     13,
     2
   ),
-(
+  (
     '9780245606113',
     'Harrap\'s German Concise Dictionary',
     'Robin Sawers',
     0,
     1
   ),
-(
+  (
     '9780255366878',
     'Foundations of Free Society',
     'Eamonn Butler',
     0,
     1
   ),
-(
+  (
     '9780271014746',
     'The English Reformation',
     'A. G. Dickens',
     0,
     1
   ),
-(
+  (
     '9780273031383',
     'Business Law',
     'Denis J. Keenan; Sarah Riches',
     0,
     1
   ),
-(
+  (
     '9780307277787',
     'The Second Sex',
     'Simone de Beauvoir',
     18,
     1
   ),
-(
+  (
     '9780316909655',
     'Long Walk to Freedom',
     'Nelson Mandela',
     0,
     1
   ),
-('9780330431880', 'The Lost', 'Alex Shearer', 13, 2),
-(
+  (
+    '9780330431880',
+    'The Lost',
+    'Alex Shearer',
+    13,
+    2
+  ),
+  (
     '9780330485616',
     'Uncle Tungsten',
     'Oliver Sacks',
     0,
     1
   ),
-(
+  (
     '9780330511315',
     'Death by Design',
     'Penny Hancock',
     18,
     4
   ),
-(
+  (
     '9780340720509',
     'New Higher Physics',
     'Adrian Watt',
     0,
     1
   ),
-(
+  (
     '9780340905548',
     'Introduction to Psychology',
     'Richard Gross',
     0,
     1
   ),
-(
+  (
     '9780340915035',
     'Tort Law',
     'Chris Turner; Jacqueline Martin',
     0,
     1
   ),
-(
+  (
     '9780340999110',
     'How to Twist a Dragon\'s Tale',
     'Cressida Cowell',
     0,
     5
   ),
-(
+  (
     '9780406904096',
     'The Law-Making Process',
     'Michael Zander',
     0,
     1
   ),
-(
+  (
     '9780406925336',
     'Cases and Materials on the English Legal System',
     'Michael Zander',
     0,
     1
   ),
-(
+  (
     '9780408106580',
     'Study Topics in Physics: Basic Electricity and Magnetism',
     'William Bolton',
     0,
     1
   ),
-(
+  (
     '9780413772633',
     'Mother Courage',
     'Bertolt Brecht',
     0,
     1
   ),
-(
+  (
     '9780421741300',
     'Smith, Bailey and Gunn on the Modern English Legal System',
     'S. H. Bailey; Peter F. Smith; Michael J. Gunn',
     0,
     1
   ),
-(
+  (
     '9780435181444',
     'Pearson Edexcel International GCSE Mathematics A',
     'Keith Pledger',
     0,
     1
   ),
-(
+  (
     '9780435181451',
     'Pearson Edexcel International GCSE Mathematics B',
     'Keith Pledger',
     0,
     1
   ),
-(
+  (
     '9780435183059',
     'Mathematics A',
     'D. A. Turner; I. A. Potts',
     0,
     1
   ),
-(
+  (
     '9780435185084',
     'Edexcel International GCSE Biology Student Book',
     'Philip Bradfield',
     0,
     1
   ),
-(
+  (
     '9780435185169',
     'Edexcel International GCSE Chemistry Student Book',
     'Graham Hill; Andrew Hunt',
     0,
     1
   ),
-('9780435185275', 'Physics', 'Penny Johnson', 0, 1),
-(
+  (
+    '9780435185275',
+    'Physics',
+    'Penny Johnson',
+    0,
+    1
+  ),
+  (
     '9780435185282',
     'Edexcel International GCSE Physics Student Book',
     'Brian Arnold; Steve Woolley',
     0,
     1
   ),
-(
+  (
     '9780435188634',
     'Edexcel International GCSE (9-1) Business Student Book',
     'Rob Jones',
     0,
     2
   ),
-(
+  (
     '9780435188948',
     'English As a Second Language',
     'Nicky Winder; Laurence Gardner',
     0,
     1
   ),
-(
+  (
     '9780435232825',
     'An Inspector Calls and Other Plays',
     'J. B. Priestley',
     0,
     2
   ),
-(
+  (
     '9780435235895',
     'AS Critical Thinking for OCR',
     'Jo Lally',
     0,
     1
   ),
-(
+  (
     '9780435966881',
     'GCSE Physics for Edexcel International GCSE',
     'Bryan Earl; Doug Wilford',
     0,
     1
   ),
-(
+  (
     '9780435966898',
     'GCSE Chemistry for Edexcel International GCSE',
     'Bryan Earl; Doug Wilford',
     0,
     1
   ),
-(
+  (
     '9780435966904',
     'GCSE Biology for Edexcel International GCSE',
     'Bryan Earl; Doug Wilford',
     0,
     1
   ),
-(
+  (
     '9780436401336',
     'Crime and Penal Policy',
     'Barbara Wootton',
     0,
     1
   ),
-('9780439943727', 'Berserk', 'Ally Kennen', 13, 2),
-(
+  ('9780439943727', 'Berserk', 'Ally Kennen', 13, 2),
+  (
     '9780451528551',
     'The Time Machine',
     'H. G. Wells',
     13,
     2
   ),
-(
+  (
     '9780451531674',
     'The Invisible Man',
     'H. G. Wells',
     13,
     2
   ),
-(
+  (
     '9780460045940',
     'Cutting Edge, or, \"Back in the Knife-Box, Miss U?\"',
     'Ned Sherrin',
     0,
     1
   ),
-(
+  (
     '9780486290997',
     'The Island of Doctor Moreau',
     'H. G. Wells',
     13,
     2
   ),
-(
+  (
     '9780521046297',
     'The General Prologue to the Canterbury Tales',
     'Geoffrey Chaucer',
     13,
     2
   ),
-(
+  (
     '9780521747424',
     'Introduction to Business Studies',
     'Peter Stimpson',
     0,
     1
   ),
-(
+  (
     '9780550100948',
     'Chambers Dictionary of World History',
     'Bruce Lenman; Hilary Marsden',
     0,
     1
   ),
-(
+  (
     '9780563203841',
     'The Complete Yes Minister',
     'Jonathan Lynn',
     0,
     1
   ),
-(
+  (
     '9780567292292',
     'The Historical Jesus: The Life of a Mediterranean Jewish Peasant',
     'John Dominic Crossan',
     0,
     1
   ),
-(
+  (
     '9780571056866',
     'The Spire',
     'William Golding',
     13,
     2
   ),
-(
+  (
     '9780571094578',
     'The Great Conspiracy Trial',
     'Jason Epstein',
     0,
     1
   ),
-(
+  (
     '9780571216109',
     'The Lunar Men',
     'Jenny Uglow',
     0,
     1
   ),
-(
+  (
     '9780571327317',
     'The Resistance',
     'Owen Sheers',
     13,
     2
   ),
-(
+  (
     '9780582403444',
     'Joseph Conrad, Heart of Darkness',
     'Joseph Conrad',
     18,
     2
   ),
-(
+  (
     '9780582469396',
     'Sociology for Beginners',
     'Nicky Hayes',
     0,
     1
   ),
-(
+  (
     '9780582473133',
     'English Legal System',
     'Catherine Elliott; Frances Quinn',
     0,
     1
   ),
-(
+  (
     '9780582829992',
     'Macbeth',
     'William Shakespeare',
     0,
     1
   ),
-(
+  (
     '9780583339674',
     'The Silver Chair',
     'C. S. Lewis',
     0,
     2
   ),
-(
+  (
     '9780586058398',
     'Foundation\'s Edge',
     'Isaac Asimov',
     13,
     2
   ),
-(
+  (
     '9780590353427',
     'Harry Potter and the Sorcerer\'s Stone',
     'J. K. Rowling',
     13,
     2
   ),
-(
+  (
     '9780603580949',
     'Too Ghoul for School: Silent But Deadly',
     'Unknown',
     0,
     2
   ),
-(
+  (
     '9780631219293',
     'Thinking Sociologically',
     'Zygmunt Bauman; Tim May',
     0,
     1
   ),
-(
+  (
     '9780689837562',
     'The Dream Travellers',
     'Sherry Ashworth',
     13,
     2
   ),
-(
+  (
     '9780701185008',
     'Sleeping with the Enemy',
     'Hal Vaughan',
     18,
     1
   ),
-(
+  (
     '9780719542527',
     'Advanced Physics Study Course',
     'William Bolton',
     0,
     1
   ),
-(
+  (
     '9780719578687',
     'Advanced Physics for Hong Kong',
     'Tom Duncan; Heather Kennett',
     0,
     1
   ),
-(
+  (
     '9780743477550',
     'The Taming of the Shrew',
     'William Shakespeare',
     0,
     1
   ),
-(
+  (
     '9780745655512',
     'Sociology for AS AQA',
     'Ken Browne',
     0,
     1
   ),
-(
+  (
     '9780745664125',
     'Sociology for A2 AQA',
     'Ken Browne; Jonathan Blundell; Pamela Law; Margaret Whalley',
     0,
     1
   ),
-(
+  (
     '9780748782802',
     'AQA Chemistry AS',
     'Ted Lister; Janet Renshaw',
     0,
     1
   ),
-(
+  (
     '9780748785056',
     'Essential AS Chemistry for OCR',
     'Ted Lister; Janet Renshaw',
     0,
     1
   ),
-(
+  (
     '9780748798216',
     'AQA Government and Politics AS',
     'Duncan Watts',
     0,
     1
   ),
-(
+  (
     '9780749082161',
     'I Hate Christmas',
     'Daniel Blythe',
     0,
     2
   ),
-('9780749397227', 'Neverwhere', 'Neil Gaiman', 13, 2),
-(
+  (
+    '9780749397227',
+    'Neverwhere',
+    'Neil Gaiman',
+    13,
+    2
+  ),
+  (
     '9780750900614',
     'A Western Front Companion, 1914–1918: A-Z Source to the Battles, Weapons, People, Places, Air Combat',
     'John Laffin',
     0,
     1
   ),
-('9780752812182', 'UFO Sightings', 'Alan Baker', 0, 1),
-(
+  (
+    '9780752812182',
+    'UFO Sightings',
+    'Alan Baker',
+    0,
+    1
+  ),
+  (
     '9780857053954',
     'Fever at Dawn',
     'Peter Gardos',
     13,
     2
   ),
-(
+  (
     '9780857087980',
     'Small-minded Giants',
     'Rob Yeung',
     0,
     5
   ),
-(
+  (
     '9780860037507',
     'AS/A-Level Geography Coursework & Practical Techniques',
     'David Redfern; Malcolm Skinner',
     0,
     1
   ),
-(
+  (
     '9780863574641',
     'Safeguards in the School Laboratory',
     'The ASE Health & Safety Specialist Group',
     0,
     1
   ),
-(
+  (
     '9780954007911',
     'AQA A Level Sociology Including AS Level',
     'Rob Webb; Hal Westergaard; Annie Townend; Keith Trobe',
     0,
     1
   ),
-(
+  (
     '9780954007928',
     'AQA A Level Sociology',
     'Rob Webb; Hal Westergaard; Annie Townend; Keith Trobe',
     0,
     1
   ),
-(
+  (
     '9780954866549',
     'The Qurʼān With Sūrah Introductions and Appendices : Qurʼān Project Translation',
     'Allah',
     0,
     1
   ),
-(
+  (
     '9780993231162',
     'The Ultimate LNAT Guide',
     'W+D245+C241:C254+C241:C257+D245+C2+C241:C296',
     0,
     5
   ),
-(
+  (
     '9781108465977',
     'Cambridge IGCSE English as a Second Language Coursebook',
     'Peter Lucantoni; Lydia Kellas',
     0,
     1
   ),
-(
+  (
     '9781108667425',
     'Unlock Level 4 Reading, Writing, & Critical Thinking Student’s Book, Mob App and Online Workbook with Downloadable Video',
     'Chris Sowton; Alan S. Kennedy',
     0,
     1
   ),
-(
+  (
     '9781108859028',
     'Cambridge International AS & A Level Biology Coursebook',
     'Mary Jones',
     0,
     1
   ),
-(
+  (
     '9781108859035',
     'Cambridge International AS & A Level Physics Coursebook',
     'David Sang',
     0,
     1
   ),
-(
+  (
     '9781108863193',
     'Cambridge International AS & A Level Chemistry Coursebook',
     'Lawrie Ryan',
     0,
     1
   ),
-(
+  (
     '9781138687387',
     'Modern World History',
     'Norman Lowe',
     0,
     1
   ),
-(
+  (
     '9781292133874',
     'Pearson REVISE Edexcel GCSE Geography a Revision Guide',
     'Pearson Education',
     0,
     5
   ),
-(
+  (
     '9781292150116',
     'Revise BTEC National Business Revision Workbook',
     'Claire Parry; Steve Jakubowski; Diane Sutherland',
     0,
     1
   ),
-(
+  (
     '9781292183398',
     'Revise Edexcel GCSE Mathematics Higher Revision Guide',
     'Harry Smith',
     0,
     5
   ),
-(
+  (
     '9781292183404',
     'Revise Edexcel GCSE Mathematics Foundation Revision Guide',
     'Harry Smith',
     0,
     5
   ),
-(
+  (
     '9781292232539',
     'Edexcel AS and A Level Mathematics Statistics & Mechanics Year 1/AS Textbook',
     'Su Nicholson',
     0,
     1
   ),
-(
+  (
     '9781292274669',
     'Edexcel AS and A Level Mathematics Statistics and Mechanics Year 1/AS Practice Workbook',
     'Ian Bettison; Pearson Education, Limited; Laura Connell; Su Nicholson',
     0,
     1
   ),
-(
+  (
     '9781292274683',
     'Edexcel AS and A Level Mathematics Pure Mathematics Year 1/AS Practice Book',
     'Pearson Education, Limited',
     0,
     1
   ),
-(
+  (
     '9781405072847',
     'MR Treasure Island',
     'S. Colbourn',
     13,
     2
   ),
-(
+  (
     '9781405087278',
     'A Midsummer Night\'s Dream',
     'William Shakespeare; Rachel Bladon',
     0,
     2
   ),
-('9781405335379', 'First Aid Manual', 'Unknown', 0, 1),
-(
+  (
+    '9781405335379',
+    'First Aid Manual',
+    'Unknown',
+    0,
+    1
+  ),
+  (
     '9781405852234',
     'Longman Dictionary of Contemporary English',
     'Pearson Education',
     0,
     1
   ),
-(
+  (
     '9781405852593',
     'Longman Business English Dictionary',
     'Della Summers',
     0,
     1
   ),
-('9781405892346', 'Economics', 'Alain Anderton', 0, 1),
-(
+  (
+    '9781405892346',
+    'Economics',
+    'Alain Anderton',
+    0,
+    1
+  ),
+  (
     '9781405896719',
     'Sociology in Focus: AQA AS Level',
     'Michael Haralambos',
     0,
     1
   ),
-(
+  (
     '9781406364897',
     'Scorpia Rising',
     'Anthony Horowitz',
     13,
     4
   ),
-(
+  (
     '9781406364910',
     'Snakehead',
     'Anthony Horowitz',
     13,
     4
   ),
-(
+  (
     '9781406364927',
     'Crocodile Tears',
     'Anthony Horowitz',
     13,
     4
   ),
-('9781407106229', 'Nasty Nature', 'Nick Arnold', 0, 2),
-(
+  (
+    '9781407106229',
+    'Nasty Nature',
+    'Nick Arnold',
+    0,
+    2
+  ),
+  (
     '9781407182612',
     'Romeo & Juliet by William Shakespeare',
     'William Shakespeare',
     13,
     2
   ),
-(
+  (
     '9781408206652',
     'As And A2 Psychology',
     'Andrew Favager',
     0,
     1
   ),
-(
+  (
     '9781408517109',
     'AQA Certificate in Biology (iGCSE) Level 1/2',
     'Ann Fullick',
     0,
     1
   ),
-(
+  (
     '9781409135418',
     'The Hidden Cottage',
     'Erica James',
     18,
     2
   ),
-(
+  (
     '9781409326199',
     'Eyewitness World War I',
     'Simon Adams',
     0,
     1
   ),
-('9781416511618', 'Our Betty', 'Liz Smith', 0, 1),
-(
+  ('9781416511618', 'Our Betty', 'Liz Smith', 0, 1),
+  (
     '9781426320705',
     'Big Hero 6 Super-Brain Science Book of Why',
     'Jennifer Swanson',
     0,
     1
   ),
-(
+  (
     '9781444161885',
     'AQA AS Government & Politics',
     'Paul Fairclough',
     0,
     1
   ),
-(
+  (
     '9781447980209',
     'Edexcel GCSE (9-1) Mathematics: Higher Student Book',
     'Naomi Norman; Katherine Pate',
     0,
     1
   ),
-(
+  (
     '9781447983545',
     'Edexcel AS/A Level Business 5th Edition Student Book and EBook',
     'Dave Hall',
     0,
     1
   ),
-(
+  (
     '9781447984351',
     'Pearson Revise OCR AS/A Level Physics Revision Workbook',
     'Steve Adams; John Balcombe',
     0,
     1
   ),
-(
+  (
     '9781447990550',
     'Edexcel AS/A Level Economics Student Book + ActiveBook (Edexcel GCE Economics 2015)',
     'Alain Anderton; Dave Gray',
     0,
     1
   ),
-(
+  (
     '9781471834882',
     'AQA A Level Psychology',
     'Jean-Marc Lawton',
     0,
     1
   ),
-(
+  (
     '9781471842139',
     'My Revision Notes: Edexcel A Level Economics',
     'Quintin Brewer; Rachel Cole',
     0,
     1
   ),
-(
+  (
     '9781471842191',
     'AQA A-Level Chemistry Student Guide',
     'Ted Lister; Janet Renshaw',
     0,
     5
   ),
-(
+  (
     '9781471842238',
     'AQA A-Level Physics Student Guide',
     'Jim Breithaupt',
     0,
     5
   ),
-(
+  (
     '9781471843365',
     'Edexcel Economics A Student Guide: Theme 1',
     'Mark Gavin',
     0,
     5
   ),
-(
+  (
     '9781471844300',
     'OCR A-Level Biology Student Guide',
     'Sue Hocking',
     0,
     5
   ),
-(
+  (
     '9781471844324',
     'AQA Sociology Student Guide 1: Education (with Theory and Methods)',
     'Dave O\'Leary',
     0,
     5
   ),
-(
+  (
     '9781471844331',
     'OCR A-Level Chemistry Student Guide',
     'Dave Gent',
     0,
     5
   ),
-(
+  (
     '9781471844362',
     'OCR A-Level Physics Student Guide',
     'Mike O\'Neill',
     0,
     5
   ),
-(
+  (
     '9781471866968',
     'Edexcel PE for GCSE',
     'Sue Hartigan',
     0,
     1
   ),
-(
+  (
     '9781471876103',
     'My Revision Notes AQA AS/A-Level History: The Tudors: England, 1485–1603',
     'Roger Turvey',
     0,
     1
   ),
-(
+  (
     '9781471876226',
     'My Revision Notes AQA AS/A-Level History: Democracy and Nazism: Germany, 1918–1945',
     'Alan Farmer; Geoff Layton',
     0,
     1
   ),
-(
+  (
     '9781471889363',
     'US Government and Politics',
     'Anthony J. Bennett',
     0,
     1
   ),
-('9781471889660', 'Politics', 'Neil McNaughton', 0, 1),
-(
+  (
+    '9781471889660',
+    'Politics',
+    'Neil McNaughton',
+    0,
+    1
+  ),
+  (
     '9781472258335',
     'The Scotland Yard Puzzle Book',
     'Sinclair McKay',
     0,
     1
   ),
-('9781509852857', 'Floored', 'Sara Barnard', 13, 2),
-(
+  (
+    '9781509852857',
+    'Floored',
+    'Sara Barnard',
+    13,
+    2
+  ),
+  (
     '9781510405196',
     'Edexcel International GCSE Biology Student Book, Second Edition',
     'Erica Larkcom; Roger Delpech',
     0,
     1
   ),
-(
+  (
     '9781510423527',
     'History',
     'David Ferriby; Keith Milne',
     0,
     1
   ),
-(
+  (
     '9781510424234',
     'Aiming for an A in Psychology',
     'Jean-Marc Lawton',
     0,
     1
   ),
-(
+  (
     '9781510458949',
     'Engaging with AQA GCSE (9-1) History: Elizabethan England, C1568-1603 British Depth Study',
     'Dale Banham',
     0,
     1
   ),
-(
+  (
     '9781510470286',
     'AQA GCSE (9-1) Sociology, Updated Edition',
     'David Bown',
     0,
     1
   ),
-(
+  (
     '9781510477513',
     'AQA GCSE (9-1) Geography Second Edition',
     'John Widdowson; Simon Oakes; Michael Witherick',
     0,
     1
   ),
-(
+  (
     '9781576731864',
     'Redeeming Love',
     'Francine Rivers',
     18,
     3
   ),
-(
+  (
     '9781592976812',
     'The Book of Mormon: Another Testament of Jesus Christ',
     'Joseph Smith',
     0,
     1
   ),
-(
+  (
     '9781593392932',
     'Britannica Concise Encyclopedia',
     'Encyclopaedia Britannica, Inc',
     0,
     1
   ),
-(
+  (
     '9781780225111',
     'In the Midst of Life',
     'Jennifer Worth',
     0,
     1
   ),
-(
+  (
     '9781780747750',
     'Professor Povey\'s Perplexing Problems',
     'Thomas Povey',
     0,
     1
   ),
-(
+  (
     '9781782941224',
     'KS3 Spelling, Punctuation & Grammar Workbook (with Answers)',
     'CGP Books',
     0,
     1
   ),
-(
+  (
     '9781782941408',
     'New KS3 Science Complete Revision & Practice – Higher (includes Videos & Quizzes)',
     'CGP Books',
     0,
     1
   ),
-(
+  (
     '9781782942795',
     'Head Start to A-Level Biology',
     'CGP Books; Paddy Gannon; Barbara Green',
     0,
     1
   ),
-(
+  (
     '9781782942924',
     'New 2015 A-Level Physics: AQA Year 1 & AS Complete Revision & Practice',
     'CGP Books',
     0,
     1
   ),
-(
+  (
     '9781782943099',
     'Grade 9-1 GCSE English Text Guide - An Inspector Calls',
     'CGP Books',
     0,
     5
   ),
-(
+  (
     '9781782943129',
     'GCSE English Text Guide - A Christmas Carol',
     'CGP Books',
     0,
     5
   ),
-(
+  (
     '9781782943242',
     'A-Level Year 2 Biology: The Complete Course for AQA',
     'Charlotte Burrows',
     0,
     1
   ),
-(
+  (
     '9781782943471',
     'A-Level Economics Complete Revision and Practice',
     'David Broadbent; Christopher Lindle; Kirstie McHale; Sarah Oxley; Andy Park',
     0,
     1
   ),
-(
+  (
     '9781782943549',
     'New A-Level Sociology',
     'CGP Books',
     0,
     1
   ),
-(
+  (
     '9781782943662',
     'Statistics for GCSE',
     'CGP Books',
     0,
     1
   ),
-(
+  (
     '9781782943679',
     'GCSE English Literature Revision Guide',
     'CGP Books',
     0,
     5
   ),
-(
+  (
     '9781782943686',
     'GCSE English Language Revision Guide',
     'CGP Books',
     0,
     5
   ),
-(
+  (
     '9781782944041',
     'GCSE Exexcel Mathematics for the Grade 9-1 Course',
     'CGP Books',
     0,
     1
   ),
-(
+  (
     '9781782944157',
     'New Gcse English Language Aqa Complete Revision & Practice - Grade 9-1 Cour',
     'CGP Books',
     0,
     2
   ),
-(
+  (
     '9781782944911',
     'GCSE Physics for Edexcel (grade 9-1)',
     'CGP Books',
     0,
     1
   ),
-(
+  (
     '9781782944935',
     'GCSE Biology for Edexcel (grade 9-1).',
     'CGP Books',
     0,
     1
   ),
-(
+  (
     '9781782944942',
     'New Grade 9-1 GCSE Chemistry: Edexcel Revision Guide with Online Edition',
     'CGP Books',
     0,
     5
   ),
-(
+  (
     '9781782944959',
     'GCSE Chemistry for Edexcel (grade 9-1).',
     'CGP Books',
     0,
     1
   ),
-(
+  (
     '9781782944966',
     'New Grade 9-1 GCSE Chemistry: Edexcel Exam Practice Workbook',
     'CGP Books',
     0,
     1
   ),
-(
+  (
     '9781782944980',
     'New Grade 9-1 GCSE Biology: Edexcel Exam Practice Workbook',
     'CGP Books',
     0,
     1
   ),
-(
+  (
     '9781782945000',
     'New Grade 9-1 GCSE Physics: Edexcel Exam Practice Workbook',
     'CGP Books',
     0,
     1
   ),
-(
+  (
     '9781782945321',
     'Chemistry Edexcel Targeted Exam Practice',
     'CGP Books',
     0,
     1
   ),
-(
+  (
     '9781782945598',
     'CGP GCSE Combined Science Revision Guide',
     'CGP Books',
     0,
     5
   ),
-(
+  (
     '9781782945604',
     'CGP GCSE Physics Revision Guide',
     'CGP Books',
     0,
     5
   ),
-(
+  (
     '9781782945611',
     'CGP GCSE Chemistry Revision Guide',
     'CGP Books',
     0,
     5
   ),
-(
+  (
     '9781782945628',
     'CGP GCSE Biology Revision Guide',
     'CGP Books',
     0,
     5
   ),
-(
+  (
     '9781782946410',
     'New GCSE Biology Edexcel Grade 8-9 Targeted Exam Practice Workbook (includes Answers)',
     'CGP Books',
     0,
     1
   ),
-(
+  (
     '9781782946748',
     'Edexcel International GCSE Biology Revision Guide: Including Online Edition, Videos and Quizzes',
     'CGP Books',
     0,
     5
   ),
-(
+  (
     '9781782946755',
     'Edexcel International GCSE Biology Exam Practice Workbook (with Answers)',
     'CGP Books',
     0,
     1
   ),
-(
+  (
     '9781782946878',
     'New Grade 9-1 Edexcel International GCSE Physics: Revision Guide with Online Edition',
     'CGP Books',
     0,
     5
   ),
-(
+  (
     '9781782946885',
     'New Grade 9-1 Edexcel International GCSE Physics: Exam Practice',
     'Unknown',
     0,
     1
   ),
-(
+  (
     '9781786328601',
     'Ready for IELTS (2nd Edition) Workbook Without Answers Pack',
     'Sam McCarter',
     0,
     1
   ),
-(
+  (
     '9781786328632',
     'IELTS 2nd Ed Students Book',
     'Sam McCarter',
     0,
     1
   ),
-(
+  (
     '9781788101011',
     'Igloo Books Large Print Puzzles Sudoku',
     'Unknown',
     0,
     2
   ),
-(
+  (
     '9781789080216',
     'New GCSE Maths Edexcel Knowledge Organiser',
     'CGP Books',
     0,
     1
   ),
-(
+  (
     '9781789080308',
     'A-level Year 1 & AS Physics Exam Board: AQA',
     'Tony Alldridge',
     0,
     1
   ),
-(
+  (
     '9781789080384',
     'New A-Level Chemistry for 2018: OCR A Year 1 & 2 Complete Revision & Practice with Online Edition',
     'CGP Books',
     0,
     1
   ),
-(
+  (
     '9781789080391',
     'New A-Level Physics for 2018',
     'CGP Books',
     0,
     1
   ),
-(
+  (
     '9781789080827',
     'Edexcel International GCSE Biology Complete Revision & Practice: Includes Online Videos & Quizzes',
     'CGP Books',
     0,
     1
   ),
-(
+  (
     '9781789082814',
     'GCSE Knowledge Retriever',
     'CGP Books',
     0,
     1
   ),
-(
+  (
     '9781789086270',
     'How to Revise for A-Level',
     'CGP Books; Siân Butler',
     0,
     5
   ),
-(
+  (
     '9781840224009',
     'The Hound of the Baskervilles and the Valley of Fear',
     'Arthur Conan Doyle',
     13,
     2
   ),
-(
+  (
     '9781840851465',
     'GCSE Science Dictionary',
     'David Baylis; Graham Booth; Godfrey Robert McDuell',
     0,
     1
   ),
-(
+  (
     '9781841467658',
     'AS Level Mathematics',
     'Richard Parsons',
     0,
     1
   ),
-(
+  (
     '9781841693255',
     'Revise Psychology for AS Level',
     'Roz Brody; Diana Dwyer',
     0,
     1
   ),
-(
+  (
     '9781841693781',
     'Psychology for AS Level',
     'Michael W. Eysenck',
     0,
     1
   ),
-(
+  (
     '9781842552155',
     'Dr Franklin\'s Island',
     'Ann Halam',
     13,
     2
   ),
-(
+  (
     '9781842553206',
     'The Fire Thief',
     'Terry Deary',
     0,
     2
   ),
-(
+  (
     '9781843560296',
     'Kennedy\'s Revised Latin Primer',
     'Benjamin Hall Kennedy',
     0,
     1
   ),
-(
+  (
     '9781843625223',
     'Fire Star',
     'Chris D\'Lacey',
     13,
     2
   ),
-(
+  (
     '9781844081813',
     'The Giant\'s House',
     'Unknown',
     0,
     2
   ),
-(
+  (
     '9781844192403',
     'KS3 Science Coursebook',
     'Educational Experts',
     0,
     1
   ),
-(
+  (
     '9781844194414',
     'Complete Study and Revision - Sociology',
     'Steve Chapman',
     0,
     1
   ),
-(
+  (
     '9781844892020',
     'Economy & Development',
     'David Burtenshaw',
     0,
     1
   ),
-(
+  (
     '9781846900839',
     'GCSE Mathematics Edexcel 2010: Spec A Higher Student Book',
     'Keith Pledger; Graham Cumming; Kevin Tanner; Gareth Cole; Michael Flowers; Julie Bolter; Rob Summerson; Rob Pepper; Joe Petran; Karen Hughes; Peter Jolly; Jean Linsky; Brian Western; Graham Newman; Joan Knott; Gillian Dyer',
     0,
     1
   ),
-(
+  (
     '9781847156761',
     'There\'s a Dragon in My Backpack!',
     'Tom Nicoll',
     13,
     4
   ),
-(
+  (
     '9781847394644',
     'The Kingmaker\'s Daughter',
     'Philippa Gregory',
     13,
     2
   ),
-(
+  (
     '9781847621184',
     'AS-Level Biology: Exam Board AQA The Revision Guide',
     'Richard Parsons',
     0,
     5
   ),
-(
+  (
     '9781847621405',
     'AS Level Psychology AQA Revision Guide',
     'Unknown',
     0,
     5
   ),
-(
+  (
     '9781847622754',
     'A2-Level Psychology AQA A Revision Guide',
     'CGP Books; Richard Parsons',
     0,
     5
   ),
-(
+  (
     '9781848120457',
     'Mates, Dates and Great Escapes',
     'Cathy Hopkins',
     13,
     2
   ),
-(
+  (
     '9781850082606',
     'Success in Sociology: AS Student Book AQA',
     'Peter Covington',
     0,
     5
   ),
-('9781853260377', 'Lord Jim', 'Joseph Conrad', 13, 2),
-(
+  (
+    '9781853260377',
+    'Lord Jim',
+    'Joseph Conrad',
+    13,
+    2
+  ),
+  (
     '9781853268359',
     'Martin Chuzzlewit',
     'Charles Dickens',
     13,
     2
   ),
-(
+  (
     '9781854315830',
     'Law for Legal Executives: English Legal System, the Law Relating to Land, Criminal Law, Law of Tort',
     'Timothy Blakemore; Brendan Greene',
     0,
     1
   ),
-(
+  (
     '9781857493962',
     'Information Technology',
     'Gareth Williams',
     0,
     1
   ),
-(
+  (
     '9781862302983',
     'The Escape of the Deadly Dinosaur: USA',
     'Elizabeth Singer Hunt',
     0,
     2
   ),
-('9781903240236', 'Tort Law', 'Sue Hodge', 0, 1),
-(
+  ('9781903240236', 'Tort Law', 'Sue Hodge', 0, 1),
+  (
     '9781907363689',
     'Oxford Essential Portuguese Dictionary',
     'John Whitlam',
     0,
     1
   ),
-(
+  (
     '9781907363696',
     'Oxford Paperback Dictionary and Thesaurus',
     'Maurice Waite; Sara Hawker',
     0,
     1
   ),
-(
+  (
     '9781907363702',
     'NCV Kidsbible.Com',
     'Betsy Schmitt',
     0,
     1
   ),
-(
+  (
     '9781907363719',
     'AS/Year 1 Chemistry',
     'Katie Braid; Mary Falkner; Gordon Henderson; Emily Howe (Editor of AS/year 1 chemistry); Rachel Ward; Ben Train (Editor of AS/year 1 chemistry)',
     0,
     1
   ),
-(
+  (
     '9781909531260',
     'The Underdog',
     'Markus Zusak',
     13,
     2
   ),
-(
+  (
     '9781910432006',
     'The Meaning of the Glorious Qur\'an',
     'Sahib Mustaqim Bleher',
     0,
     1
   ),
-(
+  (
     '9781911208068',
     'AQA Psychology for GCSE: Revision Guide',
     'Cara Flanagan; Dave Berry; Mark Jones; Rob Liddle; Ruth Jones',
     0,
     5
   ),
-(
+  (
     '9785957600756',
     'Новый Англо-русский Словарь Около 170,000 Слов И Словосочетаний',
     'Владимир Карлович Мюллер',
     0,
     1
   ),
-(
+  (
     '9785992505634',
     '1984 [книга для чтения на английском языке]',
     'Джордж Оруэлл',
     13,
     2
   ),
-('9787119033990', '新时代学生英汉双解词典', '凌玉; 宏涛', 0, 2),
-('9787560026763', '朗文中阶英语词典', 'Various', 0, 1),
-('9787801034144', '新英汉-汉英词典', 'Unknown', 0, 2),
-('9788960477001', '3030 English 세트(전3권)', '김지완', 0, 2),
-('9789088141430', 'Unknown', 'Unknown', 0, 2),
-('9789888037452', 'Chemistry', 'Edward Cheng', 0, 1),
-(
+  ('9787119033990', '新时代学生英汉双解词典', '凌玉; 宏涛', 0, 2),
+  ('9787560026763', '朗文中阶英语词典', 'Various', 0, 1),
+  ('9787801034144', '新英汉-汉英词典', 'Unknown', 0, 2),
+  (
+    '9788960477001',
+    '3030 English 세트(전3권)',
+    '김지완',
+    0,
+    2
+  ),
+  ('9789088141430', 'Unknown', 'Unknown', 0, 2),
+  (
+    '9789888037452',
+    'Chemistry',
+    'Edward Cheng',
+    0,
+    1
+  ),
+  (
     '9789888597796',
     'Pre-DSE Series',
     'H. L. Yeung; Andrew Diu; W. Y. Tong',
     0,
     1
   ),
-('9789988151430', 'Unknown', 'Unknown', 0, 2),
-(
+  ('9789988151430', 'Unknown', 'Unknown', 0, 2),
+  (
     '9798630248015',
     'Flatland',
     'Edwin A. Abbott',
@@ -3056,10 +3164,10 @@ LOCK TABLES `genres` WRITE;
 ;
 INSERT INTO `genres`
 VALUES (1, 'Non-fiction'),
-(2, 'Fiction'),
-(3, 'Romance'),
-(4, 'Thriller'),
-(5, 'Self-Help');
+  (2, 'Fiction'),
+  (3, 'Romance'),
+  (4, 'Thriller'),
+  (5, 'Self-Help');
 /*!40000 ALTER TABLE `genres` ENABLE KEYS */
 ;
 UNLOCK TABLES;
@@ -3095,896 +3203,1238 @@ VALUES (
     '2008-01-01',
     'Student\r'
   ),
-(
+  (
     2,
     'Deriya',
     'Bozdogangil',
     '2008-01-02',
     'Student\r'
   ),
-(3, 'Huisang', 'Cho', '2008-01-03', 'Student\r'),
-(
+  (3, 'Huisang', 'Cho', '2008-01-03', 'Student\r'),
+  (
     4,
     'Vakhtang',
     'Sikharulidze',
     '2008-01-04',
     'Student\r'
   ),
-(
+  (
     5,
     'Matheus',
     'Alencar Pinheiro',
     '2008-01-05',
     'Student\r'
   ),
-(6, 'Eylul', 'Capar', '2008-01-06', 'Student\r'),
-(
+  (6, 'Eylul', 'Capar', '2008-01-06', 'Student\r'),
+  (
     7,
     'Frederico',
     'Carneiro De Souza Filho',
     '2008-01-07',
     'Student\r'
   ),
-(
+  (
     8,
     'Kristina',
     'Celderova',
     '2008-01-08',
     'Student\r'
   ),
-(9, 'Eunseo', 'Choi', '2008-01-09', 'Student\r'),
-(
+  (9, 'Eunseo', 'Choi', '2008-01-09', 'Student\r'),
+  (
     10,
     'Antonio',
     'De Castro Moreira Dos Santos',
     '2008-01-10',
     'Student\r'
   ),
-(11, 'Karina', 'Demchenko', '2008-01-11', 'Student\r'),
-(
+  (
+    11,
+    'Karina',
+    'Demchenko',
+    '2008-01-11',
+    'Student\r'
+  ),
+  (
     12,
     'Mustafa Enes',
     'Guler',
     '2008-01-12',
     'Student\r'
   ),
-(13, 'Yunjin', 'Park', '2008-01-13', 'Student\r'),
-(14, 'Uzair', 'Ahmed', '2008-01-14', 'Student\r'),
-(
+  (13, 'Yunjin', 'Park', '2008-01-13', 'Student\r'),
+  (14, 'Uzair', 'Ahmed', '2008-01-14', 'Student\r'),
+  (
     15,
     'Zeynep Ipek',
     'Akcay',
     '2008-01-15',
     'Student\r'
   ),
-(
+  (
     16,
     'Joaquim',
     'Albergaria Costa E Carvalho',
     '2008-01-16',
     'Student\r'
   ),
-(17, 'Yikyeong', 'An', '2008-01-17', 'Student\r'),
-(
+  (17, 'Yikyeong', 'An', '2008-01-17', 'Student\r'),
+  (
     18,
     'Pattheera',
     'Anuragudom',
     '2008-01-18',
     'Student\r'
   ),
-(
+  (
     19,
     'Carlos Roberto',
     'Araujo Garcia',
     '2008-01-19',
     'Student\r'
   ),
-(
+  (
     20,
     'Victor Manuel',
     'Arteaga Romano',
     '2008-01-20',
     'Student\r'
   ),
-(
+  (
     21,
     'Phebean Iyanuoluwa',
     'Ayeni',
     '2008-01-21',
     'Student\r'
   ),
-(
+  (
     22,
     'Emily Kar Yee Chan',
     'Bailey',
     '2008-01-22',
     'Student\r'
   ),
-(23, 'Ernest', 'Bilovusko', '2008-01-23', 'Student\r'),
-(
+  (
+    23,
+    'Ernest',
+    'Bilovusko',
+    '2008-01-23',
+    'Student\r'
+  ),
+  (
     24,
     'Julia',
     'Callegari Bellini',
     '2008-01-24',
     'Student\r'
   ),
-(
+  (
     25,
     'Joao Pedro',
     'Cavalcante Felix',
     '2008-01-25',
     'Student\r'
   ),
-(
+  (
     26,
     'Pornnatcha',
     'Chandrachoti',
     '2008-01-26',
     'Student\r'
   ),
-(27, 'Chiao-An', 'Chen', '2008-01-27', 'Student\r'),
-(
+  (
+    27,
+    'Chiao-An',
+    'Chen',
+    '2008-01-27',
+    'Student\r'
+  ),
+  (
     28,
     'Santiago',
     'Cifuentes Espinosa',
     '2008-01-28',
     'Student\r'
   ),
-(
+  (
     29,
     'Chantelle Lizdeth',
     'Cristante Vazquez',
     '2008-01-29',
     'Student\r'
   ),
-(
+  (
     30,
     'Mehmet Turker',
     'Cuhaci',
     '2008-01-30',
     'Student\r'
   ),
-(31, 'Tianyue', 'Dai', '2008-01-31', 'Student\r'),
-(32, 'Serafima', 'Demina', '2008-02-01', 'Student\r'),
-(
+  (31, 'Tianyue', 'Dai', '2008-01-31', 'Student\r'),
+  (
+    32,
+    'Serafima',
+    'Demina',
+    '2008-02-01',
+    'Student\r'
+  ),
+  (
     33,
     'Laila Zainab',
     'Dhanji',
     '2008-02-02',
     'Student\r'
   ),
-(
+  (
     34,
     'Silvana',
     'Diaz Batiz',
     '2008-02-03',
     'Student\r'
   ),
-(35, 'Liubou', 'Hrybanava', '2008-02-04', 'Student\r'),
-(36, 'Jia Yi', 'Liu', '2008-02-05', 'Student\r'),
-(
+  (
+    35,
+    'Liubou',
+    'Hrybanava',
+    '2008-02-04',
+    'Student\r'
+  ),
+  (36, 'Jia Yi', 'Liu', '2008-02-05', 'Student\r'),
+  (
     37,
     'Taechowthai',
     'Nipatthanodom',
     '2008-02-06',
     'Student\r'
   ),
-(38, 'Tri Dung', 'Tran', '2008-02-07', 'Student\r'),
-(
+  (
+    38,
+    'Tri Dung',
+    'Tran',
+    '2008-02-07',
+    'Student\r'
+  ),
+  (
     39,
     'Ponpavi',
     'Tuntithanasap',
     '2008-02-08',
     'Student\r'
   ),
-(
+  (
     40,
     'Mariana',
     'Vieira Serra',
     '2008-02-09',
     'Student\r'
   ),
-(41, 'Ngoc Khanh', 'Vu', '2008-02-10', 'Student\r'),
-(
+  (
+    41,
+    'Ngoc Khanh',
+    'Vu',
+    '2008-02-10',
+    'Student\r'
+  ),
+  (
     42,
     'Mohammadmani',
     'Babahosseini',
     '2008-02-11',
     'Student\r'
   ),
-(
+  (
     43,
     'Bianca Sofia',
     'Cebotari',
     '2008-02-12',
     'Student\r'
   ),
-(44, 'Ruslana', 'Forsiuk', '2008-02-13', 'Student\r'),
-(45, 'Yar', 'Hasan', '2008-02-14', 'Student\r'),
-(
+  (
+    44,
+    'Ruslana',
+    'Forsiuk',
+    '2008-02-13',
+    'Student\r'
+  ),
+  (45, 'Yar', 'Hasan', '2008-02-14', 'Student\r'),
+  (
     46,
     'Rayaan Assad',
     'Majid',
     '2008-02-15',
     'Student\r'
   ),
-(47, 'Sungwook', 'Ryu', '2008-02-16', 'Student\r'),
-(48, 'Kareng Hka', 'Tawng', '2008-02-17', 'Student\r'),
-(49, 'Duy Anh', 'Tran', '2008-02-18', 'Student\r'),
-(
+  (47, 'Sungwook', 'Ryu', '2008-02-16', 'Student\r'),
+  (
+    48,
+    'Kareng Hka',
+    'Tawng',
+    '2008-02-17',
+    'Student\r'
+  ),
+  (49, 'Duy Anh', 'Tran', '2008-02-18', 'Student\r'),
+  (
     50,
     'Torukuru Favour',
     'Uranta',
     '2008-02-19',
     'Student\r'
   ),
-(51, 'David Cale', 'Blair', '2008-02-20', 'Student\r'),
-(52, 'Olga', 'Amkhalova', '2008-02-21', 'Student\r'),
-(53, 'Nima', 'Babahoseini', '2008-02-22', 'Student\r'),
-(54, 'Azaan Azmat', 'Beig', '2008-02-23', 'Student\r'),
-(55, 'Yat Chun', 'Chan', '2008-02-24', 'Student\r'),
-(
+  (
+    51,
+    'David Cale',
+    'Blair',
+    '2008-02-20',
+    'Student\r'
+  ),
+  (
+    52,
+    'Olga',
+    'Amkhalova',
+    '2008-02-21',
+    'Student\r'
+  ),
+  (
+    53,
+    'Nima',
+    'Babahoseini',
+    '2008-02-22',
+    'Student\r'
+  ),
+  (
+    54,
+    'Azaan Azmat',
+    'Beig',
+    '2008-02-23',
+    'Student\r'
+  ),
+  (
+    55,
+    'Yat Chun',
+    'Chan',
+    '2008-02-24',
+    'Student\r'
+  ),
+  (
     56,
     'Tadiwanashe Gabriel',
     'Mashongwa',
     '2008-02-25',
     'Student\r'
   ),
-(
+  (
     57,
     'Poppy Isabelle',
     'Kerly',
     '2008-02-26',
     'Student\r'
   ),
-(58, 'Kyuhwan', 'Kim', '2008-02-27', 'Student\r'),
-(
+  (58, 'Kyuhwan', 'Kim', '2008-02-27', 'Student\r'),
+  (
     59,
     'Jacob James',
     'Moss-Norbury',
     '2008-02-28',
     'Student\r'
   ),
-(
+  (
     60,
     'Sophie Amelia',
     'Willoughby',
     '2008-02-29',
     'Student\r'
   ),
-(61, 'Yuen Ching', 'Wong', '2008-03-01', 'Student\r'),
-(
+  (
+    61,
+    'Yuen Ching',
+    'Wong',
+    '2008-03-01',
+    'Student\r'
+  ),
+  (
     62,
     'Amelie Anya',
     'Bindra Ashton',
     '2008-03-02',
     'Student\r'
   ),
-(
+  (
     63,
     'Felipe',
     'Ferrari Caram Nascif',
     '2008-03-03',
     'Student\r'
   ),
-(64, 'Gusein', 'Gasanov', '2008-03-04', 'Student\r'),
-(
+  (
+    64,
+    'Gusein',
+    'Gasanov',
+    '2008-03-04',
+    'Student\r'
+  ),
+  (
     65,
     'Caue',
     'Guaratini Lopes',
     '2008-03-05',
     'Student\r'
   ),
-(66, 'Zixin', 'Gui', '2008-03-06', 'Student\r'),
-(67, 'Diep Chi', 'Ha', '2008-03-07', 'Student\r'),
-(68, 'Keyu', 'Jin', '2008-03-08', 'Student\r'),
-(
+  (66, 'Zixin', 'Gui', '2008-03-06', 'Student\r'),
+  (67, 'Diep Chi', 'Ha', '2008-03-07', 'Student\r'),
+  (68, 'Keyu', 'Jin', '2008-03-08', 'Student\r'),
+  (
     69,
     'Uladzislau',
     'Karankou',
     '2008-03-09',
     'Student\r'
   ),
-(70, 'Nayun', 'Kim', '2008-03-10', 'Student\r'),
-(
+  (70, 'Nayun', 'Kim', '2008-03-10', 'Student\r'),
+  (
     71,
     'Kristina Kalin',
     'Kostova',
     '2008-03-11',
     'Student\r'
   ),
-(72, 'Hi Sin', 'Yeung', '2008-03-12', 'Student\r'),
-(73, 'Eva', 'Clark', '2008-03-13', 'Student\r'),
-(74, 'Levent', 'Dagtas', '2008-03-14', 'Student\r'),
-(75, 'Pri', 'Dim', '2008-03-15', 'Student\r'),
-(76, 'Thuy Trang', 'Dinh', '2008-03-16', 'Student\r'),
-(
+  (72, 'Hi Sin', 'Yeung', '2008-03-12', 'Student\r'),
+  (73, 'Eva', 'Clark', '2008-03-13', 'Student\r'),
+  (
+    74,
+    'Levent',
+    'Dagtas',
+    '2008-03-14',
+    'Student\r'
+  ),
+  (75, 'Pri', 'Dim', '2008-03-15', 'Student\r'),
+  (
+    76,
+    'Thuy Trang',
+    'Dinh',
+    '2008-03-16',
+    'Student\r'
+  ),
+  (
     77,
     'Mariana',
     'Escamilla Perez',
     '2008-03-17',
     'Student\r'
   ),
-(
+  (
     78,
     'Pedro',
     'Ferrari Caram Nascif',
     '2008-03-18',
     'Student\r'
   ),
-(
+  (
     79,
     'Gabriel',
     'Ferrari De Carvalho',
     '2008-03-19',
     'Student\r'
   ),
-(80, 'Nehir', 'Gokalan', '2008-03-20', 'Student\r'),
-(81, 'Diem Quynh', 'Ha', '2008-03-21', 'Student\r'),
-(
+  (
+    80,
+    'Nehir',
+    'Gokalan',
+    '2008-03-20',
+    'Student\r'
+  ),
+  (
+    81,
+    'Diem Quynh',
+    'Ha',
+    '2008-03-21',
+    'Student\r'
+  ),
+  (
     82,
     'Mariah',
     'Haddad Goega Simao De Siqueira',
     '2008-03-22',
     'Student\r'
   ),
-(
+  (
     83,
     'Dissayarin',
     'Hiranruengrong',
     '2008-03-23',
     'Student\r'
   ),
-(84, 'Daniil', 'Ivanisov', '2008-03-24', 'Student\r'),
-(85, 'Mariia', 'Ivanova', '2008-03-25', 'Student\r'),
-(86, 'Yuli', 'Ji', '2008-03-26', 'Student\r'),
-(
+  (
+    84,
+    'Daniil',
+    'Ivanisov',
+    '2008-03-24',
+    'Student\r'
+  ),
+  (
+    85,
+    'Mariia',
+    'Ivanova',
+    '2008-03-25',
+    'Student\r'
+  ),
+  (86, 'Yuli', 'Ji', '2008-03-26', 'Student\r'),
+  (
     87,
     'Julia',
     'Jimenez Sandoval',
     '2008-03-27',
     'Student\r'
   ),
-(
+  (
     88,
     'Thiti',
     'Kiattiteerachai',
     '2008-03-28',
     'Student\r'
   ),
-(89, 'Oak Soe Ye', 'Ko', '2008-03-29', 'Student\r'),
-(90, 'Zongyu', 'Ma', '2008-03-30', 'Student\r'),
-(91, 'Hei Ching', 'Wong', '2008-03-31', 'Student\r'),
-(92, 'Iok San', 'Guan', '2008-04-01', 'Student\r'),
-(
+  (
+    89,
+    'Oak Soe Ye',
+    'Ko',
+    '2008-03-29',
+    'Student\r'
+  ),
+  (90, 'Zongyu', 'Ma', '2008-03-30', 'Student\r'),
+  (
+    91,
+    'Hei Ching',
+    'Wong',
+    '2008-03-31',
+    'Student\r'
+  ),
+  (92, 'Iok San', 'Guan', '2008-04-01', 'Student\r'),
+  (
     93,
     'Yusuf Emre',
     'Gursoy',
     '2008-04-02',
     'Student\r'
   ),
-(
+  (
     94,
     'Felicity Abigail',
     'Harris',
     '2008-04-03',
     'Student\r'
   ),
-(95, 'Phong Le', 'Hoang', '2008-04-04', 'Student\r'),
-(96, 'Nam Khanh', 'Hoang', '2008-04-05', 'Student\r'),
-(97, 'Jo Pei', 'Huang', '2008-04-06', 'Student\r'),
-(98, 'Rizma', 'Imran', '2008-04-07', 'Student\r'),
-(99, 'Cheuk Nam', 'Ip', '2008-04-08', 'Student\r'),
-(100, 'Berin', 'Kahveci', '2008-04-09', 'Student\r'),
-(101, 'German', 'Khokhlov', '2008-04-10', 'Student\r'),
-(102, 'Eiva', 'Portch', '2008-04-11', 'Student\r'),
-(
+  (
+    95,
+    'Phong Le',
+    'Hoang',
+    '2008-04-04',
+    'Student\r'
+  ),
+  (
+    96,
+    'Nam Khanh',
+    'Hoang',
+    '2008-04-05',
+    'Student\r'
+  ),
+  (97, 'Jo Pei', 'Huang', '2008-04-06', 'Student\r'),
+  (98, 'Rizma', 'Imran', '2008-04-07', 'Student\r'),
+  (99, 'Cheuk Nam', 'Ip', '2008-04-08', 'Student\r'),
+  (
+    100,
+    'Berin',
+    'Kahveci',
+    '2008-04-09',
+    'Student\r'
+  ),
+  (
+    101,
+    'German',
+    'Khokhlov',
+    '2008-04-10',
+    'Student\r'
+  ),
+  (102, 'Eiva', 'Portch', '2008-04-11', 'Student\r'),
+  (
     103,
     'Adelina',
     'Rafikova',
     '2008-04-12',
     'Student\r'
   ),
-(104, 'Daria', 'Shkurat', '2008-04-13', 'Student\r'),
-(105, 'Haoran', 'Wang', '2008-04-14', 'Student\r'),
-(
+  (
+    104,
+    'Daria',
+    'Shkurat',
+    '2008-04-13',
+    'Student\r'
+  ),
+  (105, 'Haoran', 'Wang', '2008-04-14', 'Student\r'),
+  (
     106,
     'Alexander James',
     'Kiely',
     '2008-04-15',
     'Student\r'
   ),
-(
+  (
     107,
     'Jared Thompson',
     'Merwin Thompson',
     '2008-04-16',
     'Student\r'
   ),
-(
+  (
     108,
     'Sara Fakheem',
     'Sheikh',
     '2008-04-17',
     'Student\r'
   ),
-(
+  (
     109,
     'Jessica Olivia',
     'Wakefield',
     '2008-04-18',
     'Student\r'
   ),
-(
+  (
     110,
     'Yusuf Hamza',
     'Kupoglu',
     '2008-04-19',
     'Student\r'
   ),
-(111, 'Leo', 'Leung', '2008-04-20', 'Student\r'),
-(112, 'Shengmin', 'Li', '2008-04-21', 'Student\r'),
-(113, 'Jiachun', 'Zhu', '2008-04-22', 'Student\r'),
-(114, 'Uzair', 'Ali', '2008-04-23', 'Student\r'),
-(115, 'Shaker', 'Kabdula', '2008-04-24', 'Student\r'),
-(116, 'Ka Hei', 'Koo', '2008-04-25', 'Student\r'),
-(
+  (111, 'Leo', 'Leung', '2008-04-20', 'Student\r'),
+  (112, 'Shengmin', 'Li', '2008-04-21', 'Student\r'),
+  (113, 'Jiachun', 'Zhu', '2008-04-22', 'Student\r'),
+  (114, 'Uzair', 'Ali', '2008-04-23', 'Student\r'),
+  (
+    115,
+    'Shaker',
+    'Kabdula',
+    '2008-04-24',
+    'Student\r'
+  ),
+  (116, 'Ka Hei', 'Koo', '2008-04-25', 'Student\r'),
+  (
     117,
     'Nguyen Bao Han',
     'Le',
     '2008-04-26',
     'Student\r'
   ),
-(
+  (
     118,
     'Hanna Maria',
     'Merelaine',
     '2008-04-27',
     'Student\r'
   ),
-(119, 'Serafym', 'Besaha', '2008-04-28', 'Student\r'),
-(120, 'Minjeong', 'Choi', '2008-04-29', 'Student\r'),
-(
+  (
+    119,
+    'Serafym',
+    'Besaha',
+    '2008-04-28',
+    'Student\r'
+  ),
+  (
+    120,
+    'Minjeong',
+    'Choi',
+    '2008-04-29',
+    'Student\r'
+  ),
+  (
     121,
     'Omer Kayra',
     'Kochan',
     '2008-04-30',
     'Student\r'
   ),
-(122, 'Andrii', 'Kyryliuk', '2008-05-01', 'Student\r'),
-(123, 'Chun Ming', 'Lai', '2008-05-02', 'Student\r'),
-(124, 'Ha', 'Lee', '2008-05-03', 'Student\r'),
-(
+  (
+    122,
+    'Andrii',
+    'Kyryliuk',
+    '2008-05-01',
+    'Student\r'
+  ),
+  (
+    123,
+    'Chun Ming',
+    'Lai',
+    '2008-05-02',
+    'Student\r'
+  ),
+  (124, 'Ha', 'Lee', '2008-05-03', 'Student\r'),
+  (
     125,
     'Bhanyasinee',
     'Leelerdphan',
     '2008-05-04',
     'Student\r'
   ),
-(
+  (
     126,
     'Nuria',
     'Lozano Martinez',
     '2008-05-05',
     'Student\r'
   ),
-(
+  (
     127,
     'Fiona Fay',
     'Macmillan',
     '2008-05-06',
     'Student\r'
   ),
-(128, 'Shing Lam', 'Mak', '2008-05-07', 'Student\r'),
-(
+  (
+    128,
+    'Shing Lam',
+    'Mak',
+    '2008-05-07',
+    'Student\r'
+  ),
+  (
     129,
     'Alejandra',
     'Manrique Tirado',
     '2008-05-08',
     'Student\r'
   ),
-(
+  (
     130,
     'Aiyven Ngwe',
     'Mbawa',
     '2008-05-09',
     'Student\r'
   ),
-(
+  (
     131,
     'Liah Oratilwe',
     'Mhlanga',
     '2008-05-10',
     'Student\r'
   ),
-(
+  (
     132,
     'Ximena',
     'Michel Arzate',
     '2008-05-11',
     'Student\r'
   ),
-(
+  (
     133,
     'Oleksii',
     'Mirgorod',
     '2008-05-12',
     'Student\r'
   ),
-(134, 'David', 'Moisieiev', '2008-05-13', 'Student\r'),
-(
+  (
+    134,
+    'David',
+    'Moisieiev',
+    '2008-05-13',
+    'Student\r'
+  ),
+  (
     135,
     'Sandee',
     'Montonpalin',
     '2008-05-14',
     'Student\r'
   ),
-(
+  (
     136,
     'Ashley Daritzy',
     'Morales Arreola',
     '2008-05-15',
     'Student\r'
   ),
-(
+  (
     137,
     'Zhasmin',
     'Nafigullina',
     '2008-05-16',
     'Student\r'
   ),
-(138, 'Lok Lam', 'Ng', '2008-05-17', 'Student\r'),
-(139, 'Anh Khoa', 'Ngo', '2008-05-18', 'Student\r'),
-(
+  (138, 'Lok Lam', 'Ng', '2008-05-17', 'Student\r'),
+  (
+    139,
+    'Anh Khoa',
+    'Ngo',
+    '2008-05-18',
+    'Student\r'
+  ),
+  (
     140,
     'Hanh Phuong',
     'Nguyen',
     '2008-05-19',
     'Student\r'
   ),
-(
+  (
     141,
     'Quang Anh',
     'Nguyen',
     '2008-05-20',
     'Student\r'
   ),
-(
+  (
     142,
     'Nhat Minh',
     'Nguyen',
     '2008-05-21',
     'Student\r'
   ),
-(
+  (
     143,
     'Thanh Ngoc',
     'Nguyen',
     '2008-05-22',
     'Student\r'
   ),
-(144, 'Thuy Anh', 'Nguyen', '2008-05-23', 'Student\r'),
-(
+  (
+    144,
+    'Thuy Anh',
+    'Nguyen',
+    '2008-05-23',
+    'Student\r'
+  ),
+  (
     145,
     'Khanh Ngoc',
     'Nguyen',
     '2008-05-24',
     'Student\r'
   ),
-(
+  (
     146,
     'Marina',
     'Nogueira Lima E Correa',
     '2008-05-25',
     'Student\r'
   ),
-(147, 'Xinyue', 'Ying', '2008-05-26', 'Student\r'),
-(148, 'Ali', 'Yula', '2008-05-27', 'Student\r'),
-(
+  (147, 'Xinyue', 'Ying', '2008-05-26', 'Student\r'),
+  (148, 'Ali', 'Yula', '2008-05-27', 'Student\r'),
+  (
     149,
     'Eduardo Yamil',
     'Zarate Bolanos',
     '2008-05-28',
     'Student\r'
   ),
-(150, 'Sofiia', 'Bass', '2008-05-29', 'Student\r'),
-(
+  (150, 'Sofiia', 'Bass', '2008-05-29', 'Student\r'),
+  (
     151,
     'Lutfullakhon',
     'Khusankhodjaev',
     '2008-05-30',
     'Student\r'
   ),
-(
+  (
     152,
     'Man Hei Sardius',
     'Ko',
     '2008-05-31',
     'Student\r'
   ),
-(153, 'Geonwoo', 'Kong', '2008-06-01', 'Student\r'),
-(154, 'Moonjung', 'Lee', '2008-06-02', 'Student\r'),
-(155, 'Maikl', 'Maiorov', '2008-06-03', 'Student\r'),
-(
+  (
+    153,
+    'Geonwoo',
+    'Kong',
+    '2008-06-01',
+    'Student\r'
+  ),
+  (
+    154,
+    'Moonjung',
+    'Lee',
+    '2008-06-02',
+    'Student\r'
+  ),
+  (
+    155,
+    'Maikl',
+    'Maiorov',
+    '2008-06-03',
+    'Student\r'
+  ),
+  (
     156,
     'Kirsten Ngelo',
     'Mbawa',
     '2008-06-04',
     'Student\r'
   ),
-(157, 'Yuhao', 'Sheng', '2008-06-05', 'Student\r'),
-(
+  (157, 'Yuhao', 'Sheng', '2008-06-05', 'Student\r'),
+  (
     158,
     'Dinmukhamed',
     'Yussupov',
     '2008-06-06',
     'Student\r'
   ),
-(159, 'Maria', 'Montasser', '2008-06-07', 'Student\r'),
-(
+  (
+    159,
+    'Maria',
+    'Montasser',
+    '2008-06-07',
+    'Student\r'
+  ),
+  (
     160,
     'Amara Layla',
     'Kazmi',
     '2008-06-08',
     'Student\r'
   ),
-(
+  (
     161,
     'Zahra Fakheem',
     'Sheikh',
     '2008-06-09',
     'Student\r'
   ),
-(162, 'Mehtab', 'Singh', '2008-06-10', 'Student\r'),
-(
+  (
+    162,
+    'Mehtab',
+    'Singh',
+    '2008-06-10',
+    'Student\r'
+  ),
+  (
     163,
     'Maya Theodora',
     'Zagyva',
     '2008-06-11',
     'Student\r'
   ),
-(
+  (
     164,
     'Cemre Su',
     'Ozveren',
     '2008-06-12',
     'Student\r'
   ),
-(
+  (
     165,
     'Yasmin',
     'Santos Attie',
     '2008-06-13',
     'Student\r'
   ),
-(
+  (
     166,
     'Mikhail',
     'Stukanov',
     '2008-06-14',
     'Student\r'
   ),
-(
+  (
     167,
     'Sophie Jemma',
     'Tomlinson',
     '2008-06-15',
     'Student\r'
   ),
-(168, 'Dzhonni', 'Avdoi', '2008-06-16', 'Student\r'),
-(
+  (
+    168,
+    'Dzhonni',
+    'Avdoi',
+    '2008-06-16',
+    'Student\r'
+  ),
+  (
     169,
     'Brijesh',
     'Kasi Perumal',
     '2008-06-17',
     'Student\r'
   ),
-(
+  (
     170,
     'Saydullakhon',
     'Khusankhodjaev',
     '2008-06-18',
     'Student\r'
   ),
-(171, 'Jiyoo', 'Kim', '2008-06-19', 'Student\r'),
-(172, 'Sum Yee', 'Pun', '2008-06-20', 'Student\r'),
-(
+  (171, 'Jiyoo', 'Kim', '2008-06-19', 'Student\r'),
+  (172, 'Sum Yee', 'Pun', '2008-06-20', 'Student\r'),
+  (
     173,
     'Sitki Ozgur',
     'Sari',
     '2008-06-21',
     'Student\r'
   ),
-(174, 'Yunho', 'Shin', '2008-06-22', 'Student\r'),
-(175, 'Yuze', 'Song', '2008-06-23', 'Student\r'),
-(176, 'Hyunseok', 'Song', '2008-06-24', 'Student\r'),
-(177, 'Bangyuan', 'Sun', '2008-06-25', 'Student\r'),
-(178, 'Chuyi', 'Sun', '2008-06-26', 'Student\r'),
-(
+  (174, 'Yunho', 'Shin', '2008-06-22', 'Student\r'),
+  (175, 'Yuze', 'Song', '2008-06-23', 'Student\r'),
+  (
+    176,
+    'Hyunseok',
+    'Song',
+    '2008-06-24',
+    'Student\r'
+  ),
+  (
+    177,
+    'Bangyuan',
+    'Sun',
+    '2008-06-25',
+    'Student\r'
+  ),
+  (178, 'Chuyi', 'Sun', '2008-06-26', 'Student\r'),
+  (
     179,
     'Liz',
     'Taparo Scafi',
     '2008-06-27',
     'Student\r'
   ),
-(180, 'Kerem', 'Topcu', '2008-06-28', 'Student\r'),
-(181, 'Kerem', 'Topcu', '2008-06-29', 'Student\r'),
-(182, 'Sicheng', 'Zhang', '2008-06-30', 'Student\r'),
-(183, 'Andrii', 'Zhukov', '2008-07-01', 'Student\r'),
-(
+  (180, 'Kerem', 'Topcu', '2008-06-28', 'Student\r'),
+  (181, 'Kerem', 'Topcu', '2008-06-29', 'Student\r'),
+  (
+    182,
+    'Sicheng',
+    'Zhang',
+    '2008-06-30',
+    'Student\r'
+  ),
+  (
+    183,
+    'Andrii',
+    'Zhukov',
+    '2008-07-01',
+    'Student\r'
+  ),
+  (
     184,
     'Wing Sze Vincy',
     'Mar',
     '2008-07-02',
     'Student\r'
   ),
-(
+  (
     185,
     'Hannah Michelle',
     'Moss-Norbury',
     '2008-07-03',
     'Student\r'
   ),
-(186, 'Burak', 'Onal', '2008-07-04', 'Student\r'),
-(
+  (186, 'Burak', 'Onal', '2008-07-04', 'Student\r'),
+  (
     187,
     'Natalie Diana',
     'Ortelecan',
     '2008-07-05',
     'Student\r'
   ),
-(188, 'Zlata', 'Panova', '2008-07-06', 'Student\r'),
-(189, 'Jimin', 'Park', '2008-07-07', 'Student\r'),
-(
+  (
+    188,
+    'Zlata',
+    'Panova',
+    '2008-07-06',
+    'Student\r'
+  ),
+  (189, 'Jimin', 'Park', '2008-07-07', 'Student\r'),
+  (
     190,
     'Tran Tue Anh',
     'Phi',
     '2008-07-08',
     'Student\r'
   ),
-(191, 'Cemre', 'Pinarli', '2008-07-09', 'Student\r'),
-(
+  (
+    191,
+    'Cemre',
+    'Pinarli',
+    '2008-07-09',
+    'Student\r'
+  ),
+  (
     192,
     'Julia',
     'Ribeiro Mendes',
     '2008-07-10',
     'Student\r'
   ),
-(
+  (
     193,
     'Ximena Sofia',
     'Sanchez Galguera',
     '2008-07-11',
     'Student\r'
   ),
-(194, 'Sha', 'Sha', '2008-07-12', 'Student\r'),
-(195, 'Lev', 'Sharma', '2008-07-13', 'Student\r'),
-(
+  (194, 'Sha', 'Sha', '2008-07-12', 'Student\r'),
+  (195, 'Lev', 'Sharma', '2008-07-13', 'Student\r'),
+  (
     196,
     'Julia',
     'Silva Rosa',
     '2008-07-14',
     'Student\r'
   ),
-(197, 'Hasan', 'Tahir', '2008-07-15', 'Student\r'),
-(
+  (197, 'Hasan', 'Tahir', '2008-07-15', 'Student\r'),
+  (
     198,
     'Apichapat',
     'Temboonsarun',
     '2008-07-16',
     'Student\r'
   ),
-(
+  (
     199,
     'Thet Htet',
     'Thadar',
     '2008-07-17',
     'Student\r'
   ),
-(
+  (
     200,
     'Fernando',
     'Torres Carreno',
     '2008-07-18',
     'Student\r'
   ),
-(201, 'Xuan', 'Zhang', '2008-07-19', 'Student\r'),
-(
+  (201, 'Xuan', 'Zhang', '2008-07-19', 'Student\r'),
+  (
     202,
     'Rayan Maher Mohammad',
     'Abdulhadi',
     '2008-07-20',
     'Student\r'
   ),
-(203, 'Suraya', 'Islam', '2008-07-21', 'Student\r'),
-(
+  (
+    203,
+    'Suraya',
+    'Islam',
+    '2008-07-21',
+    'Student\r'
+  ),
+  (
     204,
     'Rehan Mohammed Moopan',
     'Mandayapurath',
     '2008-07-22',
     'Student\r'
   ),
-(205, 'Ne Ha', 'Mi', '2008-07-23', 'Student\r'),
-(
+  (205, 'Ne Ha', 'Mi', '2008-07-23', 'Student\r'),
+  (
     206,
     'Arsenii',
     'Mikhailovskii',
     '2008-07-24',
     'Student\r'
   ),
-(207, 'Tanika', 'Patel', '2008-07-25', 'Student\r'),
-(
+  (
+    207,
+    'Tanika',
+    'Patel',
+    '2008-07-25',
+    'Student\r'
+  ),
+  (
     208,
     'Luisa',
     'Portilho Gomes',
     '2008-07-26',
     'Student\r'
   ),
-(209, 'Ziyan', 'Qu', '2008-07-27', 'Student\r'),
-(210, 'Yiling', 'Ren', '2008-07-28', 'Student\r'),
-(211, 'Ismail Can', 'Sire', '2008-07-29', 'Student\r'),
-(
+  (209, 'Ziyan', 'Qu', '2008-07-27', 'Student\r'),
+  (210, 'Yiling', 'Ren', '2008-07-28', 'Student\r'),
+  (
+    211,
+    'Ismail Can',
+    'Sire',
+    '2008-07-29',
+    'Student\r'
+  ),
+  (
     212,
     'Polina',
     'Soltuchenko',
     '2008-07-30',
     'Student\r'
   ),
-(
+  (
     213,
     'Pradyun',
     'Srikakolapu',
     '2008-07-31',
     'Student\r'
   ),
-(214, 'Hei Lam', 'Wong', '2008-08-01', 'Student\r'),
-(215, 'Sixuan', 'Zhai', '2008-08-02', 'Student\r'),
-(216, 'Gening', 'Zhao', '2008-08-03', 'Student\r'),
-(217, 'Samveer', 'Singh', '2008-08-04', 'Student\r'),
-(
+  (
+    214,
+    'Hei Lam',
+    'Wong',
+    '2008-08-01',
+    'Student\r'
+  ),
+  (215, 'Sixuan', 'Zhai', '2008-08-02', 'Student\r'),
+  (216, 'Gening', 'Zhao', '2008-08-03', 'Student\r'),
+  (
+    217,
+    'Samveer',
+    'Singh',
+    '2008-08-04',
+    'Student\r'
+  ),
+  (
     218,
     'Tawanashe Soza',
     'Sithole',
     '2008-08-05',
     'Student\r'
   ),
-(219, 'Lana', 'Reza', '2008-08-06', 'Student\r'),
-(
+  (219, 'Lana', 'Reza', '2008-08-06', 'Student\r'),
+  (
     220,
     'Amiya Pritesh',
     'Shah',
     '2008-08-07',
     'Student\r'
   ),
-(221, 'Kunyuan', 'Zhu', '2008-08-08', 'Student\r'),
-(222, 'Rongxuan', 'Li', '2008-08-09', 'Student\r'),
-(
+  (221, 'Kunyuan', 'Zhu', '2008-08-08', 'Student\r'),
+  (222, 'Rongxuan', 'Li', '2008-08-09', 'Student\r'),
+  (
     223,
     'Raiya Mehul',
     'Patel',
     '2008-08-10',
     'Student\r'
   ),
-(224, 'Bingchen', 'Shen', '2008-08-11', 'Student\r'),
-(225, 'Geonuk', 'Cho', '2008-08-12', 'Student\r'),
-(
+  (
+    224,
+    'Bingchen',
+    'Shen',
+    '2008-08-11',
+    'Student\r'
+  ),
+  (225, 'Geonuk', 'Cho', '2008-08-12', 'Student\r'),
+  (
     226,
     'Meer Muhammed Kameran Shekheil',
     'Hasan',
     '2008-08-13',
     'Student\r'
   ),
-(227, 'Yun-Han', 'Kao', '2008-08-14', 'Student\r'),
-(228, 'Abigail', 'Brown', '2008-08-15', 'Student\r'),
-(229, 'Zhuoyang', 'Yu', '2008-08-16', 'Student\r'),
-(
+  (227, 'Yun-Han', 'Kao', '2008-08-14', 'Student\r'),
+  (
+    228,
+    'Abigail',
+    'Brown',
+    '2008-08-15',
+    'Student\r'
+  ),
+  (229, 'Zhuoyang', 'Yu', '2008-08-16', 'Student\r'),
+  (
     230,
     'Freddie Samuel',
     'Haynes',
     '2008-08-17',
     'Student\r'
   ),
-(
+  (
     231,
     'Heavenly-Rose Farai',
     'Marechera-Atkins',
