@@ -1,0 +1,112 @@
+/* Login page and auth-related surfaces */
+.page:has(.login-page) {
+    max-width: none;
+    min-height: 100vh;
+    padding: 0;
+}
+
+.login-page {
+    align-items: center;
+    background: linear-gradient(135deg, #eaf4ff 0%, #f5f8ff 48%, #d8efff 100%);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 32px 20px;
+}
+
+.login-shell {
+    background: #ffffff;
+    border: 1px solid rgba(35, 45, 85, 0.12);
+    border-radius: 28px;
+    box-shadow: 0 24px 60px rgba(35, 45, 85, 0.18);
+    display: grid;
+    grid-template-columns: minmax(280px, 0.9fr) minmax(300px, 1fr);
+    max-width: 920px;
+    min-height: 520px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.login-welcome-panel {
+    align-items: center;
+    background: #232D55;
+    border-radius: 0 140px 140px 0;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 46px 34px;
+    text-align: center;
+}
+
+.login-logo {
+    display: block;
+    height: auto;
+    margin-bottom: 26px;
+    max-width: 280px;
+    width: 78%;
+}
+
+.login-welcome-panel h1,
+.login-form-panel h2 {
+    margin: 0;
+    text-decoration: none;
+}
+
+.login-welcome-panel h1 {
+    font-size: 2rem;
+}
+
+.login-welcome-panel p {
+    color: rgba(255, 255, 255, 0.86);
+    line-height: 1.5;
+    margin: 14px auto 24px;
+    width: min(100%, 280px);
+}
+
+.login-secondary-link {
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 34px;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.login-secondary-link:hover,
+.login-secondary-link:focus {
+    background: #ffffff;
+    color: #232D55;
+}
+
+.login-form-panel {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px;
+}
+
+.login-form-panel h2 {
+    color: #1b294e;
+    font-size: 2rem;
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+@media (max-width: 760px) {
+    .login-shell {
+        grid-template-columns: 1fr;
+        min-height: 0;
+    }
+
+    .login-welcome-panel {
+        border-radius: 0 0 80px 80px;
+        padding: 34px 24px 42px;
+    }
+
+    .login-form-panel {
+        padding: 36px 24px 42px;
+    }
+}

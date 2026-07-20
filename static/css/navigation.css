@@ -1,0 +1,84 @@
+/* Navigation and header styles */
+.site-nav {
+    background: #1b294e;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    justify-content: flex-start;
+    padding: 12px 20px;
+    flex-wrap: wrap;
+}
+
+.site-logo {
+    display: flex;
+    align-items: center;
+}
+
+.site-logo img {
+    display: block;
+    height: 48px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    display: inline-block;
+    font-weight: bold;
+    padding-bottom: 4px;
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-links a::after {
+    background: #74C5EA;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+    width: 100%;
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus::after {
+    transform: scaleX(1);
+}
+
+.nav-actions {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+    margin-left: auto;
+}
+
+.nav-user {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.nav-signin {
+    background: #74C5EA;
+    border-radius: 8px;
+    color: #0f1d3c;
+    display: inline-block;
+    font-weight: bold;
+    padding: 10px 18px;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-signin:hover,
+.nav-signin:focus {
+    background: #ffffff;
+    color: #1b294e;
+    transform: translateY(-1px);
+}

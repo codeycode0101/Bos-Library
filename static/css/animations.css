@@ -1,0 +1,31 @@
+/* Helper styles for hero cards and other reusable elements */
+.hero-animated-text .text-cycle {
+    animation: text-fade 3s ease-in-out infinite;
+}
+
+@keyframes text-fade {
+    0%, 90% { opacity: 0.2; transform: translateY(-2px); }
+    30%, 70% { opacity: 1; transform: translateY(0); }
+}
+
+.feature-card {
+    transform: translateY(0);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    animation: card-pop 0.9s ease both;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 28px 56px rgba(35, 45, 85, 0.18);
+}
+
+@keyframes card-pop {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
