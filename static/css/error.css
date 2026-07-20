@@ -1,0 +1,38 @@
+.error-btn {
+    border-radius: 999px;
+    display: inline-block;
+    font-weight: bold;
+    padding: 12px 22px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.error-btn:hover,
+.error-btn:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+}
+
+.error-btn.primary {
+    background: #2f4985;
+    color: #ffffff;
+}
+
+.error-btn.primary:hover,
+.error-btn.primary:focus {
+    background: #1b294e;
+    color: #ffffff;
+}
+
+.error-btn.secondary {
+    background: transparent;
+    border: 2px solid #2f4985;
+    color: #2f4985;
+}
+
+.error-btn.secondary:hover,
+.error-btn.secondary:focus {
+    background: #2f4985;
+    color: #ffffff;
+}

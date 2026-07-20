@@ -1,0 +1,58 @@
+/* Base styles and global utilities */
+/* Reset default spacing and set the primary typeface */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    background: #f5f8ff;
+    color: #0f1d3c;
+}
+
+:focus-visible {
+    outline: 2px solid #74C5EA;
+    outline-offset: 2px;
+}
+
+/* Reusable button-like link styles */
+.button-link {
+    border-radius: 999px;
+    display: inline-block;
+    font-weight: bold;
+    padding: 12px 22px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.button-link:hover,
+.button-link:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+}
+
+.button-link.primary {
+    background: #ffffff;
+    color: #1b294e;
+}
+
+.button-link.primary:hover,
+.button-link.primary:focus {
+    background: #f4f8ff;
+    color: #0f1d3c;
+}
+
+.button-link.secondary {
+    background: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+.button-link.secondary:hover,
+.button-link.secondary:focus {
+    background: #ffffff;
+    color: #1b294e;
+}

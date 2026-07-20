@@ -6,6 +6,7 @@
 <section class="home-hero">
     <div class="hero-copy">
         <p class="eyebrow">Bosworth Independent School</p>
+        {# TODO: Update this to be a more efficient system by using one template and passing in the relevant params to the template. #}
         {% if session.get('admin_logged_in') %}
             <h1>Administrator dashboard</h1>
             <p>Manage the library efficiently, oversee borrowing activity, and keep records up to date from one place.</p>
