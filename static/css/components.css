@@ -334,7 +334,7 @@
     padding: 32px 34px;
     box-shadow: 0 18px 40px rgba(35, 45, 85, 0.06);
 }
-
+/* ================== SWAPPING BETWEEN DASHBOARD SECTIONS ================== */
 .dashboard-section {
     display: none;
 }
@@ -342,7 +342,7 @@
 .dashboard-section.active {
     display: block;
 }
-
+/* ============================================== */
 .dashboard-section h2 {
     text-align: left;
     margin-top: 0;

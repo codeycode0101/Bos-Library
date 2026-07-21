@@ -16,7 +16,6 @@
             <button type="button" class="dashboard-tab" data-target="return-panel">Return Books</button>
             <button type="button" class="dashboard-tab" data-target="active-borrows-panel">Active Borrows</button>
         </div>
-        <!-- Removed the 'How it works' panel per design request -->
         
         <div class="sidebar-panel sidebar-actions">
             <p class="sidebar-info-title">Quick Actions</p>
@@ -25,6 +24,7 @@
     </aside>
 
     <div class="dashboard-panel">
+
         <section id="borrow-panel" class="dashboard-section active">
             <h2>Borrow a Book</h2>
             <form class="library-form" action="{{ url_for('borrow_return') }}" method="post">
@@ -39,7 +39,7 @@
                 <label for="borrow-date">Borrow Date</label>
                 <input id="borrow-date" name="borrow-date" type="date">
 
-                <button type="submit">Borrow Book</button>
+                <button type="submit" class="form-button">Borrow Book</button>
             </form>
         </section>
 
@@ -60,7 +60,7 @@
                 <label for="return-date">Return Date</label>
                 <input id="return-date" name="return-date" type="date">
 
-                <button type="submit">Return Book</button>
+                <button type="submit" class="form-button">Return Book</button>
             </form>
         </section>
 
@@ -99,6 +99,7 @@
                 </table>
             </div>
         </section>
+
     </div>
 </div>
 {% endblock %}

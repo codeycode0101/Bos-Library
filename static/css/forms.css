@@ -18,7 +18,7 @@
     border: 1px solid #232D55;
 }
 
-.login-button {
+.form-button {
     background: #232D55;
     border: none;
     color: #ffffff;
@@ -29,7 +29,7 @@
     border-radius: 10px;
 }
 
-.login-button:hover {
+.form-button:hover {
     background: #74C5EA;
     color: #000000;
 }
