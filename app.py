@@ -5,9 +5,9 @@ from src.borrow_book import borrow_book
 from src.return_book import return_book
 from src.login_system import login_admin, logout_admin, require_admin_login
 from src.book_history import get_active_borrows
+from src.catalog import get_catalog_books
 from src.debug import debug, debug_error, debug_warning, debug_info, debug_success
 from src.utils import db, cursor
-import json
 
 load_dotenv()
 app = Flask(__name__)
@@ -16,13 +16,6 @@ if not secret_key:
     debug_error('Missing SECRET_KEY environment variable')
     raise RuntimeError('Missing SECRET_KEY environment variable')
 app.secret_key = secret_key
-
-# Function to load book data from a JSON file
-def load_books():
-    data_path = os.path.join(app.root_path, 'data', 'books.json')
-    with open(data_path, 'r', encoding='utf-8') as file:
-        return json.load(file)
-
 
 # Route for the about page
 # TODO: Disabled for now, but can be enabled if needed in the future.
@@ -34,7 +27,7 @@ def load_books():
 # Route for the available books page
 @app.route('/books', strict_slashes=False)
 def books():
-    books = load_books()
+    books = get_catalog_books(cursor)
     return render_template('books.html', books=books)
 
 

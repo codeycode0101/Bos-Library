@@ -18,28 +18,105 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    document.querySelectorAll('.book-cover').forEach((image) => {
+        image.addEventListener('error', () => {
+            image.hidden = true;
+            const fallback = image.nextElementSibling;
+            if (fallback) fallback.hidden = false;
+        }, { once: true });
+    });
+
     const searchInput = document.getElementById('book-search');
     const bookGrid = document.getElementById('book-grid');
     const noResults = document.getElementById('no-results');
+    const searchSuggestions = document.getElementById('book-search-suggestions');
 
-    if (searchInput && bookGrid) {
+    if (searchInput && bookGrid && noResults && searchSuggestions) {
         const bookCards = Array.from(bookGrid.querySelectorAll('.book-card'));
+        let matches = [];
+        let activeSuggestion = -1;
+
+        const closeSuggestions = () => {
+            searchSuggestions.hidden = true;
+            searchSuggestions.replaceChildren();
+            searchInput.setAttribute('aria-expanded', 'false');
+            activeSuggestion = -1;
+        };
+
+        const chooseSuggestion = (card) => {
+            searchInput.value = card.dataset.title;
+            updateSearch();
+            closeSuggestions();
+        };
+
+        const showSuggestions = () => {
+            const query = searchInput.value.trim().toLowerCase();
+            if (!query) {
+                closeSuggestions();
+                return;
+            }
+
+            const fragment = document.createDocumentFragment();
+            matches.slice(0, 6).forEach((card, index) => {
+                const item = document.createElement('li');
+                item.setAttribute('role', 'option');
+                item.id = `book-suggestion-${index}`;
+
+                const button = document.createElement('button');
+                button.type = 'button';
+                button.className = 'search-suggestion';
+                button.innerHTML = `<span class="search-suggestion-title"></span><span class="search-suggestion-meta"></span>`;
+                button.querySelector('.search-suggestion-title').textContent = card.dataset.title;
+                button.querySelector('.search-suggestion-meta').textContent = `${card.dataset.author} · ${card.dataset.isbn}`;
+                button.addEventListener('click', () => chooseSuggestion(card));
+                item.append(button);
+                fragment.append(item);
+            });
+
+            searchSuggestions.replaceChildren(fragment);
+            searchSuggestions.hidden = matches.length === 0;
+            searchInput.setAttribute('aria-expanded', String(matches.length > 0));
+        };
 
         const updateSearch = () => {
             const query = searchInput.value.trim().toLowerCase();
             let visibleCount = 0;
 
-            bookCards.forEach(card => {
+            matches = bookCards.filter(card => {
                 const text = card.dataset.search.toLowerCase();
                 const match = query === '' || text.includes(query);
                 card.style.display = match ? 'flex' : 'none';
                 if (match) visibleCount += 1;
+                return query !== '' && match;
             });
 
             noResults.hidden = visibleCount !== 0;
+            showSuggestions();
         };
 
         searchInput.addEventListener('input', updateSearch);
+        searchInput.addEventListener('keydown', (event) => {
+            const buttons = Array.from(searchSuggestions.querySelectorAll('.search-suggestion'));
+            if (!buttons.length) return;
+
+            if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+                event.preventDefault();
+                activeSuggestion = event.key === 'ArrowDown'
+                    ? (activeSuggestion + 1) % buttons.length
+                    : (activeSuggestion - 1 + buttons.length) % buttons.length;
+                buttons.forEach((button, index) => button.classList.toggle('is-active', index === activeSuggestion));
+                searchInput.setAttribute('aria-activedescendant', `book-suggestion-${activeSuggestion}`);
+            } else if (event.key === 'Enter' && activeSuggestion >= 0) {
+                event.preventDefault();
+                chooseSuggestion(matches[activeSuggestion]);
+            } else if (event.key === 'Escape') {
+                closeSuggestions();
+            }
+        });
+        searchInput.addEventListener('focus', showSuggestions);
+        document.addEventListener('click', (event) => {
+            if (!event.target.closest('.search-box')) closeSuggestions();
+        });
         updateSearch();
     }
 

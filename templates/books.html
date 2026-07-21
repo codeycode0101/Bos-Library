@@ -4,30 +4,40 @@
 
 {% block content %}
 <h1>Available Books</h1>
-<p>This page will show the books that are ready to borrow from the library.</p>
+<p>Browse the library's current catalog and check which titles are available to borrow.</p>
 
 <div class="books-header">
     <label for="book-search">Search books</label>
-    <input id="book-search" class="search-input" type="search" placeholder="Search by title, author, or ISBN" aria-label="Search books">
+    <div class="search-box">
+        <input id="book-search" class="search-input" type="search" placeholder="Search by title, author, or ISBN" aria-label="Search books" aria-autocomplete="list" aria-controls="book-search-suggestions" aria-expanded="false" autocomplete="off">
+        <ul id="book-search-suggestions" class="search-suggestions" role="listbox" aria-label="Matching books" hidden></ul>
+    </div>
 </div>
 
 <div id="book-grid" class="book-grid">
     {% for book in books %}
-    <article class="book-card" data-search="{{ book.isbn }} {{ book.title }} {{ book.author }} {{ book.published }}">
+    <article class="book-card" data-search="{{ book.isbn }} {{ book.title }} {{ book.author }} {{ book.genre }} {{ book.status }}" data-title="{{ book.title }}" data-author="{{ book.author }}" data-isbn="{{ book.isbn }}">
         <div class="book-cover-wrapper">
-            <img class="book-cover" src="{{ url_for('static', filename='images/covers/' ~ book.cover) }}" alt="Cover for {{ book.title }}">
+            <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/{{ book.isbn }}-M.jpg?default=false" alt="Cover for {{ book.title }}" loading="lazy">
+            <div class="book-cover-placeholder" aria-hidden="true" hidden>
+                <i class="bx bx-book" aria-hidden="true"></i>
+                <span>Cover unavailable</span>
+            </div>
         </div>
         <div class="book-details">
             <h2>{{ book.title }}</h2>
             <p><strong>Author:</strong> {{ book.author }}</p>
             <p><strong>ISBN:</strong> {{ book.isbn }}</p>
-            <p><strong>Published:</strong> {{ book.published }}</p>
-            <p class="book-description">{{ book.description }}</p>
-            <p class="book-status"><strong>Status:</strong> {{ book.status }}</p>
+            <p><strong>Genre:</strong> {{ book.genre }}</p>
+            {% if book.age_restriction %}
+            <p><strong>Age rating:</strong> {{ book.age_restriction }}+</p>
+            {% endif %}
+            <p class="book-status"><strong>Status:</strong> {{ book.status }}{% if book.total_copies %} ({{ book.available_copies }} of {{ book.total_copies }} copies){% endif %}</p>
         </div>
     </article>
     {% endfor %}
 </div>
 
 <div id="no-results" class="no-results" hidden>No books match your search.</div>
+<p class="cover-attribution">Book covers supplied by <a href="https://openlibrary.org/" target="_blank" rel="noopener noreferrer">Open Library</a>.</p>
 {% endblock %}
