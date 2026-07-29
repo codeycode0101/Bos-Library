@@ -120,6 +120,13 @@ document.addEventListener('DOMContentLoaded', function () {
         updateSearch();
     }
 
+    document.querySelectorAll('.availability-fill').forEach((fill) => {
+        const width = fill.dataset.width;
+        if (width) {
+            fill.style.width = `${width}%`;
+        }
+    });
+
     const dashboardTabs = document.querySelectorAll('.dashboard-tab');
     const dashboardSections = document.querySelectorAll('.dashboard-section');
 

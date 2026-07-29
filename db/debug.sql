@@ -1,8 +1,10 @@
 SELECT *
-FROM borrows;
-SELECT *
 FROM books;
 SELECT *
 FROM book_copies;
 SELECT *
+FROM borrows;
+SELECT *
 FROM users;
+SELECT *
+FROM genres;

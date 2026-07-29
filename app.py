@@ -1,11 +1,11 @@
 import os
 from dotenv import load_dotenv
-from flask import Flask, render_template, request
+from flask import Flask, abort, render_template, request
 from src.borrow_book import borrow_book
 from src.return_book import return_book
 from src.login_system import login_admin, logout_admin, require_admin_login
 from src.book_history import get_active_borrows
-from src.catalog import get_catalog_books
+from src.catalog import get_book_metadata, get_catalog_book, get_catalog_books
 from src.debug import debug, debug_error, debug_warning, debug_info, debug_success
 from src.utils import db, cursor
 
@@ -29,6 +29,18 @@ app.secret_key = secret_key
 def books():
     books = get_catalog_books(cursor)
     return render_template('books.html', books=books)
+
+
+@app.route('/books/<isbn>', strict_slashes=False)
+def book_detail(isbn):
+    book = get_catalog_book(cursor, isbn)
+    if book is None:
+        abort(404)
+    return render_template(
+        'book_detail.html',
+        book=book,
+        metadata=get_book_metadata(isbn, book['title'], book['author'], book['genre']),
+    )
 
 
 # Route for the login page

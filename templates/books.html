@@ -16,7 +16,7 @@
 
 <div id="book-grid" class="book-grid">
     {% for book in books %}
-    <article class="book-card" data-search="{{ book.isbn }} {{ book.title }} {{ book.author }} {{ book.genre }} {{ book.status }}" data-title="{{ book.title }}" data-author="{{ book.author }}" data-isbn="{{ book.isbn }}">
+    <a class="book-card" href="{{ url_for('book_detail', isbn=book.isbn) }}" aria-label="View details for {{ book.title }}" data-search="{{ book.isbn }} {{ book.title }} {{ book.author }} {{ book.genre }} {{ book.status }}" data-title="{{ book.title }}" data-author="{{ book.author }}" data-isbn="{{ book.isbn }}">
         <div class="book-cover-wrapper">
             <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/{{ book.isbn }}-M.jpg?default=false" alt="Cover for {{ book.title }}" loading="lazy">
             <div class="book-cover-placeholder" aria-hidden="true" hidden>
@@ -32,9 +32,25 @@
             {% if book.age_restriction %}
             <p><strong>Age rating:</strong> {{ book.age_restriction }}+</p>
             {% endif %}
-            <p class="book-status"><strong>Status:</strong> {{ book.status }}{% if book.total_copies %} ({{ book.available_copies }} of {{ book.total_copies }} copies){% endif %}</p>
+            <div class="book-availability {% if not book.total_copies or not book.available_copies %} is-unavailable {% elif book.available_copies / book.total_copies >= 0.75 %} is-plentiful{% elif book.available_copies / book.total_copies >= 0.5 %} is-moderate {% else %} is-low{% endif %}">
+                <div class="availability-heading">
+                    <span class="availability-label"><i class="bx bx-book-open" aria-hidden="true"></i> Availability</span>
+                    <span class="availability-badge">{{ book.status }}</span>
+                </div>
+                {% if book.total_copies %}
+                <div class="availability-count">
+                    <strong>{{ book.available_copies }}</strong>
+                    <span>of {{ book.total_copies }} copies available</span>
+                </div>
+                <div class="availability-meter" role="progressbar" aria-label="{{ book.available_copies }} of {{ book.total_copies }} copies available" aria-valuemin="0" aria-valuemax="{{ book.total_copies }}" aria-valuenow="{{ book.available_copies }}">
+                    <span class="availability-fill" data-width="{{ (book.available_copies / book.total_copies * 100) | round(0) }}"></span>
+                </div>
+                {% else %}
+                <span class="availability-empty">No copies recorded</span>
+                {% endif %}
+            </div>
         </div>
-    </article>
+    </a>
     {% endfor %}
 </div>
 

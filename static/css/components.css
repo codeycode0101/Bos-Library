@@ -96,20 +96,33 @@
 
 .book-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
     gap: 24px;
     margin: 0 auto 30px;
-    max-width: 980px;
+    max-width: 1320px;
 }
 
 .book-card {
     display: flex;
     flex-direction: column;
+    height: 100%;
     border: 1px solid rgba(35, 45, 85, 0.17);
     border-radius: 30px;
     overflow: hidden;
     background: #ffffff;
     box-shadow: 0 22px 48px rgba(35, 45, 85, 0.10);
+    color: inherit;
+    text-decoration: none;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.book-card:hover {
+    box-shadow: 0 26px 54px rgba(35, 45, 85, 0.17);
+    transform: translateY(-4px);
+}
+
+.book-card:focus-visible {
+    outline-offset: 4px;
 }
 
 .book-cover-wrapper {
@@ -158,6 +171,7 @@
 .book-details {
     padding: 26px 26px 30px;
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: flex-start;
     gap: 12px;
@@ -183,11 +197,148 @@
     color: #4a556f;
 }
 
-.book-status {
-    margin-top: 10px;
-    font-weight: 700;
-    color: #1b3c61;
+.book-availability {
+    margin-top: auto;
+    padding: 16px;
+    border: 1px solid rgba(21, 116, 77, 0.18);
+    border-radius: 16px;
+    background: linear-gradient(135deg, #f1fbf6, #e6f7ff);
 }
+
+.availability-heading,
+.availability-count {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.availability-heading {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.availability-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #1f3155;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.availability-label .bx {
+    color: #147a52;
+    font-size: 1rem;
+}
+
+.availability-badge {
+    margin-left: auto;
+    padding: 5px 9px;
+    border-radius: 999px;
+    background: #d9f5e7;
+    color: #12613f;
+    font-size: 0.7rem;
+    font-weight: 800;
+    line-height: 1.25;
+    text-align: center;
+}
+
+.availability-count {
+    margin-top: 12px;
+    justify-content: flex-start;
+    color: #4a5b76;
+    font-size: 0.88rem;
+}
+
+.availability-count strong {
+    color: #1f3155;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.availability-meter {
+    height: 7px;
+    margin-top: 12px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: rgba(31, 49, 85, 0.12);
+}
+
+.availability-meter span {
+    display: block;
+    height: 100%;
+    min-width: 0;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #1b9d6d, #58c5a0);
+    transition: width 0.25s ease;
+}
+
+.availability-empty {
+    display: block;
+    margin-top: 10px;
+    color: #4a5b76;
+    font-size: 0.88rem;
+}
+
+.book-availability.is-unavailable {
+    border-color: rgba(168, 55, 55, 0.18);
+    background: linear-gradient(135deg, #fff6f5, #fff0ee);
+}
+
+.book-availability.is-unavailable .availability-label .bx,
+.book-availability.is-unavailable .availability-count strong {
+    color: #9b2c2c;
+}
+
+.book-availability.is-unavailable .availability-badge {
+    background: #fde0dd;
+    color: #962b2b;
+}
+
+.book-availability.is-unavailable .availability-meter span {
+    background: #d96c64;
+}
+
+.book-availability.is-moderate {
+    border-color: rgba(186, 133, 0, 0.22);
+    background: linear-gradient(135deg, #fffbed, #fff5d6);
+}
+
+.book-availability.is-moderate .availability-label .bx,
+.book-availability.is-moderate .availability-count strong {
+    color: #a86900;
+}
+
+.book-availability.is-moderate .availability-badge {
+    background: #ffedb7;
+    color: #865600;
+}
+
+.book-availability.is-moderate .availability-meter span {
+    background: linear-gradient(90deg, #e3ac21, #f1cd57);
+}
+
+.book-availability.is-low {
+    border-color: rgba(191, 98, 20, 0.22);
+    background: linear-gradient(135deg, #fff7ed, #ffead8);
+}
+
+.book-availability.is-low .availability-label .bx,
+.book-availability.is-low .availability-count strong {
+    color: #b85513;
+}
+
+.book-availability.is-low .availability-badge {
+    background: #ffe0c2;
+    color: #98410b;
+}
+
+.book-availability.is-low .availability-meter span {
+    background: linear-gradient(90deg, #e3782a, #f1a45f);
+}
+
 
 @media (max-width: 840px) {
     .book-cover-wrapper {
