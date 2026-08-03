@@ -1,39 +1,53 @@
-{% extends "base.html" %}
-
-{% block title %}Library - Login{% endblock %}
-
-{# Removes nav from login#}
-{% block nav %}{% endblock %}
-q
-{% block content %}
+{% extends "base.html" %} {% block title %}Library - Login{% endblock %} {#
+Removes nav from login#} {% block nav %}{% endblock %} q {% block content %}
 <section class="login-page" aria-labelledby="login-title">
-    <div class="login-shell">
-        <div class="login-welcome-panel">
-            <img class="login-logo" src="{{ url_for('static', filename='images/bosworth-logo.png') }}" alt="Bosworth Independent School logo">
-            <h1>Hello, Welcome!</h1>
-            <p>Admin access for the Bosworth Library dashboard.</p>
-            <a class="login-secondary-link" href="{{ url_for('index') }}">Back to library</a>
-        </div>
-
-        <div class="login-form-panel">
-            <h2 id="login-title">Admin Login</h2>
-            <form class="login-form" action="{{ url_for('login') }}" method="post">
-                <label class="login-field" for="admin-username">
-                    <span>Username</span>
-                    <i class="bx bxs-user" aria-hidden="true"></i>
-                    <input id="admin-username" name="username" type="text" placeholder="Admin username" autocomplete="username" required>
-                </label>
-
-                <label class="login-field" for="admin-password">
-                    <span>Password</span>
-                    <i class="bx bxs-lock-alt" aria-hidden="true"></i>
-                    <input id="admin-password" name="password" type="password" placeholder="Password" autocomplete="current-password" required>
-                </label>
-
-                <a class="login-forgot-link" href="#">Forgot password?</a>
-                <button type="submit" class="form-button">Login</button>
-            </form>
-        </div>
+  <div class="login-shell">
+    <div class="login-welcome-panel">
+      <img
+        class="login-logo"
+        src="{{ url_for('static', filename='images/bosworth-logo.png') }}"
+        alt="Bosworth Independent School logo"
+      />
+      <h1>Hello, Welcome!</h1>
+      <p>Admin access for the Bosworth Library dashboard.</p>
+      <a class="login-secondary-link" href="{{ url_for('index') }}"
+        >Back to library</a
+      >
     </div>
+
+    <div class="login-form-panel">
+      <h2 id="login-title">Admin Login</h2>
+      <form class="login-form" action="{{ url_for('login') }}" method="post">
+        <label class="login-field" for="admin-username">
+          <span>Username</span>
+          <i class="bx bxs-user" aria-hidden="true"></i>
+          <input
+            id="admin-username"
+            name="username"
+            type="text"
+            placeholder="Admin username"
+            autocomplete="username"
+            required
+          />
+        </label>
+
+        <label class="login-field" for="admin-password">
+          <span>Password</span>
+          <i class="bx bxs-lock-alt" aria-hidden="true"></i>
+          <input
+            id="admin-password"
+            name="password"
+            type="password"
+            placeholder="Password"
+            autocomplete="current-password"
+            required
+          />
+        </label>
+
+        <a class="login-forgot-link" href="#">Forgot password?</a>
+        <button type="submit" class="form-button">Login</button>
+      </form>
+    </div>
+  </div>
 </section>
 {% endblock %}

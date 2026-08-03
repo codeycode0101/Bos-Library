@@ -1,106 +1,156 @@
-{% extends "base.html" %}
-
-{% block title %}Library - Borrow / Return Dashboard{% endblock %}
-
-{% block content %}
+{% extends "base.html" %} {% block title %}Library - Borrow / Return Dashboard{%
+endblock %} {% block content %}
 <div class="dashboard-intro">
-    <h1>Borrow & Return Dashboard</h1>
-    <p>Switch between borrow and return workflows from a single admin-style dashboard.</p>
+  <h1>Borrow & Return Dashboard</h1>
+  <p>
+    Switch between borrow and return workflows from a single admin-style
+    dashboard.
+  </p>
 </div>
 
 <div class="dashboard-layout">
-    <aside class="dashboard-sidebar">
-        <div class="sidebar-panel">
-            <p class="sidebar-label">Dashboard</p>
-            <button type="button" class="dashboard-tab active" data-target="borrow-panel">Borrow Books</button>
-            <button type="button" class="dashboard-tab" data-target="return-panel">Return Books</button>
-            <button type="button" class="dashboard-tab" data-target="active-borrows-panel">Active Borrows</button>
-        </div>
-        
-        <div class="sidebar-panel sidebar-actions">
-            <p class="sidebar-info-title">Quick Actions</p>
-            <p style="font-size:0.95rem;color:#556185;">Use the buttons to switch workflows. Forms appear on the right.</p>
-        </div>
-    </aside>
-
-    <div class="dashboard-panel">
-
-        <section id="borrow-panel" class="dashboard-section active">
-            <h2>Borrow a Book</h2>
-            <form class="library-form" action="{{ url_for('borrow_return') }}" method="post">
-                <input type="hidden" name="action" value="borrow">
-
-                <label for="borrower-id">Borrower ID</label>
-                <input id="borrower-id" name="borrower-id" type="text" placeholder="Enter borrower ID">
-
-                <label for="borrow-title">Book Title</label>
-                <input id="borrow-title" name="borrow-title" type="text" placeholder="Enter book title">
-
-                <label for="borrow-date">Borrow Date</label>
-                <input id="borrow-date" name="borrow-date" type="date">
-
-                <button type="submit" class="form-button">Borrow Book</button>
-            </form>
-        </section>
-
-        <section id="return-panel" class="dashboard-section">
-            <h2>Return a Book</h2>
-            <form class="library-form" action="{{ url_for('borrow_return') }}" method="post">
-                <input type="hidden" name="action" value="return">
-
-                <label for="returner-id">Borrower ID</label>
-                <input id="returner-id" name="returner-id" type="text" placeholder="Enter borrower ID">
-
-                <label for="return-title">Book Title</label>
-                <input id="return-title" name="return-title" type="text" placeholder="Enter book title">
-
-                <label for="copy-id">Copy ID (optional)</label>
-                <input id="copy-id" name="copy-id" type="text" placeholder="Enter copy ID if known">
-
-                <label for="return-date">Return Date</label>
-                <input id="return-date" name="return-date" type="date">
-
-                <button type="submit" class="form-button">Return Book</button>
-            </form>
-        </section>
-
-        <section id="active-borrows-panel" class="dashboard-section">
-            <h2>Active Borrows</h2>
-            <div class="table-responsive">
-                <table class="book-table data-table">
-                    <thead>
-                        <tr>
-                            <th>Borrower ID</th>
-                            <th>Borrower</th>
-                            <th>ISBN</th>
-                            <th>Copy ID</th>
-                            <th>Title</th>
-                            <th>Borrow Date</th>
-                            <th>Due Date</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% if active_borrows %}
-                            {% for row in active_borrows %}
-                                <tr class="selectable-row" data-selected="false">
-                                    <td>{{ row.idUser }}</td>
-                                    <td>{{ row.first_name }} {{ row.last_name }}</td>
-                                    <td>{{ row.book_copy_ISBN }}</td>
-                                    <td>{{ row.book_copy_id }}</td>
-                                    <td>{{ row.Title or '—' }}</td>
-                                    <td class="muted">{{ row.borrow_date }}</td>
-                                    <td><span class="due-pill{% if row.overdue %} overdue{% endif %}">{{ row.due_date }}</span></td>
-                                </tr>
-                            {% endfor %}
-                        {% else %}
-                            <tr><td colspan="7" style="text-align:center;">No active borrows.</td></tr>
-                        {% endif %}
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
+  <aside class="dashboard-sidebar">
+    <div class="sidebar-panel">
+      <p class="sidebar-label">Dashboard</p>
+      <button
+        type="button"
+        class="dashboard-tab active"
+        data-target="borrow-panel"
+      >
+        Borrow Books
+      </button>
+      <button type="button" class="dashboard-tab" data-target="return-panel">
+        Return Books
+      </button>
+      <button
+        type="button"
+        class="dashboard-tab"
+        data-target="active-borrows-panel"
+      >
+        Active Borrows
+      </button>
     </div>
+
+    <div class="sidebar-panel sidebar-actions">
+      <p class="sidebar-info-title">Quick Actions</p>
+      <p style="font-size: 0.95rem; color: #556185">
+        Use the buttons to switch workflows. Forms appear on the right.
+      </p>
+    </div>
+  </aside>
+
+  <div class="dashboard-panel">
+    <section id="borrow-panel" class="dashboard-section active">
+      <h2>Borrow a Book</h2>
+      <form
+        class="library-form"
+        action="{{ url_for('borrow_return') }}"
+        method="post"
+      >
+        <input type="hidden" name="action" value="borrow" />
+
+        <label for="borrower-id">Borrower ID</label>
+        <input
+          id="borrower-id"
+          name="borrower-id"
+          type="text"
+          placeholder="Enter borrower ID"
+        />
+
+        <label for="borrow-title">Book Title</label>
+        <input
+          id="borrow-title"
+          name="borrow-title"
+          type="text"
+          placeholder="Enter book title"
+        />
+
+        <label for="borrow-date">Borrow Date</label>
+        <input id="borrow-date" name="borrow-date" type="date" />
+
+        <button type="submit" class="form-button">Borrow Book</button>
+      </form>
+    </section>
+
+    <section id="return-panel" class="dashboard-section">
+      <h2>Return a Book</h2>
+      <form
+        class="library-form"
+        action="{{ url_for('borrow_return') }}"
+        method="post"
+      >
+        <input type="hidden" name="action" value="return" />
+
+        <label for="returner-id">Borrower ID</label>
+        <input
+          id="returner-id"
+          name="returner-id"
+          type="text"
+          placeholder="Enter borrower ID"
+        />
+
+        <label for="return-title">Book Title</label>
+        <input
+          id="return-title"
+          name="return-title"
+          type="text"
+          placeholder="Enter book title"
+        />
+
+        <label for="copy-id">Copy ID (optional)</label>
+        <input
+          id="copy-id"
+          name="copy-id"
+          type="text"
+          placeholder="Enter copy ID if known"
+        />
+
+        <label for="return-date">Return Date</label>
+        <input id="return-date" name="return-date" type="date" />
+
+        <button type="submit" class="form-button">Return Book</button>
+      </form>
+    </section>
+
+    <section id="active-borrows-panel" class="dashboard-section">
+      <h2>Active Borrows</h2>
+      <div class="table-responsive">
+        <table class="book-table data-table">
+          <thead>
+            <tr>
+              <th>Borrower ID</th>
+              <th>Borrower</th>
+              <th>ISBN</th>
+              <th>Copy ID</th>
+              <th>Title</th>
+              <th>Borrow Date</th>
+              <th>Due Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% if active_borrows %} {% for row in active_borrows %}
+            <tr class="selectable-row" data-selected="false">
+              <td>{{ row.idUser }}</td>
+              <td>{{ row.first_name }} {{ row.last_name }}</td>
+              <td>{{ row.book_copy_ISBN }}</td>
+              <td>{{ row.book_copy_id }}</td>
+              <td>{{ row.Title or '—' }}</td>
+              <td class="muted">{{ row.borrow_date }}</td>
+              <td>
+                <span class="due-pill{% if row.overdue %} overdue{% endif %}"
+                  >{{ row.due_date }}</span
+                >
+              </td>
+            </tr>
+            {% endfor %} {% else %}
+            <tr>
+              <td colspan="7" style="text-align: center">No active borrows.</td>
+            </tr>
+            {% endif %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
 </div>
 {% endblock %}
-
