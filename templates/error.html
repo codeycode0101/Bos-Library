@@ -1,17 +1,16 @@
-{% extends "base.html" %}
-
-{% block title %}Library - {{ title }}{% endblock %}
-
+{% extends "base.html" %} {% block title %}Library - {{ title }}{% endblock %}
 {% block content %}
 <section class="error-page" aria-labelledby="error-title">
-    <div class="error-panel">
-        <i class="bx bx-lock-alt" aria-hidden="true"></i>
-        <h1 id="error-title">{{ heading }}</h1>
-        <p>{{ message }}</p>
-        <div class="error-actions">
-            <a class="error-btn primary" href="{{ url_for('login') }}">Sign in</a>
-            <a class="error-btn secondary" href="{{ url_for('index') }}">Back to home</a>
-        </div>
+  <div class="error-panel">
+    <i class="bx bx-lock-alt" aria-hidden="true"></i>
+    <h1 id="error-title">{{ heading }}</h1>
+    <p>{{ message }}</p>
+    <div class="error-actions">
+      <a class="error-btn primary" href="{{ url_for('login') }}">Sign in</a>
+      <a class="error-btn secondary" href="{{ url_for('index') }}"
+        >Back to home</a
+      >
     </div>
+  </div>
 </section>
 {% endblock %}

@@ -1,0 +1,158 @@
+{% extends "base.html" %} {% block title %}{{ book.title }} - Bosworth Library{%
+endblock %} {% block content %}
+<a class="catalog-back" href="{{ url_for('books') }}"
+  ><i class="bx bx-arrow-back" aria-hidden="true"></i
+  ><span>Back to catalog</span></a
+>
+
+<article class="book-detail-card">
+  <div class="book-detail-cover">
+    <img
+      class="book-cover"
+      src="https://covers.openlibrary.org/b/isbn/{{ book.isbn }}-L.jpg?default=false"
+      alt="Cover for {{ book.title }}"
+    />
+    <div class="book-cover-placeholder" aria-hidden="true" hidden>
+      <i class="bx bx-book" aria-hidden="true"></i>
+      <span>Cover unavailable</span>
+    </div>
+  </div>
+
+  <div class="book-detail-content">
+    <p class="detail-eyebrow">{{ book.genre }}</p>
+    <h1>{{ book.title }}</h1>
+    <p class="detail-author">by {{ book.author }}</p>
+
+    <dl class="book-facts">
+      <div>
+        <dt><i class="bx bx-barcode" aria-hidden="true"></i> ISBN</dt>
+        <dd>{{ book.isbn }}</dd>
+      </div>
+      <div>
+        <dt><i class="bx bx-category" aria-hidden="true"></i> Genre</dt>
+        <dd>{{ book.genre }}</dd>
+      </div>
+      {% if book.age_restriction %}
+      <div>
+        <dt><i class="bx bx-user" aria-hidden="true"></i> Age rating</dt>
+        <dd>{{ book.age_restriction }}+</dd>
+      </div>
+      {% endif %}
+    </dl>
+
+    <section
+      class="detail-availability {{ book.avaliablity_status }}"
+      aria-labelledby="availability-title"
+    >
+      <div class="detail-availability-heading">
+        <div>
+          <p id="availability-title">Availability</p>
+          <strong>{{ book.status }}</strong>
+        </div>
+        <i class="bx bx-book-open" aria-hidden="true"></i>
+      </div>
+      {% if book.total_copies %}
+      <p class="detail-copy-count">
+        <strong>{{ book.available_copies }}</strong> of {{ book.total_copies }}
+        copies are available now.
+      </p>
+      <div
+        class="availability-meter"
+        role="progressbar"
+        aria-label="{{ book.available_copies }} of {{ book.total_copies }} copies available"
+        aria-valuemin="0"
+        aria-valuemax="{{ book.total_copies }}"
+        aria-valuenow="{{ book.available_copies }}"
+      >
+        <span
+          class="availability-fill"
+          data-width="{{ calculate_bar_width(book) }}"
+        ></span>
+      </div>
+      {% else %}
+      <p class="detail-copy-count">
+        No copies are currently recorded for this title.
+      </p>
+      {% endif %}
+    </section>
+
+    <p class="detail-note">
+      <i class="bx bx-info-circle" aria-hidden="true"></i> To borrow this book,
+      please speak with the library team.
+    </p>
+  </div>
+</article>
+
+<div class="book-detail-sections">
+  <section
+    class="detail-panel detail-description"
+    aria-labelledby="about-this-book"
+  >
+    <div class="detail-panel-heading">
+      <i class="bx bx-book-content" aria-hidden="true"></i>
+      <div>
+        <p>{{ metadata.description_source }}</p>
+        <h2 id="about-this-book">About this book</h2>
+      </div>
+    </div>
+    <p>{{ metadata.description }}</p>
+  </section>
+
+  <aside class="detail-panel detail-edition" aria-labelledby="edition-details">
+    <div class="detail-panel-heading">
+      <i class="bx bx-detail" aria-hidden="true"></i>
+      <div>
+        <p>Edition details</p>
+        <h2 id="edition-details">At a glance</h2>
+      </div>
+    </div>
+    <dl class="edition-facts">
+      {% if metadata.publish_date %}
+      <div>
+        <dt>Published</dt>
+        <dd>{{ metadata.publish_date }}</dd>
+      </div>
+      {% endif %} {% if metadata.publisher %}
+      <div>
+        <dt>Publisher</dt>
+        <dd>{{ metadata.publisher }}</dd>
+      </div>
+      {% endif %} {% if metadata.pages %}
+      <div>
+        <dt>Pages</dt>
+        <dd>{{ metadata.pages }}</dd>
+      </div>
+      {% endif %}
+      <div>
+        <dt>ISBN</dt>
+        <dd>{{ book.isbn }}</dd>
+      </div>
+    </dl>
+    {% if metadata.subjects %}
+    <div class="subject-list" aria-label="Subjects">
+      {% for subject in metadata.subjects %}<span>{{ subject }}</span>{% endfor
+      %}
+    </div>
+    {% endif %} {% if metadata.url %}
+    <a
+      class="open-library-link"
+      href="{{ metadata.url }}"
+      target="_blank"
+      rel="noopener noreferrer"
+      >View source record <i class="bx bx-link-external" aria-hidden="true"></i
+    ></a>
+    {% endif %}
+  </aside>
+</div>
+
+{% if metadata.sources %}
+<p class="detail-attribution">
+  Additional edition information supplied by {% for source in metadata.sources
+  %}{% if not loop.first %} and {% endif %}<a
+    href="{{ source.url }}"
+    target="_blank"
+    rel="noopener noreferrer"
+    >{{ source.name }}</a
+  >{% endfor %}.
+</p>
+{% endif %} {% endblock %}

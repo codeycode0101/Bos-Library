@@ -16,5 +16,8 @@
       "connectionTimeout": 30,
       "askForPassword": true
     }
-  ]
+  ],
+  "python.defaultInterpreterPath": "${workspaceFolder}/venv/Scripts/python.exe",
+  "python.analysis.autoImportCompletions": true,
+  "python.terminal.useEnvFile": true
 }

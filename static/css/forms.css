@@ -27,11 +27,14 @@
     margin-top: 16px;
     padding: 12px 18px;
     border-radius: 10px;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
-.form-button:hover {
+.form-button:hover,
+.form-button:focus {
     background: #74C5EA;
-    color: #000000;
+    color: #0f1d3c;
+    transform: translateY(-1px);
 }
 
 .login-form {
