@@ -22,8 +22,6 @@ secret_key = os.getenv("SECRET_KEY")
 if not secret_key:
     debug_error("Missing SECRET_KEY environment variable")
     raise RuntimeError("Missing SECRET_KEY environment variable")
-    debug_error("Missing SECRET_KEY environment variable")
-    raise RuntimeError("Missing SECRET_KEY environment variable")
 app.secret_key = secret_key
 
 # Route for the about page
@@ -34,7 +32,6 @@ app.secret_key = secret_key
 
 
 # Route for the available books page
-@app.route("/books", strict_slashes=False)
 @app.route("/books", strict_slashes=False)
 def books():
     books = get_catalog_books(cursor)
@@ -48,7 +45,6 @@ def books():
 
 
 @app.route("/books/<isbn>", strict_slashes=False)
-@app.route("/books/<isbn>", strict_slashes=False)
 def book_detail(isbn):
     book = get_catalog_book(cursor, isbn)
     if book is None:
@@ -56,7 +52,6 @@ def book_detail(isbn):
     metadata = get_book_metadata(isbn, book["title"], book["author"], book["genre"])
     check_book_availability(book)
     return render_template(
-        "book_detail.html",
         "book_detail.html",
         book=book,
         metadata=metadata,
@@ -66,9 +61,7 @@ def book_detail(isbn):
 
 # Route for the login page
 @app.route("/login", strict_slashes=False, methods=["GET", "POST"])
-@app.route("/login", strict_slashes=False, methods=["GET", "POST"])
 def login():
-    if request.method == "POST":
     if request.method == "POST":
         return login_admin()
 
@@ -77,13 +70,11 @@ def login():
 
 
 @app.route("/logout", strict_slashes=False)
-@app.route("/logout", strict_slashes=False)
 def logout():
     return logout_admin()
 
 
 # Route for the borrow and return page
-@app.route("/borrow-return", strict_slashes=False, methods=["GET", "POST"])
 @app.route("/borrow-return", strict_slashes=False, methods=["GET", "POST"])
 def borrow_return():
     auth_response = require_admin_login()
@@ -118,14 +109,10 @@ def borrow_return():
 # Route for the index page, with an optional name parameter.
 @app.route("/")
 @app.route("/<name>", strict_slashes=False)
-@app.route("/")
-@app.route("/<name>", strict_slashes=False)
 # Renders the index.html template, passing the name variable to it (defaulting to "Guest" if no name is provided).
 def index(name="Guest"):
     return render_template("index.html", name=name)
-    return render_template("index.html", name=name)
 
 
-if __name__ == "__main__":
 if __name__ == "__main__":
     app.run(debug=True)
