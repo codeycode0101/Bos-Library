@@ -1,7 +1,7 @@
-from flask import request, flash, redirect, url_for, render_template
+from flask import request, flash, redirect, url_for
 from src.utils import db, cursor, find_isbn
-from src.book_history import get_active_borrows
 from src.debug import debug_info
+from src.users import resolve_user_id
 from datetime import datetime, timedelta
 
 
@@ -24,16 +24,23 @@ def borrow_book():
         return None
     
     user_id = request.form.get('borrower-id')
+    borrower_name = request.form.get('borrower-name')
     book_title = request.form.get('borrow-title')
     borrow_date_str = request.form.get('borrow-date')
 
     # Debugging prints
     debug_info(f"User ID: {user_id}")
+    debug_info(f"Borrower name: {borrower_name}")
     debug_info(f"Book title: {book_title}")
     debug_info(f"Borrow date: {borrow_date_str}")
 
-    if not (user_id and book_title and borrow_date_str):
+    if not (borrower_name and book_title and borrow_date_str):
         flash("Please fill in all fields.", "error")
+        return redirect(url_for('borrow_return'))
+
+    user_id, user_error = resolve_user_id(cursor, user_id, borrower_name)
+    if user_error:
+        flash(user_error, "error")
         return redirect(url_for('borrow_return'))
 
     # Find the book's ISBN based on the title

@@ -49,21 +49,55 @@ endblock %} {% block content %}
       >
         <input type="hidden" name="action" value="borrow" />
 
-        <label for="borrower-id">Borrower ID</label>
-        <input
-          id="borrower-id"
-          name="borrower-id"
-          type="text"
-          placeholder="Enter borrower ID"
-        />
+        <label for="borrower-name">Borrower Name</label>
+        <div class="search-box form-search-box">
+          <input
+            id="borrower-name"
+            class="search-input smart-search-input"
+            name="borrower-name"
+            type="search"
+            placeholder="Start typing a borrower name"
+            aria-label="Borrower name"
+            aria-autocomplete="list"
+            aria-controls="borrower-name-suggestions"
+            aria-expanded="false"
+            autocomplete="off"
+            data-smart-source="borrowers"
+            data-hidden-target="borrower-id"
+          />
+          <input id="borrower-id" name="borrower-id" type="hidden" />
+          <ul
+            id="borrower-name-suggestions"
+            class="search-suggestions"
+            role="listbox"
+            aria-label="Matching borrowers"
+            hidden
+          ></ul>
+        </div>
 
         <label for="borrow-title">Book Title</label>
-        <input
-          id="borrow-title"
-          name="borrow-title"
-          type="text"
-          placeholder="Enter book title"
-        />
+        <div class="search-box form-search-box">
+          <input
+            id="borrow-title"
+            class="search-input smart-search-input"
+            name="borrow-title"
+            type="search"
+            placeholder="Start typing a book title"
+            aria-label="Book title"
+            aria-autocomplete="list"
+            aria-controls="borrow-title-suggestions"
+            aria-expanded="false"
+            autocomplete="off"
+            data-smart-source="books"
+          />
+          <ul
+            id="borrow-title-suggestions"
+            class="search-suggestions"
+            role="listbox"
+            aria-label="Matching books"
+            hidden
+          ></ul>
+        </div>
 
         <label for="borrow-date">Borrow Date</label>
         <input id="borrow-date" name="borrow-date" type="date" />
@@ -81,21 +115,57 @@ endblock %} {% block content %}
       >
         <input type="hidden" name="action" value="return" />
 
-        <label for="returner-id">Borrower ID</label>
-        <input
-          id="returner-id"
-          name="returner-id"
-          type="text"
-          placeholder="Enter borrower ID"
-        />
+        <label for="returner-name">Borrower Name</label>
+        <div class="search-box form-search-box">
+          <input
+            id="returner-name"
+            class="search-input smart-search-input"
+            name="returner-name"
+            type="search"
+            placeholder="Start typing a borrower name"
+            aria-label="Borrower name"
+            aria-autocomplete="list"
+            aria-controls="returner-name-suggestions"
+            aria-expanded="false"
+            autocomplete="off"
+            data-smart-source="activeBorrowers"
+            data-hidden-target="returner-id"
+            data-show-all-on-focus="true"
+          />
+          <input id="returner-id" name="returner-id" type="hidden" />
+          <ul
+            id="returner-name-suggestions"
+            class="search-suggestions"
+            role="listbox"
+            aria-label="Matching active borrowers"
+            hidden
+          ></ul>
+        </div>
 
         <label for="return-title">Book Title</label>
-        <input
-          id="return-title"
-          name="return-title"
-          type="text"
-          placeholder="Enter book title"
-        />
+        <div class="search-box form-search-box">
+          <input
+            id="return-title"
+            class="search-input smart-search-input"
+            name="return-title"
+            type="search"
+            placeholder="Start typing a borrowed book title"
+            aria-label="Book title"
+            aria-autocomplete="list"
+            aria-controls="return-title-suggestions"
+            aria-expanded="false"
+            autocomplete="off"
+            data-smart-source="activeBorrows"
+            data-show-all-on-focus="true"
+          />
+          <ul
+            id="return-title-suggestions"
+            class="search-suggestions"
+            role="listbox"
+            aria-label="Matching borrowed books"
+            hidden
+          ></ul>
+        </div>
 
         <label for="copy-id">Copy ID (optional)</label>
         <input
@@ -153,4 +223,13 @@ endblock %} {% block content %}
     </section>
   </div>
 </div>
+<script id="borrower-suggestions-data" type="application/json">
+  {{ borrowers|tojson }}
+</script>
+<script id="book-suggestions-data" type="application/json">
+  {{ books|tojson }}
+</script>
+<script id="active-borrow-suggestions-data" type="application/json">
+  {{ active_borrows|tojson }}
+</script>
 {% endblock %}

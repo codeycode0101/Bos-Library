@@ -120,6 +120,247 @@ document.addEventListener('DOMContentLoaded', function () {
         updateSearch();
     }
 
+    const readJsonData = (id) => {
+        const element = document.getElementById(id);
+        if (!element) {
+            return [];
+        }
+
+        try {
+            return JSON.parse(element.textContent.trim() || '[]');
+        } catch (error) {
+            console.warn(`Could not parse ${id}`, error);
+            return [];
+        }
+    };
+
+    const borrowers = readJsonData('borrower-suggestions-data').map((borrower) => ({
+        id: String(borrower.id),
+        value: borrower.name,
+        title: borrower.name,
+        meta: borrower.role ? `ID ${borrower.id} - ${borrower.role}` : `ID ${borrower.id}`,
+        search: borrower.search || `${borrower.id} ${borrower.name} ${borrower.role || ''}`,
+    }));
+
+    const books = readJsonData('book-suggestions-data').map((book) => ({
+        id: book.isbn,
+        value: book.title,
+        title: book.title,
+        meta: `${book.author} - ${book.isbn} - ${book.status}`,
+        search: `${book.title} ${book.author} ${book.isbn} ${book.genre} ${book.status}`,
+    }));
+
+    const activeBorrows = readJsonData('active-borrow-suggestions-data');
+    const activeBorrowRecords = activeBorrows.map((borrow) => {
+        const borrowerName = `${borrow.first_name || ''} ${borrow.last_name || ''}`.trim();
+        return {
+            id: String(borrow.idBorrow),
+            userId: String(borrow.idUser),
+            copyId: String(borrow.book_copy_id || ''),
+            value: borrow.Title || '',
+            title: borrow.Title || 'Untitled',
+            borrowerName,
+            meta: `${borrowerName} - copy ${borrow.book_copy_id} - due ${borrow.due_date || 'unknown'}`,
+            search: `${borrow.Title || ''} ${borrow.book_copy_ISBN || ''} ${borrow.book_copy_id || ''} ${borrowerName} ${borrow.idUser}`,
+        };
+    });
+
+    const activeBorrowersById = new Map();
+    activeBorrows.forEach((borrow) => {
+        const userId = String(borrow.idUser);
+        const borrowerName = `${borrow.first_name || ''} ${borrow.last_name || ''}`.trim();
+        if (!activeBorrowersById.has(userId)) {
+            activeBorrowersById.set(userId, {
+                id: userId,
+                value: borrowerName,
+                title: borrowerName,
+                meta: '1 active borrow',
+                search: `${userId} ${borrowerName}`,
+                count: 1,
+            });
+            return;
+        }
+
+        const borrower = activeBorrowersById.get(userId);
+        borrower.count += 1;
+        borrower.meta = `${borrower.count} active borrows`;
+    });
+
+    const smartSources = {
+        borrowers,
+        books,
+        activeBorrowers: Array.from(activeBorrowersById.values()),
+        activeBorrows: activeBorrowRecords,
+    };
+
+    const closeSmartSuggestions = (input, list) => {
+        list.hidden = true;
+        list.replaceChildren();
+        input.setAttribute('aria-expanded', 'false');
+        input.removeAttribute('aria-activedescendant');
+    };
+
+    const chooseSmartSuggestion = (input, list, item) => {
+        input.value = item.value;
+
+        const hiddenTargetId = input.dataset.hiddenTarget;
+        if (hiddenTargetId) {
+            const hiddenInput = document.getElementById(hiddenTargetId);
+            if (hiddenInput) {
+                hiddenInput.value = item.id || item.userId || '';
+            }
+        }
+
+        if (input.id === 'return-title') {
+            const copyInput = document.getElementById('copy-id');
+            const returnerInput = document.getElementById('returner-name');
+            const returnerIdInput = document.getElementById('returner-id');
+
+            if (copyInput && item.copyId) {
+                copyInput.value = item.copyId;
+            }
+            if (returnerInput && item.borrowerName) {
+                returnerInput.value = item.borrowerName;
+            }
+            if (returnerIdInput && item.userId) {
+                returnerIdInput.value = item.userId;
+            }
+        }
+
+        if (input.id === 'returner-name') {
+            const returnTitleInput = document.getElementById('return-title');
+            const copyInput = document.getElementById('copy-id');
+
+            if (returnTitleInput) {
+                returnTitleInput.value = '';
+            }
+            if (copyInput) {
+                copyInput.value = '';
+            }
+
+            window.setTimeout(() => returnTitleInput?.focus(), 0);
+        }
+
+        closeSmartSuggestions(input, list);
+    };
+
+    document.querySelectorAll('.smart-search-input').forEach((input) => {
+        const listId = input.getAttribute('aria-controls');
+        const list = listId ? document.getElementById(listId) : null;
+        const source = smartSources[input.dataset.smartSource] || [];
+        let matches = [];
+        let activeIndex = -1;
+
+        if (!list || !source.length) {
+            return;
+        }
+
+        const updateMatches = () => {
+            const query = input.value.trim().toLowerCase();
+            const selectedReturnerId = document.getElementById('returner-id')?.value;
+            const showAllOnFocus = input.dataset.showAllOnFocus === 'true';
+
+            if (!query && !showAllOnFocus) {
+                matches = [];
+                return;
+            }
+
+            matches = source.filter((item) => {
+                const itemText = (item.search || item.title || item.value || '').toLowerCase();
+                const queryMatches = !query || itemText.includes(query);
+                if (input.id !== 'return-title' || !selectedReturnerId) {
+                    return queryMatches;
+                }
+                return queryMatches && item.userId === selectedReturnerId;
+            }).slice(0, 6);
+        };
+
+        const renderSuggestions = () => {
+            updateMatches();
+
+            const fragment = document.createDocumentFragment();
+            matches.forEach((item, index) => {
+                const option = document.createElement('li');
+                option.setAttribute('role', 'option');
+                option.id = `${input.id}-suggestion-${index}`;
+
+                const button = document.createElement('button');
+                button.type = 'button';
+                button.className = 'search-suggestion';
+                button.innerHTML = '<span class="search-suggestion-title"></span><span class="search-suggestion-meta"></span>';
+                button.querySelector('.search-suggestion-title').textContent = item.title;
+                button.querySelector('.search-suggestion-meta').textContent = item.meta;
+                button.addEventListener('click', () => chooseSmartSuggestion(input, list, item));
+
+                option.append(button);
+                fragment.append(option);
+            });
+
+            list.replaceChildren(fragment);
+            list.hidden = matches.length === 0;
+            input.setAttribute('aria-expanded', String(matches.length > 0));
+            activeIndex = -1;
+        };
+
+        input.addEventListener('input', () => {
+            const hiddenTargetId = input.dataset.hiddenTarget;
+            if (hiddenTargetId) {
+                const hiddenInput = document.getElementById(hiddenTargetId);
+                if (hiddenInput) {
+                    hiddenInput.value = '';
+                }
+            }
+
+            if (input.id === 'returner-name') {
+                const returnTitleInput = document.getElementById('return-title');
+                const copyInput = document.getElementById('copy-id');
+                if (returnTitleInput) {
+                    returnTitleInput.value = '';
+                }
+                if (copyInput) {
+                    copyInput.value = '';
+                }
+            }
+
+            if (input.id === 'return-title') {
+                const copyInput = document.getElementById('copy-id');
+                if (copyInput) {
+                    copyInput.value = '';
+                }
+            }
+
+            renderSuggestions();
+        });
+
+        input.addEventListener('focus', renderSuggestions);
+        input.addEventListener('keydown', (event) => {
+            const buttons = Array.from(list.querySelectorAll('.search-suggestion'));
+            if (!buttons.length) {
+                return;
+            }
+
+            if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+                event.preventDefault();
+                activeIndex = event.key === 'ArrowDown'
+                    ? (activeIndex + 1) % buttons.length
+                    : (activeIndex - 1 + buttons.length) % buttons.length;
+                buttons.forEach((button, index) => button.classList.toggle('is-active', index === activeIndex));
+                input.setAttribute('aria-activedescendant', `${input.id}-suggestion-${activeIndex}`);
+            } else if (event.key === 'Enter' && activeIndex >= 0) {
+                event.preventDefault();
+                chooseSmartSuggestion(input, list, matches[activeIndex]);
+            } else if (event.key === 'Escape') {
+                closeSmartSuggestions(input, list);
+            }
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!event.target.closest(`#${input.id}, #${list.id}`)) {
+                closeSmartSuggestions(input, list);
+            }
+        });
+    });
+
     document.querySelectorAll('.availability-fill').forEach((fill) => {
         const width = fill.dataset.width;
         if (width) {

@@ -13,11 +13,11 @@ from src.catalog import get_catalog_book, get_catalog_books
 from src.debug import debug, debug_error, debug_warning, debug_success
 from src.login_system import login_admin, logout_admin, require_admin_login
 from src.return_book import return_book
+from src.users import get_user_directory
 from src.utils import cursor
 
 load_dotenv()
 app = Flask(__name__)
-secret_key = os.getenv("SECRET_KEY")
 secret_key = os.getenv("SECRET_KEY")
 if not secret_key:
     debug_error("Missing SECRET_KEY environment variable")
@@ -85,10 +85,6 @@ def borrow_return():
         action = request.form.get("action")
         debug("borrow_return route received POST", color="yellow")
         debug(f"form action: {action}", color="cyan")
-    if request.method == "POST":
-        action = request.form.get("action")
-        debug("borrow_return route received POST", color="yellow")
-        debug(f"form action: {action}", color="cyan")
 
         if action == "borrow":
             if resp := borrow_book():
@@ -101,9 +97,16 @@ def borrow_return():
 
     # Query active borrows to populate dashboard tab
     active_borrows = get_active_borrows(cursor)
+    borrowers = get_user_directory(cursor)
+    books = get_catalog_books(cursor)
     debug_success(f"Active borrows fetched: {active_borrows}")
 
-    return render_template("borrow_return.html", active_borrows=active_borrows)
+    return render_template(
+        "borrow_return.html",
+        active_borrows=active_borrows,
+        borrowers=borrowers,
+        books=books,
+    )
 
 
 # Route for the index page, with an optional name parameter.

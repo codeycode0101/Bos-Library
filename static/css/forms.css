@@ -16,6 +16,15 @@
     width: 100%;
     padding: 10px;
     border: 1px solid #232D55;
+    border-radius: 8px;
+}
+
+.library-form .form-search-box {
+    max-width: none;
+}
+
+.library-form .search-input {
+    border-width: 1px;
 }
 
 .form-button {

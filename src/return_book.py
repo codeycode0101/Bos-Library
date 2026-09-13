@@ -1,6 +1,7 @@
 from flask import request, flash, redirect, url_for
 from src.utils import db, cursor, find_isbn
 from src.debug import debug_info, debug_warning
+from src.users import resolve_user_id
 from datetime import datetime
 
 
@@ -10,20 +11,27 @@ def return_book():
         return None
 
     user_id = request.form.get('returner-id')
+    returner_name = request.form.get('returner-name')
     book_title = request.form.get('return-title')
     return_date_str = request.form.get('return-date')
     copy_id = request.form.get('copy-id')
 
     # Debugging prints
     debug_info(f"User ID: {user_id}")
+    debug_info(f"Returner name: {returner_name}")
     debug_info(f"Book title: {book_title}")
     debug_info(f"Return date: {return_date_str}")
     debug_info(f"Copy ID: {copy_id}")
 
     # Check that all fields are filled
-    if not (user_id and book_title and return_date_str):
+    if not (returner_name and book_title and return_date_str):
         flash("Please fill in all fields.", "error")
         return redirect(url_for('borrow_return'))   
+
+    user_id, user_error = resolve_user_id(cursor, user_id, returner_name)
+    if user_error:
+        flash(user_error, "error")
+        return redirect(url_for('borrow_return'))
 
     # Fetch book_ISBN from database
     book_ISBN = find_isbn(book_title, cursor)
