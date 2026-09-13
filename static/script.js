@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 id: userId,
                 value: borrowerName,
                 title: borrowerName,
-                meta: '1 active borrow',
+                meta: '1 borrowed',
                 search: `${userId} ${borrowerName}`,
                 count: 1,
             });
@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const borrower = activeBorrowersById.get(userId);
         borrower.count += 1;
-        borrower.meta = `${borrower.count} active borrows`;
+        borrower.meta = `${borrower.count} borrowed`;
     });
 
     const smartSources = {
@@ -393,12 +393,12 @@ document.addEventListener('DOMContentLoaded', function () {
             initialTab.click();
         }
     }
-    // Active borrows table row selection highlighting when clicked, and deselect when clicking outside the table
-    const activeBorrowTable = document.querySelector('#active-borrows-panel table.data-table');
+    // Borrow history table row selection highlighting when clicked, and deselect when clicking outside the table
+    const historyTables = Array.from(document.querySelectorAll('#active-borrows-panel table.data-table'));
     let selectedRow = null;
 
-    if (activeBorrowTable) {
-        const rows = Array.from(activeBorrowTable.querySelectorAll('.selectable-row'));
+    if (historyTables.length) {
+        const rows = historyTables.flatMap(table => Array.from(table.querySelectorAll('.selectable-row')));
 
         rows.forEach(row => {
             row.addEventListener('click', (event) => {
@@ -416,7 +416,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         document.addEventListener('click', (event) => {
-            if (!activeBorrowTable.contains(event.target) && selectedRow) {
+            const clickedHistoryTable = historyTables.some(table => table.contains(event.target));
+            if (!clickedHistoryTable && selectedRow) {
                 selectedRow.classList.remove('selected');
                 selectedRow = null;
             }

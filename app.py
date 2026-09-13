@@ -6,7 +6,7 @@ from src.book_formatter import (
     check_book_availability,
     calculate_bar_width,
 )
-from src.book_history import get_active_borrows
+from src.book_history import get_active_borrows, get_borrow_history
 from src.book_metadata import get_book_metadata
 from src.borrow_book import borrow_book
 from src.catalog import get_catalog_book, get_catalog_books
@@ -97,6 +97,7 @@ def borrow_return():
 
     # Query active borrows to populate dashboard tab
     active_borrows = get_active_borrows(cursor)
+    borrow_history = get_borrow_history(cursor)
     borrowers = get_user_directory(cursor)
     books = get_catalog_books(cursor)
     debug_success(f"Active borrows fetched: {active_borrows}")
@@ -104,6 +105,7 @@ def borrow_return():
     return render_template(
         "borrow_return.html",
         active_borrows=active_borrows,
+        borrow_history=borrow_history,
         borrowers=borrowers,
         books=books,
     )

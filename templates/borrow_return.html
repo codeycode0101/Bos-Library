@@ -27,7 +27,7 @@ endblock %} {% block content %}
         class="dashboard-tab"
         data-target="active-borrows-panel"
       >
-        Active Borrows
+        Borrow History
       </button>
     </div>
 
@@ -137,7 +137,7 @@ endblock %} {% block content %}
             id="returner-name-suggestions"
             class="search-suggestions"
             role="listbox"
-            aria-label="Matching active borrowers"
+            aria-label="Matching borrowers with books borrowed"
             hidden
           ></ul>
         </div>
@@ -183,7 +183,8 @@ endblock %} {% block content %}
     </section>
 
     <section id="active-borrows-panel" class="dashboard-section">
-      <h2>Active Borrows</h2>
+      <h2>Borrow History</h2>
+      <h3 class="table-section-title">Currently Borrowed</h3>
       <div class="table-responsive">
         <table class="book-table data-table">
           <thead>
@@ -214,7 +215,59 @@ endblock %} {% block content %}
             </tr>
             {% endfor %} {% else %}
             <tr>
-              <td colspan="7" style="text-align: center">No active borrows.</td>
+              <td colspan="7" style="text-align: center">
+                No books are currently borrowed.
+              </td>
+            </tr>
+            {% endif %}
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="table-section-title">Full Borrow / Return Log</h3>
+      <div class="table-responsive">
+        <table class="book-table data-table borrow-history-table">
+          <thead>
+            <tr>
+              <th>Borrower ID</th>
+              <th>Borrower</th>
+              <th>Copy ID</th>
+              <th>Title</th>
+              <th>Borrow Date</th>
+              <th>Due Date</th>
+              <th>Return Date</th>
+              <th>Status</th>
+              <th>Late Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% if borrow_history %} {% for row in borrow_history %}
+            <tr class="selectable-row" data-selected="false">
+              <td>{{ row.idUser }}</td>
+              <td>{{ row.first_name }} {{ row.last_name }}</td>
+              <td>{{ row.book_copy_id }}</td>
+              <td>{{ row.Title or '-' }}</td>
+              <td class="muted">{{ row.borrow_date or '-' }}</td>
+              <td class="muted">{{ row.due_date or '-' }}</td>
+              <td class="muted">{{ row.return_date or 'Not returned' }}</td>
+              <td>
+                <span
+                  class="status-pill{% if row.loan_status == 'Borrowed' %} status-borrowed{% elif row.loan_status == 'Returned' %} status-returned{% endif %}"
+                  >{{ row.loan_status }}</span
+                >
+              </td>
+              <td>
+                <span
+                  class="due-pill{% if row.late or row.overdue %} overdue{% endif %}"
+                  >{{ row.late_status }}</span
+                >
+              </td>
+            </tr>
+            {% endfor %} {% else %}
+            <tr>
+              <td colspan="9" style="text-align: center">
+                No borrowing history has been recorded.
+              </td>
             </tr>
             {% endif %}
           </tbody>
